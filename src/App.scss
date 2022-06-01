@@ -1,0 +1,1479 @@
+@import "./assets/scss/definitions";
+html {
+  scroll-behavior: smooth;
+}
+
+.roadMap_container {
+  .elem {
+    max-width: 600px;
+    width: 100%;
+  }
+}
+.success-connect {
+  height: 0px !important;
+}
+
+.header-section {
+  margin-top: 60px !important;
+}
+.header-section {
+  // background-image: url("./svg/bg-sweet.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 92vh;
+  position: fixed;
+}
+.drag-header {
+  display: flex;
+  justify-content: center;
+  img {
+    width: 175px;
+    height: 200px;
+  }
+}
+.roadmap-content {
+  max-width: 1240px;
+  width: 100%;
+}
+@font-face {
+  font-family: ProductSans;
+  src: url(./assets/fonts/Product-Sans-Regular.ttf);
+}
+
+aside.svelte-rntogh {
+  z-index: 9999 !important;
+}
+
+@font-face {
+  font-family: MontserratMedium;
+  src: url(./assets/fonts/Montserrat-Medium.ttf);
+}
+
+.sidebar.svelte-1o88d5s {
+  display: none !important;
+}
+
+css-1fzpoyk:nth-child(1) {
+  transform: translateY(-50%) translateX(-35%) scale(0.6) !important;
+  top: 200px;
+  width: 300px;
+}
+
+.css-doq0dk {
+  left: 40px;
+  // top: 20px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.css-1fzpoyk:nth-child(3) {
+  transform: translateY(-50%) translateX(-70%) scale(0.6) !important;
+  top: 200px;
+  width: 300px;
+}
+
+.css-doq0dk .css-1fzpoyk {
+  height: 380px !important;
+}
+
+iframe {
+  display: none !important;
+}
+
+@font-face {
+  font-family: otf;
+  src: url(./assets/fonts/Montserrat-Regular.otf);
+}
+
+.css-1fzpoyk:nth-child(1) {
+  transform: translateY(-50%) translateX(-35%) scale(0.6) !important;
+  top: 200px;
+  width: 300px;
+}
+
+.wallets-buttons-connectors {
+  text-align: center;
+  height: 45px;
+  border: 1px solid white !important;
+  border-radius: 5px !important;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  background: #edf2f7;
+  transition: 0.5s;
+  margin-top: 10px;
+
+  &:hover {
+    background: #e9e9ed;
+  }
+
+  button {
+    margin: 15px 0px;
+    width: 100%;
+  }
+}
+
+.disconnect-wallet-crypto {
+  height: 25px;
+  top: -9px;
+  position: relative;
+  cursor: pointer;
+}
+
+.roadMap_images {
+  transform: scale(1.3);
+}
+
+img[alt="own_image"] {
+  max-width: 150% !important;
+}
+
+.calculator-content {
+  .chakra-input {
+    border-radius: 10px !important;
+  }
+}
+.swt-chakra-tabs {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+}
+.list-calc-tabs {
+  position: relative;
+  top: 110px;
+  z-index: 100;
+  width: 100%;
+
+  button {
+    padding: 0;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 9px 8px;
+    border-top-left-radius: 15px !important;
+  }
+}
+
+.dragon-name {
+  display: block;
+  margin: 0 auto;
+  transform: translateX(35px);
+  width: 150px;
+}
+
+.reddit {
+  background-color: #205072;
+  padding: 3px;
+  border-radius: 20px;
+  width: 30px;
+  height: 30px;
+}
+
+.body-wrap {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.road-text-more {
+  margin-top: -23px;
+}
+
+.about-header {
+  font-family: otf !important;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 50px;
+}
+
+.coming-soon {
+  padding: 5px;
+  text-align: center;
+  background: #f6f3ff;
+  color: black;
+  color: #03a66d;
+  border-radius: 10px;
+}
+
+.title-section {
+  margin-top: 140px;
+  text-align: center;
+  position: relative;
+  z-index: 2000;
+}
+
+.logo-mobile-sweet {
+  display: none;
+}
+
+.title-section .title-tokeno {
+  font-weight: bold;
+  font-size: 32px;
+  color: #205072;
+  text-align: center;
+  font-weight: bold;
+  font-family: Comfortaa;
+}
+
+.roadMap_images-mobile {
+  position: absolute;
+  position: absolute;
+  top: -230px;
+  left: 25px;
+  width: 235px;
+  display: none;
+}
+
+.desc-title {
+  color: #505050;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.parent-item-card {
+  display: flex;
+  grid-gap: 12px;
+  flex-wrap: wrap;
+  grid-row-gap: 40px;
+}
+
+.card-precent {
+  position: relative;
+  margin-top: 45px;
+  padding: 60px;
+  max-width: 700px;
+
+  background: #f6f4ff;
+  background: url("./svg/tokenomics.png"),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  backdrop-filter: blur(5px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 30px;
+  // border: 2px solid #ffffff;
+  box-sizing: border-box;
+  box-shadow: 0px 40px 40px rgba(106, 106, 106, 0.1);
+  border-radius: 20px;
+  background-blend-mode: overlay, normal;
+  border-radius: 20px;
+  box-shadow: 0px 40px 40px rgba(106, 106, 106, 0.1);
+}
+
+.tire-cards {
+  .App {
+    transform: translateY(80px);
+  }
+}
+
+.liner {
+  width: 184px;
+  height: 6px;
+  background: red;
+  background: #ffffff;
+  border: 1px solid #cacaca;
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+.item-precent {
+  display: block;
+  height: 5px;
+  background: #4dd4fe;
+  border-radius: 40px;
+}
+
+.private-sale {
+  width: 206px !important;
+  margin-left: auto !important;
+  display: flex !important;
+  justify-content: flex-end !important;
+  flex-direction: row !important;
+  @include text-size-sm;
+}
+
+.title-roadmap-second {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  padding: 30px 20px !important;
+  color: #203d86;
+  .second-line {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #63b9f8;
+  }
+}
+
+.wallet-connect {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: -18px;
+}
+
+.item-card:nth-child(1) .item-precent {
+  width: 25%;
+}
+
+.item-card:nth-child(2) .item-precent {
+  width: 20%;
+}
+
+.item-card:nth-child(3) .item-precent {
+  width: 20%;
+}
+
+.item-card:nth-child(4) .item-precent {
+  width: 15%;
+}
+
+.item-card:nth-child(5) .item-precent {
+  width: 5%;
+}
+
+.item-card:nth-child(6) .item-precent {
+  width: 5%;
+}
+
+.item-card:nth-child(7) .item-precent {
+  width: 4%;
+}
+
+.item-card:nth-child(8) .item-precent {
+  width: 5%;
+}
+
+.item-card:nth-child(9) .item-precent {
+  width: 1%;
+}
+
+.parent-drag {
+  // width: 500px;
+  margin-top: 60px;
+}
+
+.item-card p {
+  color: #2c2c2c;
+
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.dragon-icon {
+  position: absolute;
+  top: 142px !important;
+  top: 58px;
+  right: -37px;
+  height: 224px;
+}
+
+.logo-sweet-desktop {
+  cursor: pointer;
+}
+
+.second-roadmap-title {
+  text-align: center;
+  margin: 140px 0px 50px;
+}
+
+.second-roadmap {
+  z-index: 15;
+  position: relative;
+  margin-bottom: 120px;
+
+  span {
+    display: inline-block;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    margin-top: 50px;
+    color: #203d86;
+  }
+  .quarters-item {
+    padding: 10px;
+  }
+}
+
+.footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  bottom: 0;
+  background: linear-gradient(
+    178.55deg,
+    rgba(213, 210, 255, 0) 1.25%,
+    rgba(173, 166, 250, 0.8) 97.68%
+  );
+  .logo-sweet-desktop {
+    width: 160px;
+    height: 30px;
+    margin-top: 15px;
+  }
+}
+
+.img-block {
+  display: flex;
+  grid-gap: 5px;
+}
+
+.img-block-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // margin-top: 150px;
+}
+
+.line {
+  display: flex;
+  flex: 1 1 100%;
+  background: #aaaaaa;
+  border: 1px solid #aaaaaa;
+}
+
+.footer-link {
+  list-style: none;
+  // margin-top: 70px;
+
+  .social-icons {
+    display: flex !important;
+    justify-content: center;
+    grid-gap: 20px;
+    align-items: center;
+    list-style: none;
+
+    nav {
+      display: flex;
+      align-items: center;
+      grid-gap: 20px;
+    }
+
+    .reddit {
+      display: inline-block;
+      background: #205072;
+      width: 25px;
+      height: 25px;
+    }
+
+    .reddit {
+      svg {
+        margin-left: 0.5px;
+      }
+    }
+
+    .second-nav-social {
+      li {
+        // &:nth-child(1) {
+        //   &:hover {
+        //     svg {
+        //       path {
+        //         fill: #000000;
+        //       }
+        //     }
+        //   }
+        // }
+
+        &:nth-child(1) {
+          &:hover {
+            svg {
+              path {
+                fill: #000000;
+              }
+            }
+          }
+        }
+
+        &:nth-child(2) {
+          &:hover {
+            svg {
+              path {
+                fill: #ff0000;
+              }
+            }
+          }
+        }
+
+        &:nth-child(3) {
+          &:hover {
+            svg {
+              path {
+                fill: #4267b2;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    nav {
+      &:first-child {
+        li {
+          &:nth-child(1) {
+            &:hover {
+              svg {
+                path {
+                  fill: #229ed9;
+                }
+              }
+            }
+          }
+
+          &:nth-child(2) {
+            &:hover {
+              svg {
+                path {
+                  fill: #00acee;
+                }
+              }
+            }
+          }
+
+          // &:nth-child(3) {
+          //   &:hover {
+          //     svg {
+          //       path {
+          //         fill: #5865f2;
+          //       }
+          //     }
+          //   }
+          // }
+          // &:nth-child(4) {
+          //   &:hover {
+          //     svg {
+          //       path {
+          //         fill: #dad7ff;
+          //       }
+          //     }
+          //     span {
+          //       background-color: #ff5700;
+          //     }
+          //   }
+          // }
+        }
+      }
+    }
+  }
+}
+
+.footer-nav li {
+  list-style: none;
+}
+
+.footer-nav {
+  grid-gap: 30px;
+  // margin-top: 42px;
+  display: flex;
+  justify-content: space-evenly;
+  // padding-top: 15px;
+  // nav {
+  // width: 50%;
+  // }
+}
+
+.elem {
+  .active {
+    span {
+      color: #03a66d;
+      font-weight: 600;
+    }
+
+    box-sizing: border-box;
+    background-color: #03a66d;
+    border: 1px solid #03a66d !important;
+  }
+}
+
+.footer-nav {
+  strong {
+    color: white;
+    font-size: 18px;
+  }
+  ul {
+    li {
+      margin: 8px 0;
+      font-family: ProductSans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 22px;
+      /* identical to box height */
+
+      color: white;
+    }
+  }
+}
+
+.footer-section {
+  max-width: 225px;
+  width: 100%;
+}
+
+.footer-parent-section {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  // grid-gap: 30px;
+  // display: flex;
+  // justify-content: space-between;
+  // // padding-top: 60px;
+  // list-style: none;
+}
+
+.item-second-roadmap {
+  display: flex !important;
+  // justify-content: space-evenly !important;
+  grid-gap: 80px !important;
+  justify-content: center !important;
+}
+
+.calculator-sweetcoin-input {
+  cursor: auto !important;
+}
+
+.calculator-left-align {
+  .css-1v9ca19 {
+    margin-left: -70px;
+  }
+}
+
+.parent-slides {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+
+  .circle-slide {
+    height: 10px;
+    background: #eff1f4;
+    border-radius: 15px;
+    width: 10px;
+    display: block;
+    cursor: pointer;
+  }
+
+  .active {
+    background-color: #205072;
+  }
+}
+
+.footer-section,
+.foot-section-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-title {
+  font-family: "Product Sans", sans-serif;
+  color: #2c2c2c;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.foot-section-list {
+  list-style: none;
+  margin-top: 15px;
+}
+
+.foot-section-list a {
+  color: #2c2c2c;
+  font-weight: 400;
+}
+
+.elem {
+  margin: 0 auto;
+  display: flex;
+  // max-width: 660px;
+  // width: 100%;
+
+  .circle {
+    min-width: 35px;
+    height: 35px;
+    background: #ecfafe;
+    border: 2px solid #aaaaaa;
+    background-blend-mode: overlay, normal;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: (0px 20px 40px rgba(106, 106, 106, 0.1));
+  }
+}
+
+.right-group {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0px 5px;
+}
+
+.year-input {
+  border: 1px solid #03a66d !important;
+  text-align: center;
+  cursor: auto !important;
+}
+
+.input-group-left {
+  display: flex !important;
+  justify-content: space-between !important;
+  margin-left: 5px;
+}
+
+.plus-min {
+  cursor: pointer;
+}
+
+.foot-section-list li {
+  margin: 10px 0px 0px 0px;
+}
+
+.App {
+  .css-j85bf3 {
+    min-height: 700px;
+
+    *div {
+      display: flex !important;
+    }
+  }
+}
+
+#calculator-id {
+  text-align: center;
+  color: #205072;
+  font-style: normal;
+  font-weight: bold;
+  // margin-top: 120px;
+  font-size: 32px;
+  font-family: "Comfortaa", cursive;
+  font-style: normal;
+  font-weight: bold;
+  z-index: 15;
+  position: relative;
+}
+
+.parent-slides {
+  display: flex;
+}
+
+.popupComp {
+  display: none;
+}
+
+.openPupUp {
+  display: block;
+}
+
+.footer-parent-section {
+  .footer-section {
+    &:nth-child(2) {
+      padding-left: 65px;
+    }
+  }
+}
+
+@media screen and (max-width: 1240px) {
+  .footer-parent-section {
+    display: grid;
+    grid-template-columns: 220px 220px 220px 220px !important;
+    grid-gap: 50px;
+    justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .roadMap_images {
+    margin-left: 100px !important;
+  }
+}
+
+@media screen and (max-width: 1260px) {
+  .main-content {
+    max-width: 1000px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+
+  // .quarter-section {
+  //   display: grid !important;
+  //   justify-self: center !important;
+  //   align-self: center;
+  //   grid-template-columns: repeat(2, 295px);
+  //   grid-gap: 20px;
+
+  //   .quarters-item {
+  //     margin-left: auto;
+  //   }
+
+  //   // .circle-list {
+  //   //   display: none;
+  //   // }
+  // }
+}
+
+.sweet-step {
+  &::after {
+    content: "Collect your Sweets";
+    position: absolute;
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .content-slider {
+    width: 80% !important;
+  }
+  .main-content {
+    max-width: 800px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+
+  .footer-parent-section {
+    display: grid;
+    grid-template-columns: 220px 220px !important;
+    grid-gap: 50px;
+    justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .quarters-item {
+    // background-image: url("../svg/quarter.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    // background: #f7f4ff;
+    // border: 3px solid #ffffff;
+    box-sizing: border-box;
+    border-radius: 20px;
+    // max-width: 250px;
+    margin: 0 auto !important;
+    width: 80% !important;
+  }
+  .liner {
+    width: 115px;
+  }
+
+  .dragon-icon {
+    bottom: 0;
+    top: 265px !important;
+    right: 0px !important;
+  }
+
+  .parent-item-card {
+    max-width: 350px;
+    display: grid;
+    grid-template-columns: 200px 200px;
+  }
+
+  .calculator-content {
+    min-height: 0 !important;
+  }
+
+  .roadMap-header {
+    margin-top: 120px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .second-roadmap {
+    .item-second-roadmap {
+      display: flex !important;
+      justify-content: center !important;
+      margin: 0 auto !important;
+
+      // .quarters-item {
+      //   display: flex;
+      //   flex-direction: column;
+      // }
+    }
+  }
+
+  .roadMap_images-mobile {
+    display: block;
+  }
+
+  .logo-mobile-sweet {
+    display: block;
+  }
+
+  // .logo-sweet-desktop {
+  //   display: none;
+  // }
+  .top-white {
+    display: none;
+  }
+
+  .mob-top-white {
+    display: block !important;
+    // position: relative !important;
+    width: 100%;
+    top: 6% !important;
+    transform: translateY(-50%);
+  }
+
+  .parent-drag {
+    margin-left: 0;
+    margin-top: 160px;
+    width: 260px;
+    position: relative;
+  }
+
+  .background-content {
+    .main-content {
+      padding: 0px 10px;
+      width: 100% !important;
+      margin: 0 auto !important;
+    }
+
+    .content-container {
+      padding: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .flex-component {
+    padding-bottom: 15px;
+  }
+  .header-section {
+    padding: 0 !important;
+  }
+
+  .d-flex {
+    display: flex;
+    justify-content: center;
+  }
+  .buy-sweet-open {
+    grid-gap: 5px !important;
+    .button-ido {
+      width: 100px;
+      font-size: 13px !important;
+    }
+  }
+
+  .wallet-connect {
+    margin: 0;
+  }
+  .buttons-config {
+    display: flex;
+  }
+  .content-slider {
+    margin: 0 !important;
+  }
+
+  .css-1fzpoyk:nth-child(1) {
+    transform: translateY(-50%) translateX(-35%) scale(0.4) !important;
+  }
+
+  .youtube-about-video {
+    margin-top: 120px;
+
+    iframe {
+      width: 400px;
+    }
+  }
+
+  .partners-main {
+    padding: 0px 20px !important;
+  }
+
+  .header-section {
+    .rowHeader {
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }
+
+  .rowHeader {
+    display: flex;
+    align-items: flex-start !important;
+    flex-direction: column;
+    grid-gap: 0px !important;
+    // margin-top: 15px;
+    .logo-sweet-desktop {
+      margin-top: 6px;
+      width: 250px;
+    }
+
+    .d-flex {
+      margin-top: 10px;
+    }
+
+    .wallet-connect,
+    .d-flex {
+      width: 100%;
+    }
+
+    .wallet-connect {
+      margin-top: 15px;
+    }
+  }
+
+  .css-1fzpoyk:nth-child(1) {
+    transform: translateY(-50%) translateX(-45%) scale(0.4) !important;
+  }
+
+  .css-1fzpoyk:nth-child(3) {
+    transform: translateY(-50%) translateX(-60%) scale(0.4) !important;
+  }
+
+  .dragon-name {
+    transform: translateX(14px) !important;
+  }
+
+  // .circle-list {
+  //   transform: rotate(90deg);
+  //   margin: 25px auto;
+  //   width: 60px !important;
+  //   z-index: 15;
+  //   display: block !important;
+  // }
+
+  .footer-link {
+    .social-icons {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  // .quarters-item {
+  //   display: grid;
+  //   grid-auto-rows: auto;
+  // }
+
+  // .quarter-section {
+  //   display: flex !important;
+  //   flex-direction: column;
+  //   align-items: center;
+  //   grid-gap: 0;
+  //   max-width: 350px;
+  //   width: 100%;
+
+  //   .quarters-item {
+  //     max-width: 100% !important;
+  //   }
+
+  //   grid-template-columns: repeat(1, 295px);
+
+  //   // .quarters-item {
+  //   //   margin-left: auto;
+  //   // }
+  // }
+
+  // .info-content {
+  //   display: flex !important;
+  //   flex-direction: column;
+  //   margin-top: 25px;
+  // }
+
+  .chakra-tabs {
+    button {
+      font-size: 14px;
+    }
+  }
+
+  #road {
+    margin: 0;
+  }
+
+  .about-header {
+    margin-top: 25px;
+  }
+
+  .col-calculator {
+    margin-top: -75px !important;
+  }
+
+  .roadMap_columns .roadMap_images_content {
+    width: 550px;
+    min-height: 1000px;
+  }
+
+  .elem {
+    position: relative;
+
+    .done-step {
+      display: none;
+    }
+
+    .circle {
+      width: 30px;
+      height: 10px;
+      border: 1px solid #03a66d;
+
+      img {
+        display: none;
+      }
+    }
+
+    .active {
+      background-color: #03a66d;
+    }
+
+    .line {
+      display: none !important;
+    }
+
+    .sweet-step {
+      display: none;
+    }
+  }
+
+  .roadMap-text {
+    margin-bottom: 15px !important;
+  }
+
+  .about-header {
+    line-height: 25px;
+    font-size: 20px !important;
+  }
+
+  .about-text {
+    font-size: 16px;
+  }
+
+  .calculator-content .calculator-text {
+    padding: 0 !important;
+    margin-bottom: 15px;
+    font-size: 16px !important;
+  }
+
+  .social_columns .roadMap_container,
+  .social-border {
+    min-width: 350px !important;
+  }
+
+  .img-block-top {
+    display: flex;
+  }
+
+  .img-block {
+    display: none;
+  }
+
+  .social-border .social-item {
+    height: 50px;
+  }
+
+  .tire-container {
+    min-width: 300px !important;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .columns {
+    .tire-container {
+      min-width: 300px !important;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .card-precent {
+    max-width: 400px;
+    width: 100%;
+  }
+
+  .roadMap_columns .roadMap_images_content {
+    width: 345px;
+  }
+
+  .calculator-left-align {
+    margin-top: -15px;
+  }
+
+  .tire-container .calculator {
+    min-height: 580px !important;
+    width: 360px !important;
+
+    .calculator-content {
+      position: static;
+      margin-top: 160px;
+    }
+  }
+
+  .roadMap_columns .roadMap_images_content {
+    background-image: url("./svg/mobile-roadmap.png");
+    background-size: 100% 100%;
+    background-size: contain;
+
+    background-repeat: no-repeat;
+  }
+
+  .parent-item-card {
+    grid-template-columns: 150px 150px;
+  }
+
+  .tire-container {
+    min-width: 335px !important;
+  }
+
+  .calculator-sweetcoin-input {
+    width: 80% !important;
+  }
+
+  .calculator-sweetcoin-footer-input {
+    width: 95% !important;
+  }
+
+  .chakra-input__group {
+    margin-right: 16px;
+  }
+
+  .calc-columns .tire-container .calculator {
+    background-size: 100% 100%;
+  }
+
+  .footer-parent-section {
+    display: flex;
+    // flex-direction: column-reverse;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 0 !important;
+
+    .footer-nav {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  .social_columns {
+    margin-top: 25px !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .connected-wallet-header {
+    display: flex;
+    justify-content: center;
+
+    p {
+      margin: 1.5px;
+    }
+
+    .disconnect-wallet-crypto {
+      height: 25px;
+      font-size: 14px;
+    }
+  }
+
+  .youtube-about-video {
+    iframe {
+      width: 350px;
+      height: 250px;
+    }
+  }
+
+  .parent-drag {
+    margin-top: 210px;
+  }
+
+  .content-slider {
+    max-width: 80% !important;
+  }
+
+  .calculator-text {
+    margin-bottom: 10px !important;
+  }
+
+  .calculator-left-align {
+    .nft-stacking {
+      margin-top: 15px;
+    }
+  }
+
+  .tire-container {
+    .calculator {
+      max-width: 350px !important;
+      width: 100%;
+    }
+  }
+
+  .tabs-calc .css-5nopcy[aria-selected="true"],
+  .tabs-calc .css-5nopcy[data-selected] {
+    font-size: 13px !important;
+  }
+
+  .until-and-error-text {
+    width: 100%;
+    padding: 0px 5px;
+  }
+
+  .warning-text {
+    margin-left: 180px;
+    width: 130px;
+    margin-right: 15px;
+  }
+
+  .war-text {
+    width: 190px !important;
+  }
+
+  .rowHeader {
+    .css-1v9ca19 {
+      width: 174px;
+
+      .chakra-text {
+        font-size: 11px;
+      }
+    }
+  }
+
+  .calculator-left-align {
+    .wallet-connect {
+      width: inherit !important;
+    }
+
+    .css-1v9ca19 {
+      margin-left: -70px;
+    }
+  }
+
+  .swt-calculator {
+    margin-left: 15px !important;
+  }
+
+  .swt-calculator {
+    margin-left: 7px !important;
+  }
+
+  .calculator-sweetcoin {
+    margin-left: 15px !important;
+  }
+
+  .calculator-sweetcoin-footer-input {
+    margin-left: 15px !important;
+  }
+
+  .calculator-left-align-footer {
+    text-align: right !important;
+    width: 170px !important;
+    position: relative;
+  }
+
+  .tokeno {
+    .card-precent {
+      margin-top: 30px;
+    }
+  }
+
+  .tire-cards {
+    height: 700px;
+  }
+
+  .roadMap_columns_Img {
+    width: 100% !important;
+  }
+
+  .social-drag-road {
+    padding-bottom: 30px;
+  }
+
+  .footer-parent-section {
+    padding-top: 20px !important;
+  }
+
+  .tire-container {
+    .calculator {
+      .calculator-content {
+        margin-top: 260px;
+        width: 85%;
+      }
+    }
+  }
+
+  .calculator-sweetcoin-input,
+  .calculator-sweetcoin-footer-input {
+    margin-right: 15px;
+  }
+
+  .social-border {
+    margin: 5px !important;
+  }
+
+  // .info-content {
+  //   .info-item {
+  //     min-height: 160px !important;
+  //   }
+  // }
+
+  .rowHeader {
+    padding: 0vh 0vh 0 0vh !important;
+  }
+
+  .roadMap_container-item {
+    margin: 0 !important;
+  }
+
+  .social_columns .roadMap_container .social-border {
+    min-width: 340px !important;
+  }
+
+  .tire-container {
+    margin: 0 !important;
+  }
+
+  .roadMap-header {
+    margin: 0 !important;
+  }
+
+  .tokeno,
+  .title-section {
+    margin: 0 !important;
+  }
+
+  .tokeno {
+    margin-top: 0 !important;
+  }
+
+  .footer {
+    margin-top: 33px;
+    padding-top: 110px;
+  }
+
+  .calculator-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: static !important;
+    margin-top: 45px;
+    top: 0;
+    right: inherit;
+    height: 100%;
+  }
+
+  .calculator-sweetcoin-text {
+    font-size: 14px !important;
+  }
+
+  .card-precent {
+    padding: 30px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .youtube-about-video {
+    iframe {
+      width: 300px;
+      height: 200px;
+    }
+  }
+}

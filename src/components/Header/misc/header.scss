@@ -1,0 +1,184 @@
+.rowHeader {
+  padding: 10px 3vh 10px 3vh;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(178.55deg, #5250b5 1.25%, #3b206f 97.68%);
+  grid-gap: 25px;
+  width: 100%;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+}
+
+.d-flex {
+  display: flex;
+  align-items: center;
+  .content-container {
+    padding-left: 35px;
+  }
+}
+
+.buttons-connected {
+  margin-right: 20px;
+  display: flex;
+
+  .buy-sweet-btn {
+    background-color: #03a66d !important;
+    border: 1px solid #03a66d;
+    color: white !important;
+  }
+}
+
+.balances-block {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin: 10px 0px;
+
+  .bust-block {
+    display: flex;
+    align-items: center;
+    grid-gap: 5px;
+  }
+
+  .swt-balance-logo {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.header-buy-sweet {
+  .buy-header {
+    padding: 0 !important;
+    position: relative;
+    color: #205072 !important;
+    top: -10px;
+  }
+}
+
+.price-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0px;
+}
+
+.buy-sweet-btn-footer {
+  background: #03a66d;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  color: #ffffff;
+  width: 112px;
+  height: 40px;
+  margin-top: 20px;
+}
+
+.max-input-counter {
+  display: flex;
+  grid-gap: 15px;
+}
+
+.max-btn-sweet {
+  background-color: #03a66d !important;
+  color: white;
+}
+
+.social-icons-header {
+  margin-top: 15px;
+  background-image: url("../../../svg/social-bg.png");
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: space-around;
+  background-color: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  align-items: center;
+  height: 60px;
+  max-width: 400px;
+  // width: 100%;
+  .show-hover {
+    display: none;
+  }
+  a {
+    background: linear-gradient(#131313 100%, #5e5e5e 100%);
+    width: 39px;
+    height: 38px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      width: 25px;
+      path {
+        fill: #b9aeae;
+      }
+    }
+    &:nth-child(4) {
+      &:hover {
+        .show-hover {
+          display: block;
+        }
+        .hide-hover {
+          display: none;
+        }
+      }
+    }
+
+    &:nth-child(1) {
+      &:hover {
+        background: #0088cc !important;
+        svg {
+          path {
+            fill: white;
+          }
+        }
+      }
+    }
+    &:nth-child(2) {
+      &:hover {
+        background: #1da1f2 !important;
+        svg {
+          path {
+            fill: white;
+          }
+        }
+      }
+    }
+    &:nth-child(3) {
+      &:hover {
+        background: #1b74e4 !important;
+        svg {
+          path {
+            fill: white;
+          }
+        }
+      }
+    }
+    &:nth-child(5) {
+      &:hover {
+        background: #ff0000 !important;
+        svg {
+          path {
+            fill: white;
+          }
+        }
+      }
+    }
+    &:nth-child(6) {
+      &:hover {
+        background: black !important;
+        svg {
+          path {
+            fill: white;
+          }
+        }
+      }
+      svg {
+        width: inherit;
+      }
+    }
+  }
+}

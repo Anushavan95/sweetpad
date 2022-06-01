@@ -1,0 +1,39 @@
+name: Build and publish to CF Workers
+
+on:
+  push:
+    branches:
+      - master
+      - dev
+      - stage
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    name: Deploy
+    steps:
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+      - uses: actions/checkout@v2
+      - name: Set WORKSPACE [dev]
+        if: endsWith(github.ref, '/dev')
+        run: |
+          echo "WRANGLER_ENV=dev" >> $GITHUB_ENV
+      - name: Set WORKSPACE [stage]
+        if: endsWith(github.ref, '/stage')
+        run: |
+          echo "WRANGLER_ENV=stage" >> $GITHUB_ENV
+      - name: Set WORKSPACE [production]
+        if: endsWith(github.ref, '/master')
+        run: |
+          echo "WRANGLER_ENV=" >> $GITHUB_ENV
+      - name: Install Dependecies
+        run: npm install
+      - name: Build
+        run: CI=false npm run build
+      - name: Publish
+        uses: cloudflare/wrangler-action@1.3.0
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          environment: ${{ env.WRANGLER_ENV }}

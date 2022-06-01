@@ -1,0 +1,127 @@
+header {
+  color: white;
+  padding: 2vh 3vh 4vh 3vh;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.rowHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  /* flex-wrap: wrap; */
+  grid-gap: 25px;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin: 0 0 1rem;
+}
+
+header h2 {
+  font-weight: bold;
+  font-size: 30px;
+  color: #03383e;
+}
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+
+
+.buttons-connected {
+  margin-right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+}
+
+.buttons-connected .buy-sweet-btn {
+  background-color: #03a66d !important;
+  border: 1px solid #03a66d;
+  color: white !important;
+}
+
+.balances-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 10px 0px;
+}
+
+.balances-block .bust-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: 5px;
+}
+
+.balances-block .swt-balance-logo {
+  width: 20px;
+  height: 20px;
+}
+
+.header-buy-sweet .buy-header {
+  padding: 0 !important;
+  position: relative;
+  color: #205072 !important;
+  top: -10px;
+}
+
+.price-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 20px 0px;
+}
+
+.buy-sweet-btn-footer {
+  background: #03a66d;
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  color: #ffffff;
+  width: 112px;
+  height: 40px;
+  margin-top: 20px;
+}
+
+.max-input-counter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  grid-gap: 15px;
+}
+
+.max-btn-sweet {
+  background-color: #03a66d !important;
+  color: white;
+}
+/*# sourceMappingURL=header.css.map */

@@ -1,0 +1,13 @@
+name = "sweetpad-front"
+type = "webpack"
+route = ''
+zone_id = ''
+account_id = ''
+usage_model = ''
+compatibility_flags = []
+workers_dev = true
+site = {bucket = "./build",entry-point = "workers-site"}
+compatibility_date = "2022-05-02"
+
+[env.stage]
+[env.dev]

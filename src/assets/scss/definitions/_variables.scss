@@ -1,0 +1,31 @@
+// colors
+$s-white:     rgba(255, 255, 255, 1);
+$s-blue-dark: rgba(3, 56, 62, 1);
+$s-blue-500:  rgba(32, 80, 114, 1);
+$s-green:     rgba(3, 166, 109, 1);
+$s-gray-900:  rgba(80, 80, 80, 1);
+$s-grey-700:  rgba(80, 80, 80, 1);
+$s-black-500: rgba(44, 44, 44, 1);
+$s-error-red: rgb(255,0,0);
+//fonts
+$font-product: "Product-sans", sans-serif;
+$font-cursive: "Comfortaa", cursive;
+//font-size
+$font-ex-lg:    38px;
+$font-lg:    32px;
+$font-md:    18px;
+$font-sm:    16px;
+$font-ex-sm: 14px;
+$font-error: 12px;
+//line-height
+$font-ex-lg-line:    46px;
+$font-lg-line:    35.68px;
+$font-md-line:    21.83px;
+$font-sm-line:    19.41px;
+$font-ex-sm-line: 16.98px;
+//shadows
+$shadow-s-black-500:       2px 16px 19px rgba(0, 0, 0, 0.04);
+$shadow-s-black-inset-300: inset 0 0 2000px rgba(255, 255, 255, 0.50);
+$shadow-s-grey-300:        -5px 5px 20px rgba(0, 0, 0, 0.05);
+//background
+$background-s-grey-500:  rgba(136, 136, 136, 0.18)

@@ -1,0 +1,39 @@
+@import "variables";
+
+@mixin text-size-ex-sm {
+  font-family: $font-product;
+  font-size: $font-ex-sm;
+  font-weight: 400;
+  font-style: normal;
+  line-height: $font-ex-sm-line;
+  letter-spacing: 0.03em;
+}
+@mixin text-size-sm {
+  font-family: $font-product;
+  font-size: $font-sm;
+  font-weight: 400;
+  font-style: normal;
+  line-height: $font-ex-sm-line;
+  letter-spacing: 0.03em;
+}
+@mixin text-size-md {
+  font-family: $font-product;
+  font-size: $font-md;
+  font-weight: 400;
+  font-style: normal;
+  line-height: $font-md-line;
+}
+@mixin typography-heading{
+  font-family: $font-cursive;
+  font-size: $font-lg;
+  font-weight: 700;
+  font-style: normal;
+  line-height: $font-lg-line;
+}
+@mixin typography-heading-text {
+  font-family: $font-cursive;
+  font-size: $font-ex-lg;
+  font-weight: 700;
+  font-style: normal;
+  line-height: $font-ex-lg-line;
+}

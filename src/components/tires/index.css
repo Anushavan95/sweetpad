@@ -1,0 +1,405 @@
+@font-face {
+  font-family: ProductSans;
+  src: url(../../assets/fonts//Product-Sans-Regular.ttf);
+}
+
+.disabledActive,
+.disabledInputActive {
+  opacity: 0.5;
+}
+
+.link-modal {
+  color: #205072;
+}
+
+.css-v9b9hc {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-align: center !important;
+  -ms-flex-align: center !important;
+  align-items: center !important;
+  z-index: 9999 !important;
+}
+
+.css-v9b9hc .css-hxtskf {
+  width: 100%;
+  padding: 20px;
+  background: radial-gradient(90.16% 143.01% at 15.32% 21.04%, rgba(239, 239, 239, 0.05) 0%, rgba(166, 219, 255, 0.0111979) 77.08%, rgba(163, 207, 245, 0.00330848) 93.23%, rgba(107, 178, 244, 0) 100%), #e5eeff url(../../svg/mobile-bg.png);
+  -webkit-box-shadow: 2px 16px 19px rgba(0, 0, 0, 0.04);
+  box-shadow: 2px 16px 19px rgba(0, 0, 0, 0.04);
+  border-radius: 20px;
+  border: 2px solid #bcbcbc;
+  background-size: cover;
+}
+
+.css-v9b9hc .css-k0waxj {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  grid-gap: 15px;
+}
+
+.css-v9b9hc .title-modal {
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #205072;
+}
+
+.css-v9b9hc .telegram-modal-section {
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.02em;
+  color: #505050;
+  font-family: ProductSans;
+}
+
+.css-v9b9hc .telegram-modal-section .tele-text-content {
+  margin-top: 20px;
+}
+
+.css-v9b9hc .telegram-modal-section .join {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.02em;
+  color: #505050;
+}
+
+.css-v9b9hc .telegram-modal-section .buttons-section {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.css-v9b9hc .telegram-modal-section .buttons-section .code {
+  border: 2px solid #03a66d !important;
+  font-weight: bold;
+  background: transparent;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.css-v9b9hc .join-telegram {
+  display: inline-block;
+  margin-left: 10px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  color: #205072;
+}
+
+.css-v9b9hc .link-telegram {
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.02em;
+  color: #03a66d;
+}
+
+.css-v9b9hc .twitter-modal-section .title-modal {
+  max-width: 230px;
+  margin: 20px auto;
+}
+
+.css-v9b9hc .twitter-modal-section .css-1c6j008 {
+  margin-top: 20px;
+}
+
+.css-v9b9hc .twitter-modal-section ul {
+  margin-top: 20px;
+}
+
+.css-v9b9hc .youtube-modal-section ul {
+  margin-top: 20px;
+}
+
+.css-v9b9hc .youtube-modal-section .css-1c6j008 {
+  margin-top: 20px;
+}
+
+.swt-input {
+  font-family: ProductSans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: #03a66d;
+}
+
+.tabs-calc {
+  margin-top: 10px;
+}
+
+.tabs-calc .chakra-tabs__tab {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+}
+
+.tabs-calc .chakra-tabs__tablist {
+  height: 42px;
+  padding: 1px;
+  background: rgba(197, 199, 234, 0.1);
+  border: 1px solid #bcbcbc;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.tabs-calc .chakra-tabs__tablist button {
+  height: 100%;
+  font-family: ProductSans;
+  font-weight: normal;
+  font-size: 16px;
+  padding: 10px !important;
+  width: 100%;
+}
+
+.tabs-calc .css-5nopcy[aria-selected="true"],
+.tabs-calc .css-5nopcy[data-selected] {
+  background: -webkit-gradient(linear, left top, left bottom, from(#03a66d), to(#03a66d));
+  background: linear-gradient(180deg, #03a66d 0%, #03a66d 100%);
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.war-text {
+  font-family: ProductSans;
+  width: 380px;
+}
+
+.line-calc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.line-calc span {
+  margin: 0px 5px;
+  height: 1px;
+  display: block;
+  width: 107px;
+  background: #205072;
+  border-radius: 20px;
+}
+
+.line-calc strong {
+  position: relative;
+  top: -2px;
+  font-family: ProductSans;
+  font-weight: normal;
+  color: #205072;
+}
+
+.until-and-error-text {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: end;
+  grid-gap: 5px;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.nft-stacking {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  margin-top: 25px;
+  color: #205072;
+}
+
+.css-k0waxj .done {
+  background: #03a66d;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  color: white;
+}
+
+.css-k0waxj .done:hover {
+  background: #0fcf8c !important;
+}
+
+.css-k0waxj .cancel {
+  background: transparent;
+  border: 2px solid #03a66d;
+  border-radius: 20px;
+  color: #03a66d;
+}
+
+.css-k0waxj .cancel:hover {
+  background: #ffffff !important;
+}
+
+.buy-sweet-roadmap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.buttons-config {
+  display: contents;
+}
+
+.line-footer {
+  margin: 20px 0px 0px 0px;
+  padding-bottom: 60px;
+}
+
+.line-footer .line-chart {
+  background: #505050;
+  border-radius: 20px;
+  height: 1px;
+}
+
+.line-footer .copyright {
+  font-family: ProductSans;
+  color: #2c2c2c;
+  font-size: 13px;
+  font-weight: normal;
+  margin-top: 33px;
+  text-align: center;
+}
+
+.checkbox-input {
+  background: #f7f4ff;
+  border: 2px solid #ffffff !important;
+}
+
+.done-label {
+  border: 3px solid white;
+  border-radius: 8px;
+}
+
+.close-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-bottom: 23px;
+}
+
+.close-label .closed-done {
+  border: 3px solid white;
+  border-radius: 8px;
+  fill: white;
+  background: #00ab6b;
+}
+
+.second-roadmap .connected,
+.second-roadmap .connect-wallet {
+  display: none;
+}
+
+
+
+.item-second-roadmap ul li:after {
+  content: "";
+  width: 210px;
+  height: 1px;
+  background: #203172 !important;
+  border-radius: 20px;
+}
+
+.buy-sweet-btn-footer,
+.approve,
+.claim {
+  background-color: #03a66d !important;
+  color: white;
+}
+
+.buy-sweet-btn-footer.show {
+  display: inline-block !important;
+}
+
+.countdown {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  grid-gap: 20px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.countdown .time-and-coin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.liner-modal {
+  width: 100%;
+  position: absolute;
+  height: 2px;
+  background-color: white;
+  top: -18px;
+}
+
+
+.buy-btn-footer {
+  position: relative;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: baseline !important;
+  -ms-flex-align: baseline !important;
+  align-items: baseline !important;
+}
+
+/*# sourceMappingURL=index.css.map */

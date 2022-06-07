@@ -185,10 +185,11 @@ img[alt="own_image"] {
 }
 
 .about-header {
+  margin-top: 25px;
   font-family: otf !important;
   color: #ffffff;
   font-weight: 500;
-  font-size: 35px;
+  font-size: 33px;
   line-height: 50px;
 }
 
@@ -202,7 +203,7 @@ img[alt="own_image"] {
 }
 
 .title-section {
-  margin-top: 140px;
+  margin-top: 160px;
   text-align: center;
   position: relative;
   z-index: 2000;
@@ -249,18 +250,27 @@ img[alt="own_image"] {
   padding: 60px;
   max-width: 700px;
 
-  background: #f6f4ff;
-  background: url("./svg/tokenomics.png"),
-    linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.3) 0%,
-      rgba(255, 255, 255, 0) 100%
-    );
+  // background: #f6f4ff;
+  // background: url("./svg/tokenomics.png"),
+  //   linear-gradient(
+  //     180deg,
+  //     rgba(255, 255, 255, 0.3) 0%,
+  //     rgba(255, 255, 255, 0) 100%
+  //   );
+  // backdrop-filter: blur(5px);
+  // /* Note: backdrop-filter has minimal browser support */
+
+  // border-radius: 30px;
+  // border: 2px solid #ffffff;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
   backdrop-filter: blur(5px);
   /* Note: backdrop-filter has minimal browser support */
-
+  border: 0.5px solid white;
   border-radius: 30px;
-  // border: 2px solid #ffffff;
   box-sizing: border-box;
   box-shadow: 0px 40px 40px rgba(106, 106, 106, 0.1);
   border-radius: 20px;
@@ -365,10 +375,13 @@ img[alt="own_image"] {
 }
 
 .item-card p {
-  color: #2c2c2c;
+  color: white;
 
   font-weight: 700;
   font-size: 18px;
+}
+.item-card {
+  color: white;
 }
 
 .dragon-icon {
@@ -410,8 +423,8 @@ img[alt="own_image"] {
 }
 
 .footer {
-  position: absolute;
-  width: 100%;
+  position: relative;
+  min-width: 100vw;
   bottom: 0;
   bottom: 0;
   background: linear-gradient(
@@ -424,6 +437,9 @@ img[alt="own_image"] {
     height: 30px;
     margin-top: 15px;
   }
+  // .main-content {
+  //   max-width: none !important;
+  // }
 }
 
 .img-block {
@@ -1208,13 +1224,13 @@ img[alt="own_image"] {
     }
   }
 
-  .roadMap_columns .roadMap_images_content {
-    background-image: url("./svg/mobile-roadmap.png");
-    background-size: 100% 100%;
-    background-size: contain;
+  // .roadMap_columns .roadMap_images_content {
+  //   // background-image: url("./svg/mobile-roadmap.png");
+  //   background-size: 100% 100%;
+  //   background-size: contain;
 
-    background-repeat: no-repeat;
-  }
+  //   background-repeat: no-repeat;
+  // }
 
   .parent-item-card {
     grid-template-columns: 150px 150px;

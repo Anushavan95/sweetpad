@@ -21,6 +21,7 @@
 .partners-component {
   z-index: 2000;
   position: relative;
+  margin-top: -75px;
   .title-partners {
     color: #205072;
     font-style: normal;
@@ -32,10 +33,10 @@
   .partners-container {
     display: flex;
     flex-wrap: wrap;
-    grid-gap: 10px;
+    grid-gap: 10px 50px;
 
     justify-content: center;
-    max-width: 980px;
+    max-width: 1200px;
     margin: 0 auto;
 
     a {
@@ -45,7 +46,15 @@
       width: 210px;
       height: 130px;
 
-      background-image: url("../../svg/partners.png");
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.3) 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      backdrop-filter: blur(5px);
+      /* Note: backdrop-filter has minimal browser support */
+
+      border-radius: 30px;
       background-size: cover;
 
       // border: 2px solid white;
@@ -107,23 +116,23 @@
   align-items: center !important;
   z-index: 9999 !important;
 
-  .css-hxtskf {
-    width: 100%;
-    padding: 20px;
-    // background-color: #E5EEFF;
-    background: radial-gradient(
-        90.16% 143.01% at 15.32% 21.04%,
-        rgba(239, 239, 239, 0.05) 0%,
-        rgba(166, 219, 255, 0.0111979) 77.08%,
-        rgba(163, 207, 245, 0.00330848) 93.23%,
-        rgba(107, 178, 244, 0) 100%
-      ),
-      #e5eeff url(../../svg/mobile-bg.png);
-    box-shadow: 2px 16px 19px rgba(0, 0, 0, 0.04);
-    border-radius: 20px;
-    border: 2px solid #bcbcbc;
-    background-size: cover;
-  }
+  // .css-hxtskf {
+  //   width: 100%;
+  //   padding: 20px;
+  //   // background-color: #E5EEFF;
+  //   // background: radial-gradient(
+  //   //     90.16% 143.01% at 15.32% 21.04%,
+  //   //     rgba(239, 239, 239, 0.05) 0%,
+  //   //     rgba(166, 219, 255, 0.0111979) 77.08%,
+  //   //     rgba(163, 207, 245, 0.00330848) 93.23%,
+  //   //     rgba(107, 178, 244, 0) 100%
+  //   //   ),
+  //   //   #e5eeff url(../../svg/mobile-bg.png);
+  //   box-shadow: 2px 16px 19px rgba(0, 0, 0, 0.04);
+  //   border-radius: 20px;
+  //   border: 2px solid #bcbcbc;
+  //   background-size: cover;
+  // }
 
   .css-k0waxj {
     display: flex;
@@ -424,13 +433,6 @@
   ul {
     li {
       font-size: 15px;
-      &:after {
-        content: "";
-        width: 210px;
-        height: 1px;
-        background: #203172 !important;
-        border-radius: 20px;
-      }
     }
   }
 }
@@ -465,7 +467,9 @@
   background-color: white;
   top: -18px;
 }
-
+.drawwer-box {
+  padding: 20px;
+}
 .buy-btn-footer {
   position: relative;
   display: flex !important;
@@ -474,7 +478,15 @@
 }
 
 .stacking-leaderboard-section {
-  background-image: url("../../svg/bg-about.png");
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  backdrop-filter: blur(5px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 30px;
   background-size: 100% 100%;
   display: flex;
   justify-content: center;
@@ -507,10 +519,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 700px;
-    height: 280px;
-    margin-top: 60px;
-    background-image: url("../../svg/bg-about.png");
+    width: 630px;
+    height: 250px;
+    margin-top: 20px;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    backdrop-filter: blur(5px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 30px;
     background-size: 100% 100%;
     position: relative;
     .link-to-sweet-channel {
@@ -588,14 +608,110 @@
     }
   }
 }
+.tokeno-drag-content {
+  position: relative;
+  .drag-tokeno-img {
+    position: absolute;
+    bottom: 0;
+    right: 500px;
+    width: 250px;
+  }
+}
+.social-item {
+  // background-image: url("../svg/socials.png");
+  min-width: 600px;
+  height: 58px;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
 
-// .react-multi-carousel-track {
-//   display: block !important;
-//   flex-direction: column !important;
-// }
+@media screen and (max-width: 2000px) {
+  .pool-title {
+    margin-bottom: 30px;
+  }
+  .about-video-youtube {
+    margin-top: 170px;
+  }
+  .roadMap_container {
+    margin-top: 125px;
+  }
+  .tires-calc {
+    margin: 0;
+  }
+}
 
-// .react-multiple-carousel__arrow--left,
-// .react-multiple-carousel__arrow--right,
-// .react-multi-carousel-dot-list {
-//   display: none;
-// }
+@media screen and (max-width: 1600px) {
+  .roadMap_container {
+    margin-top: 70px;
+  }
+  .partners-component {
+    margin-top: 0 !important;
+  }
+  .about-video-youtube {
+    margin-top: 150px !important;
+    // .videos-iframe {
+    //   width: 700px;
+    //   height: 280px;
+    // }
+  }
+  .social-item {
+    height: 50px;
+    min-width: 450px;
+  }
+  .social-item-opacity {
+    height: 48px;
+  }
+  .social_columns {
+    margin-top: 30px;
+  }
+  .drag-social,
+  .drag-tokeno-img {
+    width: 170px !important;
+  }
+  .feautured-pool {
+    max-width: 900px;
+    .feautured-pool-list-parent {
+      .feautured-pool-list {
+        height: 40px;
+      }
+      span {
+        font-size: 12px;
+      }
+      p {
+        font-size: 15px;
+        line-height: 20px;
+      }
+    }
+  }
+  .partners-component {
+    .partners-container {
+      max-width: 860px;
+      .partners-section {
+        width: 170px;
+        height: 100px;
+        img {
+          width: 120px;
+          // height: 100px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .partners-component .partners-container {
+    max-width: 1000px;
+    grid-gap: 10px 30px;
+    display: flex;
+    justify-content: inherit;
+  }
+  .stacking-leadboard-main {
+    margin-top: 150px !important;
+  }
+  .stacking-leaderboard-section {
+    width: 600px;
+    height: 300px;
+    // display: flex;
+    // align-items: inherit;
+  }
+}

@@ -61,4 +61,8 @@ export const SocialActionCreators = {
     type: SocialActionEnum.SET_SWEET_COIN,
     payload,
   }),
+  setProvider: (payload: any) => ({
+    type: SocialActionEnum.SET_PROVIDER,
+    payload,
+  }),
 };

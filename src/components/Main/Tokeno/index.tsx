@@ -72,9 +72,9 @@ const Tokeno = () => {
         </div>
         {/* <img src={Dragon} alt={"Dragon"} className={"dragon-icon"} /> */}
       </section>
-      <div className="tokeno-dragon">
+      {/* <div className="tokeno-dragon">
         <img src={DragonTokeno} alt="DragonTokeno" />
-      </div>
+      </div> */}
     </div>
   );
 };

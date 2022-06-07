@@ -92,11 +92,14 @@ class MyApp extends React.PureComponent<any, any> {
       providerOptions: this.getProviderOptions(),
     });
   }
-
   public onConnect = async () => {
     try {
       const provider = await this.web3Modal.connect();
-      await provider.enable();
+
+      let c = await provider.enable();
+      console.log(provider, "provider");
+      console.log(c, "c");
+
       const web3: any = initWeb3(provider);
       const accounts = await web3.eth.getAccounts();
       let address = accounts[0];
@@ -115,6 +118,7 @@ class MyApp extends React.PureComponent<any, any> {
         });
 
         localStorage.setItem("walletconnectedaddress", JSON.stringify(address));
+        localStorage.setItem("porvider", JSON.stringify(this.state.web3_modal));
       } else if (chainId !== 56) {
         localStorage.removeItem("walletconnectedaddress");
         alert("Please change your network to Binance Smart Chain");
@@ -160,8 +164,9 @@ class MyApp extends React.PureComponent<any, any> {
   };
 
   public render = () => {
-    let { assets, address, connected, chainId, fetching, accountLocal } =
-      this.state;
+    let { address, connected, chainId, fetching, accountLocal } = this.state;
+    console.log(this.state.web3, "www");
+
     return (
       <>
         <BuySweet

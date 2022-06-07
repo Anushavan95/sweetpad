@@ -14,6 +14,7 @@ const initialState: SocialState = {
   clickedBuySweet: false,
   busdCoin: 0,
   sweetCoin: 0,
+  provider: null,
 };
 export default function socialsReducer(
   state = initialState,
@@ -54,6 +55,8 @@ export default function socialsReducer(
       return { ...state, busdCoin: action.payload };
     case SocialActionEnum.SET_SWEET_COIN:
       return { ...state, sweetCoin: action.payload };
+    case SocialActionEnum.SET_PROVIDER:
+      return { ...state, provider: action.payload };
     default:
       return state;
   }

@@ -37,6 +37,13 @@ import BscNEWS from "../../../svg/Bsc-new.png";
 import BscNEWS_1 from "../../../svg/Bsc-new_1.png";
 
 import CryptoDaily from "../../../svg/crypto-daily.png";
+
+import NftEvenning_1 from "../../../svg/nft-evenning_1.png";
+import NftEvenning from "../../../svg/nft-evenning.png";
+
+import NftCalendar from "../../../svg/nft-calendar.png";
+import NftCalendar_1 from "../../../svg/nft-calendar_1.png";
+
 import { Button } from "@chakra-ui/react";
 
 export default function Partners() {
@@ -160,6 +167,18 @@ export default function Partners() {
           <section className="partners-section cryptotalk">
             <img src={Crypto} alt="Crypto" />
             <img src={Crypto} alt="Crypto" className="hover-show" />
+          </section>
+        </a>
+        <a href="" target="_blank">
+          <section className="partners-section cryptotalk">
+            <img src={NftEvenning} alt="Crypto" />
+            <img src={NftEvenning_1} alt="Crypto" className="hover-show" />
+          </section>
+        </a>
+        <a href="" target="_blank">
+          <section className="partners-section cryptotalk">
+            <img src={NftCalendar} alt="Crypto" />
+            <img src={NftCalendar_1} alt="Crypto" className="hover-show" />
           </section>
         </a>
       </div>

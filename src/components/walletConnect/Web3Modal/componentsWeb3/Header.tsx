@@ -57,7 +57,7 @@ const Header = (props: IHeaderProps) => {
     <SHeader {...props} className="connected-wallet-p">
       {newAddres ? (
         <div>
-          <Button type="button" onClick={handleOpen}>
+          <Button type="button" onClick={handleOpen} className="my-account">
             My Account
           </Button>
           <Drawer

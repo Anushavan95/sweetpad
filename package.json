@@ -63,6 +63,7 @@
     "react-swipeable": "^6.2.0",
     "react-swipeable-views": "^0.14.0",
     "react-telegram-login": "^1.1.2",
+    "react-use-scroll-snap": "0.0.4",
     "react-with-gesture": "^4.0.8",
     "reactjs-countdown-hook": "^1.0.5",
     "redux": "^4.1.2",

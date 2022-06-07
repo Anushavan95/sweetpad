@@ -19,21 +19,23 @@ import { ethers } from "ethers";
 import SimpleStorage_abi from "../../utils/ABI/sweet-token.json";
 import BusdToken from "../../utils/ABI/busd-token.json";
 import PresaleTokken from "../../utils/ABI/presale-token.json";
-import NftSweetTokken from "../../utils/ABI/nft-sweet-tokken.json";
+import SweetTokkenTest_abi from "../../utils/ABI/sweet-tokken-test.json";
+import SweetFreezing_abi from "../../utils/ABI/sweet-freezing-test.json";
 
 import DayDown from "./DayDown";
 import {
   sweetAddress,
   busdAddress,
   presaleAddress,
-  nftSweetAddress,
+  sweetFreezing,
 } from "../../utils/contractaddresses";
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useDisclosure } from "@chakra-ui/react";
 import ClipLoader from "react-spinners/ClipLoader";
 import { useTypedSelector } from "../../hooks/useTypedSelector";
 import { SocialActionCreators } from "../../store/reducers/socials/action-creators";
 import { useDispatch } from "react-redux";
+
 interface Iprops {
   userAccount: any;
   connectOpen: boolean;
@@ -68,7 +70,8 @@ function BuySweet({ onConnect, provider }: Iprops) {
   let busdContract: any;
   let presaleContract: any;
 
-  let sweetNftContract: any;
+  let SweetTokkenTest: any;
+  let sweetFreezingContract: any;
 
   const { isOpen, onOpen, onClose, isControlled } = useDisclosure();
   const [date, setDate] = useState<any>(null);
@@ -99,6 +102,8 @@ function BuySweet({ onConnect, provider }: Iprops) {
   }, [isConnectButtonClick, clickedBuySweet]);
 
   useEffect(() => {
+    dispatch(SocialActionCreators.setProvider(provider));
+
     if (provider) {
       let accounts = provider.eth.getAccounts();
       setLocalAddress(accounts[0]);
@@ -115,6 +120,7 @@ function BuySweet({ onConnect, provider }: Iprops) {
       );
       setStateMax(maxApprove);
     };
+
     bustData();
   }, [onConnect]);
   const onDeleteModal = () => {
@@ -129,25 +135,28 @@ function BuySweet({ onConnect, provider }: Iprops) {
       );
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
       sweetContract = new provider.eth.Contract(
-        SimpleStorage_abi as AbiItem[],
+        SweetTokkenTest_abi as AbiItem[],
         sweetAddress
       );
+      sweetFreezingContract = new provider.eth.Contract(
+        SweetFreezing_abi as AbiItem[],
+        sweetFreezing
+      );
+
       presaleContract = new provider.eth.Contract(
         PresaleTokken as AbiItem[],
         presaleAddress
       );
 
-      sweetNftContract = new provider.eth.Contract(
-        NftSweetTokken as AbiItem[],
-        nftSweetAddress
-      );
-      console.log(sweetNftContract, "sweetNftContract");
+      // sweetNftContract = new provider.eth.Contract(
+      //   NftSweetTokken as AbiItem[],
+      //   nftSweetAddress
+      // );
+      // console.log(sweetNftContract, "sweetNftContract");
       let accounts = await provider.eth.getAccounts();
-      // let a = await sweetNftContract.methods
-      //   .balanceOf("0xb2444FE0E53378E094736834067c1E2653ec3CAB")
-      //   .call();
 
-      // console.log(a, "a");
+      // addres
+      // 0x601d9D19a83D2a75e07045e7a67410a26120CE3E
 
       setContract((tempContract: any) => {
         return tempContract;
@@ -185,6 +194,7 @@ function BuySweet({ onConnect, provider }: Iprops) {
     );
 
     let accounts = await provider.eth.getAccounts();
+    // sweetcontract
     await busdContract.methods.approve(presaleAddress, maxApprove).send({
       from: accounts[0],
     });
@@ -300,7 +310,6 @@ function BuySweet({ onConnect, provider }: Iprops) {
   useEffect(() => {
     dispatch(SocialActionCreators.setAccountLocal(localAddressState));
   }, [localAddressState]);
-  console.log(sweetCoin, "sweetCoin");
 
   return (
     <Box className="buy-sweet-open">

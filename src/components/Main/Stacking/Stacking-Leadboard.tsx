@@ -1,3 +1,4 @@
+import { Button } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 
 export default function StackingLeadboard() {
@@ -35,20 +36,24 @@ export default function StackingLeadboard() {
   }, []);
 
   return (
-    <div className="stacking-leaderboard-section">
-      {/* StackingLeadboard */}
-      <ul className="leaderboard-lists">
-        {stacking.map((item: any, index: number) => {
-          return (
-            <li className="leaderboard-list-items">
-              <span>{index}</span> <h5> {item.name}</h5>{" "}
-              <span>{item.info}</span>
-              <span>{item.days}</span>
-              <span>{item.count}</span>
-            </li>
-          );
-        })}
-      </ul>
-    </div>
+    <>
+      <div className="pool-title">
+        <Button>About us</Button>
+      </div>
+      <div className="stacking-leaderboard-section">
+        <ul className="leaderboard-lists">
+          {stacking.map((item: any, index: number) => {
+            return (
+              <li className="leaderboard-list-items">
+                <span>{index}</span> <h5> {item.name}</h5>{" "}
+                <span>{item.info}</span>
+                <span>{item.days}</span>
+                <span>{item.count}</span>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    </>
   );
 }

@@ -83,19 +83,15 @@ const Drawer = (props: any) => {
                 <h3>Coins</h3>
                 <div className="balance-draw-coin">
                   <div className="balance-draw">
-                    <img src={BustSvg} alt="BustSvg" />
-                    BNB:
+                    <img src={BustSvg} alt="BustSvg" /> <span> BNB:</span>
+                    {busdCoin}
                   </div>
-
-                  {busdCoin}
                 </div>
                 <div className="balance-draw-coin">
                   <div className="balance-draw">
                     <img src={SweetLogo} alt="SweetLogo" />
-                    SWT:
+                    <span> SWT:</span> {sweetCoin}
                   </div>
-
-                  {sweetCoin}
                 </div>
               </div>
             </Box>

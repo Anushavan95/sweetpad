@@ -30,9 +30,7 @@
 //   return (
 //     <div className="roadMap_container" id="road">
 //       <h5 className="roadMap-header" id="roadMap">
-//         <div className="pool-title">
-//           <Button>Roadmap</Button>
-//         </div>
+//
 //       </h5>
 
 //       <section className="quarter-section">
@@ -69,6 +67,7 @@
 
 // export default RoadMap;
 
+import { Button } from "@chakra-ui/react";
 import React, { Component } from "react";
 // import OwlCarousel from 'react-owl-carousel';
 import Carousel from "react-multi-carousel";
@@ -128,133 +127,145 @@ class Carousels extends Component {
 
     return (
       // <!-- Main Carousel Section Start -->
-      <div id="main-slide" className="carousel slide" data-ride="carousel">
-        <div className="carousel-inner">
-          <Carousel
-            responsive={responsive}
-            additionalTransfrom={0}
-            arrows={false}
-            centerMode={false}
-            className=""
-            // dotListClass="custom-dot-list-style"
-            // draggable
-            focusOnSelect={false}
-            infinite
-            autoPlay={false}
-            itemClass=""
-            ssr={true}
-            keyBoardControl={true}
-            // minimumTouchDrag={80}
-            renderButtonGroupOutside={false}
-            renderDotsOutside={false}
-            showDots
-            sliderClass=""
-            // slidesToSlide={1}
-            // swipeable
-            // customDot={<CustomDot />}
-            // customRightArrow={<CustomRight />}
-            // customLeftArrow={<CustomLeft />}
-          >
-            {/* <div className="carousel-item active"> */}
-            <div className="quarters-item">
-              <div className="quarters-item-child">
-                <div className="title-quarter">{/* <h3>Quarter 1</h3> */}</div>
-                <ul>
-                  <li>
-                    Seed Phase
-                    <label className="done-label">
-                      <Done />
-                    </label>
-                  </li>
-                  <li>
-                    100,000 Community
-                    <label className="done-label">
-                      <Done />
-                    </label>
-                  </li>
-
-                  <li>
-                    Whitepaper
-                    <label className="done-label">
-                      <Done />
-                    </label>
-                  </li>
-                  <li>
-                    CoinMarketCap <br />
-                    ICO listing
-                    <label className="done-label">
-                      <Done />
-                    </label>
-                  </li>
-                  <li>
-                    NFT Airdrop
-                    <label className="done-label">
-                      <Done />
-                    </label>
-                  </li>
-
-                  <li> Community</li>
-                </ul>
-              </div>
-            </div>
-            {/* </div> */}
-            {/* <div className="carousel-item active "> */}
-            <div className="quarters-item">
-              <div className="quarters-item-child">
-                <div className="title-quarter">{/* <h3>Quarter 2</h3> */}</div>
-                <ul>
-                  <li>SWT coin Airdrop</li>
-                  <li>Public Sale</li>
-                  <li>Platform Launch </li>
-                  <li>Staking Launch</li>
-                  <li>Partnerships</li>
-                  <li>NFT Release</li>
-                  <li>NFT Marketplace </li>
-                  <li>
-                    Listing on Different <br></br>
-                    Exchanges
-                  </li>
-                  <li>CoinGecko Listing</li>
-                  <li className="querater-item-last-child">
-                    Influencer Marketing Push
-                  </li>
-                  {/* <li>100,000 Community</li> */}
-                </ul>
-              </div>
-            </div>
-            {/* </div> */}
-            {/* <div className="carousel-item active"> */}
-            <div className="quarters-item">
-              <div className="quarters-item-child">
-                <div className="title-quarter">{/* <h3>Quarter 3</h3> */}</div>
-                <ul>
-                  <li>Exchanger Launch</li>
-                  <li> Pools Opening</li>
-                  <li> 150,000 Community</li>
-                  <li> 5,000 Holders</li>
-                  <li> NFT Game</li>
-                  <li>Pools Openning</li>
-                </ul>
-              </div>
-            </div>
-            {/* </div> */}
-            {/* <div className="carousel-item active"> */}
-            <div className="quarters-item">
-              <div className="quarters-item-child">
-                <div className="title-quarter">{/* <h3>Quarter 4</h3> */}</div>
-                <ul>
-                  <li>Start Sweet Game</li>
-                  <li> Start Sweet Metaverse</li>
-                  <li>200,000 Community</li>
-                  <li>10,000 Holders</li>
-                </ul>
-              </div>
-            </div>
-            {/* </div> */}
-          </Carousel>
+      <>
+        <div className="pool-title">
+          <Button>Roadmap</Button>
         </div>
-      </div>
-      /* <!-- Main Carousel Section End --> */
+        <div id="main-slide" className="carousel slide" data-ride="carousel">
+          <div className="carousel-inner">
+            <Carousel
+              responsive={responsive}
+              additionalTransfrom={0}
+              arrows={false}
+              centerMode={false}
+              className=""
+              // dotListClass="custom-dot-list-style"
+              // draggable
+              focusOnSelect={false}
+              infinite
+              autoPlay={false}
+              itemClass=""
+              ssr={true}
+              keyBoardControl={true}
+              // minimumTouchDrag={80}
+              renderButtonGroupOutside={false}
+              renderDotsOutside={false}
+              showDots
+              sliderClass=""
+              // slidesToSlide={1}
+              // swipeable
+              // customDot={<CustomDot />}
+              // customRightArrow={<CustomRight />}
+              // customLeftArrow={<CustomLeft />}
+            >
+              {/* <div className="carousel-item active"> */}
+              <div className="quarters-item">
+                <div className="quarters-item-child">
+                  <div className="title-quarter">
+                    {/* <h3>Quarter 1</h3> */}
+                  </div>
+                  <ul>
+                    <li>
+                      Seed Phase
+                      <label className="done-label">
+                        <Done />
+                      </label>
+                    </li>
+                    <li>
+                      100,000 Community
+                      <label className="done-label">
+                        <Done />
+                      </label>
+                    </li>
+
+                    <li>
+                      Whitepaper
+                      <label className="done-label">
+                        <Done />
+                      </label>
+                    </li>
+                    <li>
+                      CoinMarketCap <br />
+                      ICO listing
+                      <label className="done-label">
+                        <Done />
+                      </label>
+                    </li>
+                    <li>
+                      NFT Airdrop
+                      <label className="done-label">
+                        <Done />
+                      </label>
+                    </li>
+
+                    <li> Community</li>
+                  </ul>
+                </div>
+              </div>
+              {/* </div> */}
+              {/* <div className="carousel-item active "> */}
+              <div className="quarters-item">
+                <div className="quarters-item-child">
+                  <div className="title-quarter">
+                    {/* <h3>Quarter 2</h3> */}
+                  </div>
+                  <ul>
+                    <li>SWT coin Airdrop</li>
+                    <li>Public Sale</li>
+                    <li>Platform Launch </li>
+                    <li>Staking Launch</li>
+                    <li>Partnerships</li>
+                    <li>NFT Release</li>
+                    <li>NFT Marketplace </li>
+                    <li>
+                      Listing on Different <br></br>
+                      Exchanges
+                    </li>
+                    <li>CoinGecko Listing</li>
+                    <li className="querater-item-last-child">
+                      Influencer Marketing Push
+                    </li>
+                    {/* <li>100,000 Community</li> */}
+                  </ul>
+                </div>
+              </div>
+              {/* </div> */}
+              {/* <div className="carousel-item active"> */}
+              <div className="quarters-item">
+                <div className="quarters-item-child">
+                  <div className="title-quarter">
+                    {/* <h3>Quarter 3</h3> */}
+                  </div>
+                  <ul>
+                    <li>Exchanger Launch</li>
+                    <li> Pools Opening</li>
+                    <li> 150,000 Community</li>
+                    <li> 5,000 Holders</li>
+                    <li> NFT Game</li>
+                    <li>Pools Openning</li>
+                  </ul>
+                </div>
+              </div>
+              {/* </div> */}
+              {/* <div className="carousel-item active"> */}
+              <div className="quarters-item">
+                <div className="quarters-item-child">
+                  <div className="title-quarter">
+                    {/* <h3>Quarter 4</h3> */}
+                  </div>
+                  <ul>
+                    <li>Start Sweet Game</li>
+                    <li> Start Sweet Metaverse</li>
+                    <li>200,000 Community</li>
+                    <li>10,000 Holders</li>
+                  </ul>
+                </div>
+              </div>
+              {/* </div> */}
+            </Carousel>
+          </div>
+        </div>
+      </>
     );
   }
 }

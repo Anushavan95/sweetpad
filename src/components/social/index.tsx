@@ -5,7 +5,6 @@ import { EmptyLength, WalletStatus } from "../../types/types";
 import { WalletContent } from "./WalletContent";
 import pic from "../../svg/Sweet-Dragon-social.gif";
 import picMobile from "../../svg/Sweet-Dragon-mobile.gif";
-import drag from "../../svg/dragon-social.png";
 
 import SocialService from "../../api/SocialService";
 import Step from "./step";
@@ -200,7 +199,6 @@ const SocialLinks = () => {
       ) : (
         ""
       )}
-      <img src={drag} alt="Dragon-social" className="drag-social" />
 
       <SocialModal
         setActiveStep={setActiveStep}

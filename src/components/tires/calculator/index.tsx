@@ -11,6 +11,7 @@ import SWTcalc from "./SWT/swt-calc";
 import DaysCalc from "./SWT/days-calc";
 import BuyNFT from "./NFT/Buy-NFT";
 import BuySweetButton from "../../walletConnect/BuySweetButton";
+import SwtStacking from "./SwtStacking";
 interface Props {
   days: number;
   setDays: (value: any) => void;
@@ -19,6 +20,8 @@ interface Props {
 }
 
 const Calculator = ({ days, setDays, setCard, changeCardHandler }: Props) => {
+  let addres = localStorage.getItem("walletconnectedaddress");
+
   const [sweetCoin, setSweetCoin] = useState<string>("1000000");
   const [disableTab, setDisableTab] = useState<boolean>(true);
   const [disableInput, setDisableInput] = useState<boolean>(false);
@@ -113,6 +116,9 @@ const Calculator = ({ days, setDays, setCard, changeCardHandler }: Props) => {
       ? dispatch(SocialActionCreators.setResultSlider(result))
       : dispatch(SocialActionCreators.setResultSlider(0));
   }, [result]);
+  const buyAddres = () => {
+    alert("account yes");
+  };
   return (
     <React.Fragment>
       <Box className={"calculator"}>
@@ -161,12 +167,15 @@ const Calculator = ({ days, setDays, setCard, changeCardHandler }: Props) => {
                   />
                   <Box className="buttons-group">
                     <div className="swt-nft-buttons">
-                      {/* <Button>Buy SWT</Button> */}
                       <BuySweetButton btnName={"Buy-SWT"} />
                       <BuyNFT />
                     </div>
                     <div>
-                      <Button>Stake</Button>
+                      {addres ? (
+                        <SwtStacking />
+                      ) : (
+                        <BuySweetButton btnName={"Approve"} />
+                      )}
                     </div>
                   </Box>
                 </React.Fragment>

@@ -12,6 +12,7 @@ export enum SocialActionEnum {
   SET_CLICKED_BUY = "SET_CLICKED_BUY",
   SET_BUSD_COIN = "SET_BUSD_COIN",
   SET_SWEET_COIN = "SET_SWEET_COIN",
+  SET_PROVIDER = "SET_PROVIDER",
 }
 export interface SocialState {
   result: number;
@@ -27,6 +28,7 @@ export interface SocialState {
   clickedBuySweet: boolean;
   busdCoin: number;
   sweetCoin: any;
+  provider: any;
 }
 export interface Items {
   check: boolean;

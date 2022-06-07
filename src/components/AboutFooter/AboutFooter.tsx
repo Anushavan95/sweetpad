@@ -1,15 +1,15 @@
 import { Button } from "@chakra-ui/react";
 import React, { useState } from "react";
+
 import Play from "../../svg/Play.svg";
 import Footer from "./footer";
 
 export default function AboutFooter() {
   const [show, setShow] = useState(false);
-
   return (
     <>
       <section>
-        <div className="main-content">
+        <div>
           <div className="youtube-about-video">
             <>
               <div className="about-video-youtube">
@@ -50,8 +50,8 @@ export default function AboutFooter() {
               </div>
             </>
           </div>
+          <Footer />
         </div>
-        <Footer />
       </section>
     </>
   );

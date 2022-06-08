@@ -173,10 +173,10 @@ export default function Home() {
             </div>
           </div>
           <div className="tokeno-dragon">
-            <LazyLoadImage
+            <img
               src={DragonTokeno}
               alt="DragonTokeno"
-              effect="blur"
+              // effect="blur"
               className="drag-tokeno-img"
             />
           </div>

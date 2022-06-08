@@ -25,26 +25,7 @@ const Tires = () => {
     // @ts-ignore
     return disabledTab ? <SliderByInput /> : <Slider />;
   };
-  // const [devicetype, setdevicetype] = useState("mobile");
-  // const responsive = {
-  //   superLargeDesktop: {
-  //     // the naming can be any, depends on you.
-  //     breakpoint: { max: 4000, min: 3000 },
-  //     items: 2,
-  //   },
-  //   desktop: {
-  //     breakpoint: { max: 3000, min: 1024 },
-  //     items: 2,
-  //   },
-  //   tablet: {
-  //     breakpoint: { max: 1024, min: 700 },
-  //     items: 2,
-  //   },
-  //   mobile: {
-  //     breakpoint: { max: 700, min: 300 },
-  //     items: 1,
-  //   },
-  // };
+
   return (
     <div className="tires-calc">
       <div className="pool-title">

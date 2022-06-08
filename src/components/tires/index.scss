@@ -33,7 +33,7 @@
   .partners-container {
     display: flex;
     flex-wrap: wrap;
-    grid-gap: 10px 50px;
+    grid-gap: 10px 55px;
 
     justify-content: center;
     max-width: 1200px;
@@ -43,8 +43,8 @@
       cursor: pointer;
     }
     .partners-section {
-      width: 210px;
-      height: 130px;
+      width: 200px;
+      height: 120px;
 
       background: linear-gradient(
         180deg,
@@ -365,7 +365,9 @@
     margin: 0;
   }
 }
-
+#main-slide {
+  margin-top: 20px;
+}
 .buttons-config {
   display: contents;
 }
@@ -478,6 +480,7 @@
 }
 
 .stacking-leaderboard-section {
+  margin-top: 20px;
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0.3) 0%,
@@ -560,7 +563,7 @@
 }
 
 .tires-calc {
-  margin-top: 50px;
+  // margin-top: 50px;
   .pool-title {
     position: relative;
     top: 70px;
@@ -625,6 +628,14 @@
   border-radius: 20px;
 }
 
+.buy-dragon-video {
+  width: 350px;
+  bottom: 30px;
+  right: 220px;
+  position: absolute;
+  z-index: 15;
+}
+
 @media screen and (max-width: 2000px) {
   .pool-title {
     margin-bottom: 30px;
@@ -633,7 +644,7 @@
     margin-top: 170px;
   }
   .roadMap_container {
-    margin-top: 125px;
+    margin-top: 40px;
   }
   .tires-calc {
     margin: 0;
@@ -641,6 +652,14 @@
 }
 
 @media screen and (max-width: 1600px) {
+  .social-item-container {
+    height: 40px;
+  }
+  .about-header {
+    margin-top: 40px;
+    font-size: 32px;
+    line-height: 35px;
+  }
   .roadMap_container {
     margin-top: 70px;
   }
@@ -649,17 +668,13 @@
   }
   .about-video-youtube {
     margin-top: 150px !important;
-    // .videos-iframe {
-    //   width: 700px;
-    //   height: 280px;
-    // }
   }
   .social-item {
-    height: 50px;
+    height: 40px;
     min-width: 450px;
   }
   .social-item-opacity {
-    height: 48px;
+    height: 40px;
   }
   .social_columns {
     margin-top: 30px;
@@ -696,6 +711,86 @@
       }
     }
   }
+  .stacking-leaderboard-section {
+    height: 350px;
+  }
+  .quarters-item {
+    max-width: 225px;
+    ul {
+      li {
+        font-size: 13px;
+        padding: 6px 0px;
+      }
+    }
+  }
+  .title-section {
+    margin-top: 180px;
+  }
+  .card-precent {
+    margin-top: 20px;
+    padding: 50px;
+  }
+  .tire-container {
+    .calculator {
+      min-height: 500px !important;
+      max-width: 315px !important;
+    }
+  }
+  .calculator-content {
+    .calculator-text {
+      font-size: 15px;
+      padding-bottom: 10px;
+      margin-top: 15px;
+    }
+  }
+  .swt-calculator {
+    h2 {
+      font-size: 15px;
+    }
+  }
+  .list-calc-tabs {
+    top: 85px;
+    width: 98%;
+  }
+  .buttons-group {
+    margin-top: 15px;
+  }
+  .calculator-sweetcoin-input {
+    margin-bottom: 10px;
+  }
+  .list-calc-tabs {
+    button {
+      padding: 9px 3px;
+    }
+  }
+  .col-calculator {
+    position: relative;
+    .price-dragon {
+      position: absolute !important;
+      right: 150px !important;
+      bottom: 30px !important;
+    }
+  }
+  .css-doq0dk {
+    .css-1fzpoyk {
+      height: 315px !important;
+    }
+    img[alt="own_image"] {
+      max-width: 100% !important;
+    }
+  }
+  .css-1fzpoyk:nth-child(1) {
+    transform: translateY(-50%) translateX(-25%) scale(0.6) !important;
+  }
+  .css-1fzpoyk:nth-child(3) {
+    transform: translateY(-50%) translateX(-80%) scale(0.6) !important;
+  }
+  .pool-title {
+    margin-bottom: 0;
+  }
+  .buy-dragon-video {
+    width: 200px;
+  }
 }
 
 @media screen and (max-width: 1300px) {
@@ -710,8 +805,5 @@
   }
   .stacking-leaderboard-section {
     width: 600px;
-    height: 300px;
-    // display: flex;
-    // align-items: inherit;
   }
 }

@@ -26,7 +26,8 @@ import Tires from "../../components/tires";
 import VideoComponent from "../../components/VideoComponent";
 import { SocialActionCreators } from "../../store/reducers/socials/action-creators";
 import Carousel from "react-multi-carousel";
-
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import BuyDragonVideo from "../../components/BuyDragonVideo";
 // import useScrollSnap from "react-use-scroll-snap";
 // const responsive = {
 //   desktop: { breakpoint: { max: 3000, min: 1024 }, items: 3 },
@@ -137,6 +138,7 @@ export default function Home() {
               <LivePools />
             </div>
           </div>
+          <BuyDragonVideo />
         </section>
         <section className="component-section scroll-area">
           <div className="live-feautured-conetnt">
@@ -158,7 +160,11 @@ export default function Home() {
               <SocialLinks />
             </div>
           </div>
-          <img src={drag} alt="Dragon-social" className="drag-social" />
+          <LazyLoadImage
+            src={drag}
+            alt="Dragon-social"
+            className="drag-social"
+          />
         </section>
         <section className="component-section tokeno-drag-content  scroll-area">
           <div className="tokeno-content">
@@ -167,9 +173,10 @@ export default function Home() {
             </div>
           </div>
           <div className="tokeno-dragon">
-            <img
+            <LazyLoadImage
               src={DragonTokeno}
               alt="DragonTokeno"
+              effect="blur"
               className="drag-tokeno-img"
             />
           </div>

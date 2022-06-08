@@ -7,8 +7,8 @@ import Footer from "./footer";
 export default function AboutFooter() {
   const [show, setShow] = useState(false);
   return (
-    <>
-      <section>
+    <div>
+      <section className="main-content">
         <div>
           <div className="youtube-about-video">
             <>
@@ -50,9 +50,9 @@ export default function AboutFooter() {
               </div>
             </>
           </div>
-          <Footer />
         </div>
       </section>
-    </>
+      <Footer />
+    </div>
   );
 }

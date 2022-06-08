@@ -162,6 +162,19 @@ img[alt="own_image"] {
   margin: 0 auto;
   transform: translateX(35px);
   width: 150px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 44px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: #4dd4fe;
+}
+
+.price-dragon {
+  font-size: 15px;
 }
 
 .reddit {

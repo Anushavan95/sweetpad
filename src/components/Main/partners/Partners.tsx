@@ -45,6 +45,7 @@ import NftCalendar from "../../../svg/nft-calendar.png";
 import NftCalendar_1 from "../../../svg/nft-calendar_1.png";
 
 import { Button } from "@chakra-ui/react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function Partners() {
   return (
@@ -58,7 +59,7 @@ export default function Partners() {
           target="_blank"
         >
           <section className="partners-section">
-            <img src={BscNEWS} alt="BscNEWS" />
+            <LazyLoadImage effect="blur" src={BscNEWS} alt="BscNEWS" />
             <img src={BscNEWS_1} alt="BscNEWS" className="hover-show" />
           </section>
         </a>
@@ -67,7 +68,11 @@ export default function Partners() {
           target="_blank"
         >
           <section className="partners-section">
-            <img src={CoinMarketCap} alt="CoinMarketCap" />
+            <LazyLoadImage
+              effect="blur"
+              src={CoinMarketCap}
+              alt="CoinMarketCap"
+            />
             <img
               src={CoinMarketCap_1}
               alt="CoinMarketCap"
@@ -80,7 +85,7 @@ export default function Partners() {
           target="_blank"
         >
           <section className="partners-section">
-            <img src={ICO} alt="ICO" />
+            <LazyLoadImage effect="blur" src={ICO} alt="ICO" />
             <img src={ICO_1} alt="ICO" className="hover-show" />
           </section>
         </a>
@@ -89,13 +94,13 @@ export default function Partners() {
           target="_blank"
         >
           <section className="partners-section">
-            <img src={CryptoDaily} alt="CryptoDaily" />
+            <LazyLoadImage effect="blur" src={CryptoDaily} alt="CryptoDaily" />
             <img src={CryptoDaily} alt="CryptoDaily" className="hover-show" />
           </section>
         </a>
         <a href="https://bnbproject.org/#/project/2274" target="_blank">
           <section className="partners-section">
-            <img src={Bnbcoin} alt="Bnbcoin" />
+            <LazyLoadImage effect="blur" src={Bnbcoin} alt="Bnbcoin" />
             <img src={Bnbcoin_1} alt="Bnbcoin" className="hover-show" />
           </section>
         </a>
@@ -104,7 +109,7 @@ export default function Partners() {
           target="_blank"
         >
           <section className="partners-section">
-            <img src={Coinscope} alt="Coinscope" />
+            <LazyLoadImage effect="blur" src={Coinscope} alt="Coinscope" />
             <img src={Coinscope_1} alt="Coinscope" className="hover-show" />
           </section>
         </a>
@@ -113,7 +118,11 @@ export default function Partners() {
           target="_blank"
         >
           <section className="partners-section">
-            <img src={BitcoinForum} alt="BitcoinForum" />
+            <LazyLoadImage
+              effect="blur"
+              src={BitcoinForum}
+              alt="BitcoinForum"
+            />
             <img
               src={BitcoinForum_1}
               alt="BitcoinForum"
@@ -123,7 +132,7 @@ export default function Partners() {
         </a>
         <a href="https://coinsniper.net/coin/29021" target="_blank">
           <section className="partners-section nippers">
-            <img src={Nipper_1} alt="Nipper" />
+            <LazyLoadImage effect="blur" src={Nipper_1} alt="Nipper" />
             <img src={Nipper} alt="Nipper" className="hover-show" />
           </section>
         </a>
@@ -132,31 +141,31 @@ export default function Partners() {
           target="_blank"
         >
           <section className="partners-section coinHub-news">
-            <img src={CoinHub} alt="CoinHub" />
+            <LazyLoadImage effect="blur" src={CoinHub} alt="CoinHub" />
             <img src={CoinHub_1} alt="CoinHub" className="hover-show" />
           </section>
         </a>
         <a href="https://icomarks.com/ico/sweetpad" target="_blank">
           <section className="partners-section icomarks">
-            <img src={Icomarks_1} alt="Icomarks" />
+            <LazyLoadImage effect="blur" src={Icomarks_1} alt="Icomarks" />
             <img src={Icomarks} alt="Icomarks" className="hover-show" />
           </section>
         </a>
         <a href="https://cryptoinvest.am/post.php?post=62" target="_blank">
           <section className="partners-section">
-            <img src={Export_1} alt="Export" />
+            <LazyLoadImage effect="blur" src={Export_1} alt="Export" />
             <img src={Export} alt="Export" className="hover-show" />
           </section>
         </a>
         <a href="https://icolink.com/ico-sweetpad.html" target="_blank">
           <section className="partners-section">
-            <img src={ICOcoin} alt="ICOcoin" />
+            <LazyLoadImage effect="blur" src={ICOcoin} alt="ICOcoin" />
             <img src={ICOcoin_1} alt="ICOcoin" className="hover-show" />
           </section>
         </a>
         <a href="https://icoholder.com/en/sweetpad-1016830" target="_blank">
           <section className="partners-section">
-            <img src={Icoholder} alt="Icoholder" />
+            <LazyLoadImage effect="blur" src={Icoholder} alt="Icoholder" />
             <img src={Icoholder_1} alt="Icoholder" className="hover-show" />
           </section>
         </a>
@@ -165,19 +174,19 @@ export default function Partners() {
           target="_blank"
         >
           <section className="partners-section cryptotalk">
-            <img src={Crypto} alt="Crypto" />
+            <LazyLoadImage effect="blur" src={Crypto} alt="Crypto" />
             <img src={Crypto} alt="Crypto" className="hover-show" />
           </section>
         </a>
         <a href="" target="_blank">
           <section className="partners-section cryptotalk">
-            <img src={NftEvenning} alt="Crypto" />
+            <LazyLoadImage effect="blur" src={NftEvenning} alt="Crypto" />
             <img src={NftEvenning_1} alt="Crypto" className="hover-show" />
           </section>
         </a>
         <a href="" target="_blank">
           <section className="partners-section cryptotalk">
-            <img src={NftCalendar} alt="Crypto" />
+            <LazyLoadImage effect="blur" src={NftCalendar} alt="Crypto" />
             <img src={NftCalendar_1} alt="Crypto" className="hover-show" />
           </section>
         </a>

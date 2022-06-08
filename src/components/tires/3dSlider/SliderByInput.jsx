@@ -17,22 +17,22 @@ export const SliderByInput = () => {
     goToSlide: 1,
     offsetRadius: 3,
     showNavigation: false,
-    config: config.gentle
+    config: config.gentle,
   });
 
   let slides = [
     {
       key: 0,
-      content: <img src={one} alt="own_image" />
+      content: <img src={one} alt="own_image" />,
     },
     {
       key: 1,
-      content: <img src={two} alt="own_image" />
+      content: <img src={two} alt="own_image" />,
     },
     {
       key: 2,
-      content: <img src={tree} alt="own_image" />
-    }
+      content: <img src={tree} alt="own_image" />,
+    },
   ].map((slide, index) => {
     return { ...slide, onClick: () => setState({ goToSlide: index }) };
   });
@@ -48,15 +48,27 @@ export const SliderByInput = () => {
     }
   }, [result]);
   return (
-    <div style={{ width: "100%", height: "400px", margin: "0 auto" }} className="content-slider">
+    <div
+      style={{ width: "100%", height: "400px", margin: "0 auto" }}
+      className="content-slider"
+    >
       {state.goToSlide === 0 && (
-        <img src={Airo} alt="img_1" className="dragon-name" />
+        // <img src={Airo} alt="img_1" className="dragon-name" />
+        <h2 alt="img_1" className="dragon-name">
+          Ario
+        </h2>
       )}
       {state.goToSlide === 1 && (
-        <img src={Miro} alt="img_1" className="dragon-name" />
+        // <img src={Miro} alt="img_1" className="dragon-name" />
+        <h2 alt="img_1" className="dragon-name">
+          Miro
+        </h2>
       )}
       {state.goToSlide === 2 && (
-        <img src={Neo} alt="img_1" className="dragon-name" />
+        // <img src={Neo} alt="img_1" className="dragon-name" />
+        <h2 alt="img_1" className="dragon-name">
+          Neo
+        </h2>
       )}
       <Carousel
         slides={slides}
@@ -66,13 +78,19 @@ export const SliderByInput = () => {
         animationConfig={state.config}
       />
       {state.goToSlide === 0 && (
-        <img src={AiroBottom} alt="img_2" className="dragon-name" />
+        <pre alt="img_2" className="dragon-name .price-dragon">
+          10.000 xSWT <br /> Guaranteed Allocation
+        </pre>
       )}
       {state.goToSlide === 1 && (
-        <img src={MiroBottom} alt="img_2" className="dragon-name" />
+        <pre alt="img_2" className="dragon-name  price-dragon">
+          50.000 xSWT <br /> Guaranteed Allocation
+        </pre>
       )}
       {state.goToSlide === 2 && (
-        <img src={NeoBottom} alt="img_2" className="dragon-name" />
+        <pre alt="img_2" className="dragon-name price-dragon">
+          100.000 xSWT <br /> Guaranteed Allocation
+        </pre>
       )}
       <div
         style={{
@@ -80,7 +98,7 @@ export const SliderByInput = () => {
           marginTop: "2rem",
           width: "50%",
           display: "flex",
-          justifyContent: "space-around"
+          justifyContent: "space-around",
         }}
       ></div>
     </div>

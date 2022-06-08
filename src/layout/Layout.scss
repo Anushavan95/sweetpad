@@ -130,6 +130,7 @@
   }
 }
 .live-pools-conetnt {
+  position: relative;
   margin-top: 100px;
 }
 .main-content {
@@ -407,6 +408,7 @@
 
 .social-component-content {
   position: relative;
+  margin-top: -65px;
   width: 100%;
   .main-content {
     .social-drag-road,
@@ -435,7 +437,9 @@
   }
 }
 .component-section {
+  // position: relative;
   display: flex !important;
+  min-width: 100vw;
   align-items: center;
   justify-content: center;
 }
@@ -585,7 +589,7 @@
     color: #63b9f8;
 
     font-weight: 600;
-    font-size: 26px;
+    font-size: 24px;
     line-height: 32px;
   }
 }
@@ -1483,7 +1487,7 @@ fieldset {
   max-width: 1250px;
 }
 .social_columns {
-  margin-top: 60px;
+  margin-top: 20px;
   display: flex;
   align-items: center;
   // justify-content: space-around;
@@ -1498,14 +1502,9 @@ fieldset {
 .drag-social {
   width: 200px;
   position: absolute;
-  // margin-left: auto;
-  // margin-right: auto;
-  // margin: 0 auto;
-  // left: 300px;
-  // right: 0;
-  // text-align: center;
-  bottom: 50px;
-  right: 0px;
+
+  bottom: 30px;
+  right: 150px;
 }
 
 .social-item-container {
@@ -1754,6 +1753,8 @@ fieldset {
 }
 
 .scroll-area {
+  // min-width: 100vw;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;

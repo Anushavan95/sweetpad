@@ -5,7 +5,7 @@ import Arrow from "../../../svg/arrow-up.png";
 export default function FeaturedPools() {
   const [pools, setPools] = useState<any>([]);
   useEffect(() => {
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i < 7; i++) {
       setPools((prevPolls: any) => {
         return [
           ...prevPolls,

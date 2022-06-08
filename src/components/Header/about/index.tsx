@@ -1,7 +1,6 @@
 import React from "react";
 import { Button, useToast } from "@chakra-ui/react";
-import pic from "../../svg/Sweet_Dragon.gif";
-import Dragon from "../../../svg/dragon-1.png";
+
 import TikTokLogo from "../../../svg/TikTokLogo";
 import YoutubeLogo from "../../../svg/YoutubeLogo";
 import InstagramLogo from "../../../icons/instagram-about.png";
@@ -10,6 +9,9 @@ import TwitterLogo from "../../../svg/TwitterLogo";
 import Telegram from "../../../svg/Telegram";
 import Instagram from "../../../svg/instagram.png";
 // import Tiktok from "../../../svg/tiktok.png";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import DragonVideo from "../../DragonVideo";
+
 interface Iprops {
   connectWallet: (boll: boolean) => void;
 }
@@ -47,8 +49,8 @@ const About = ({ connectWallet }: Iprops) => {
               href="https://www.facebook.com/SweetPad-official-111890581352736"
               target={"_blank"}
             >
-              <img src={Instagram} className="hide-hover" />
-              <img src={InstagramLogo} className="show-hover" />
+              <LazyLoadImage src={Instagram} className="hide-hover" />
+              <LazyLoadImage src={InstagramLogo} className="show-hover" />
             </a>
             <a
               href="https://youtube.com/channel/UCVlg4Abe1XIWbXYyD6aMixA"
@@ -90,8 +92,9 @@ const About = ({ connectWallet }: Iprops) => {
           </div>
         </div>
       </div>
+
       <div className="drag-header">
-        <img src={Dragon} alt="dragon" />
+        <DragonVideo />
       </div>
     </>
   );

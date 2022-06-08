@@ -19,23 +19,24 @@ export const Slider = () => {
     showNavigation: false,
     config: config.gentle,
     animationConfig: {
-          tension: 220, friction: 20
-    }
+      tension: 220,
+      friction: 20,
+    },
   });
 
   let slides = [
     {
       key: 2,
-      content: <img src={one} alt="own_image" />
+      content: <img src={one} alt="own_image" />,
     },
     {
       key: 1,
-      content: <img src={two} alt="own_image" />
+      content: <img src={two} alt="own_image" />,
     },
     {
       key: 3,
-      content: <img src={tree} alt="own_image" />
-    }
+      content: <img src={tree} alt="own_image" />,
+    },
   ].map((slide, index) => {
     return { ...slide, onClick: () => setState({ goToSlide: index }) };
   });
@@ -44,7 +45,10 @@ export const Slider = () => {
   }, [sliderIndex]);
 
   return (
-    <div style={{ width: "100%", height: "400px", margin: "0 auto" }} className='content-slider'>
+    <div
+      style={{ width: "100%", height: "400px", margin: "0 auto" }}
+      className="content-slider"
+    >
       {state.goToSlide === 0 && (
         <img src={dragons} alt="img_1" className="dragon-name" />
       )}
@@ -72,13 +76,13 @@ export const Slider = () => {
       )}
       <div
         style={{
-            margin: "0 auto",
-            marginTop: "2rem",
-            width: "50%",
-            display: "flex",
-            justifyContent: "space-around"
+          margin: "0 auto",
+          marginTop: "2rem",
+          width: "50%",
+          display: "flex",
+          justifyContent: "space-around",
         }}
-    />
+      />
     </div>
   );
 };

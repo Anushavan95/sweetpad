@@ -97,8 +97,6 @@ class MyApp extends React.PureComponent<any, any> {
       const provider = await this.web3Modal.connect();
 
       let c = await provider.enable();
-      console.log(provider, "provider");
-      console.log(c, "c");
 
       const web3: any = initWeb3(provider);
       const accounts = await web3.eth.getAccounts();
@@ -106,7 +104,7 @@ class MyApp extends React.PureComponent<any, any> {
       const networkId = await web3.eth.net.getId();
       const chainId = await web3.eth.chainId();
 
-      if (chainId == 56) {
+      if (chainId == 56 || 97) {
         await this.setState({
           web3,
           provider,

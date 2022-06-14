@@ -15,6 +15,7 @@ const initialState: SocialState = {
   busdCoin: 0,
   sweetCoin: 0,
   provider: null,
+  openBurgerMenu: false,
 };
 export default function socialsReducer(
   state = initialState,
@@ -57,6 +58,8 @@ export default function socialsReducer(
       return { ...state, sweetCoin: action.payload };
     case SocialActionEnum.SET_PROVIDER:
       return { ...state, provider: action.payload };
+    case SocialActionEnum.SET_OPEN_BURGER_MENU:
+      return { ...state, openBurgerMenu: !state.openBurgerMenu };
     default:
       return state;
   }

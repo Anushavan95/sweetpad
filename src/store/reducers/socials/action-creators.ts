@@ -65,4 +65,8 @@ export const SocialActionCreators = {
     type: SocialActionEnum.SET_PROVIDER,
     payload,
   }),
+  setOpenBurgerMenu: (payload: boolean) => ({
+    type: SocialActionEnum.SET_OPEN_BURGER_MENU,
+    payload,
+  }),
 };

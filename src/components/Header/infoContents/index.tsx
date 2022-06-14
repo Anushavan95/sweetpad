@@ -1,7 +1,9 @@
 import React from "react";
+import { useTypedSelector } from "../../../hooks/useTypedSelector";
 // import { TEXT_1, TEXT_2, TEXT_3, TEXT_4 } from "../../constants/infoContext";
 
 const InfoContents = () => {
+  const { openBurgerMenu } = useTypedSelector((state) => state.socials);
   let infoItemDesctop = [
     { id: 1, link: "tokenomics", title: "Tokenomics " },
     { id: 2, link: "roadMap", title: "Roadmap" },
@@ -32,12 +34,13 @@ const InfoContents = () => {
       </div>
     );
   });
+
   return (
-    <div>
-      <section className="content-container">
-        <div className="info-content">{items}</div>
-      </section>
-    </div>
+    <section
+      className={`content-container ${openBurgerMenu ? "show-nav-panel" : ""}`}
+    >
+      <div className="info-content">{items}</div>
+    </section>
   );
 };
 export default InfoContents;

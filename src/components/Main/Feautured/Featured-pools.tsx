@@ -33,7 +33,7 @@ export default function FeaturedPools() {
               <div className="name-pool">
                 <p> {poolsItem.name} </p>
                 <span>{poolsItem.info}</span>
-              </div>{" "}
+              </div>
               <strong>SLC</strong>
               <span>{poolsItem.count}</span>
               <span>{poolsItem.pos}</span>

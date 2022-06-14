@@ -44,7 +44,7 @@ export default function StackingLeadboard() {
         <ul className="leaderboard-lists">
           {stacking.map((item: any, index: number) => {
             return (
-              <li className="leaderboard-list-items">
+              <li className="leaderboard-list-items" key={index}>
                 <span>{index}</span> <h5> {item.name}</h5>{" "}
                 <span>{item.info}</span>
                 <span>{item.days}</span>

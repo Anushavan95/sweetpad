@@ -9,7 +9,11 @@ import { Button } from "@chakra-ui/react";
 // import OnboardComponent from "../walletConnect/Trust";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-const Tires = () => {
+interface Iprops {
+  isTabletOrMobile?: boolean;
+  method?: string;
+}
+const Tires = ({ isTabletOrMobile, method }: Iprops) => {
   const [days, setDays] = useState<number>(365);
   const [card, setCard] = useState<string>("The Skater");
   const { result, disabledTab } = useTypedSelector((state) => state.socials);
@@ -31,6 +35,7 @@ const Tires = () => {
       <div className="pool-title">
         <Button id="calculator-id">Tiers</Button>
       </div>
+
       <section className="content-container">
         {/* <Carousel
           swipeable={true}
@@ -50,30 +55,66 @@ const Tires = () => {
           dotListClass="custom-dot-list-style"
           itemClass="carousel-item-padding-40-px"
         > */}
-        <div className="columns calc-columns">
-          <div className="tire-container">
-            <Calculator
-              days={days}
-              setDays={(value) => {
-                setDays(value);
-              }}
-              changeCardHandler={(card, num) => {
-                changeCardHandler(card, num);
-              }}
-              setCard={(card) => {
-                setCard(card);
-              }}
-            />
-          </div>
-        </div>
-        <div className="columns col-calculator">
-          <div
-            className="tire-container tire-cards"
-            style={{ display: "block" }}
-          >
-            {renderComponent()}
-          </div>
-        </div>
+        {isTabletOrMobile ? (
+          <>
+            {method === "calculator" ? (
+              <div className="columns calc-columns">
+                <div className="tire-container">
+                  <Calculator
+                    days={days}
+                    setDays={(value) => {
+                      setDays(value);
+                    }}
+                    changeCardHandler={(card, num) => {
+                      changeCardHandler(card, num);
+                    }}
+                    setCard={(card) => {
+                      setCard(card);
+                    }}
+                  />
+                </div>
+              </div>
+            ) : (
+              <div className="columns col-calculator">
+                <div
+                  className="tire-container tire-cards"
+                  style={{ display: "block" }}
+                >
+                  {renderComponent()}
+                </div>
+              </div>
+            )}
+          </>
+        ) : (
+          <>
+            <div className="columns calc-columns">
+              <div className="tire-container">
+                <Calculator
+                  days={days}
+                  setDays={(value) => {
+                    setDays(value);
+                  }}
+                  changeCardHandler={(card, num) => {
+                    changeCardHandler(card, num);
+                  }}
+                  setCard={(card) => {
+                    setCard(card);
+                  }}
+                />
+              </div>
+            </div>
+
+            <div className="columns col-calculator">
+              <div
+                className="tire-container tire-cards"
+                style={{ display: "block" }}
+              >
+                {renderComponent()}
+              </div>
+            </div>
+          </>
+        )}
+
         {/* </Carousel> */}
       </section>
     </div>

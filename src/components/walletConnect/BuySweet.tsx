@@ -109,7 +109,7 @@ function BuySweet({ onConnect, provider }: Iprops) {
       setLocalAddress(accounts[0]);
     }
     const bustData = async () => {
-      busdContract = new provider.eth.Contract(
+      busdContract = await new provider.eth.Contract(
         BusdToken as AbiItem[],
         busdAddress
       );
@@ -392,11 +392,7 @@ function BuySweet({ onConnect, provider }: Iprops) {
                   Approve
                 </Button>
               ) : (
-                <Button
-                  className={`buy-sweet-btn-footer `}
-                  onClick={buySweet}
-                  // disabled={bust > 0 ? disableApprove : true}
-                >
+                <Button className={`buy-sweet-btn-footer `} onClick={buySweet}>
                   Buy
                 </Button>
               )}

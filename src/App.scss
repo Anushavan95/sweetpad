@@ -15,9 +15,7 @@ html {
 
 .header-section {
   margin-top: 60px !important;
-}
-.header-section {
-  // background-image: url("./svg/bg-sweet.png");
+  // background-image: url("./svg/2\ NEW.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   width: 100%;
@@ -877,30 +875,67 @@ img[alt="own_image"] {
 }
 
 @media screen and (max-width: 980px) {
+  .feautured-pool-list {
+    &:nth-child(5) {
+      display: none !important;
+    }
+
+    &:nth-child(4) {
+      display: none !important;
+    }
+    &:nth-child(3) {
+      display: none !important;
+    }
+  }
+  .social-icons-header {
+    display: none !important;
+  }
+  .rowHeader {
+    display: flex;
+    flex-direction: column;
+    .burger {
+      display: flex !important;
+    }
+    .content-container {
+      transform: translate(100%);
+      position: absolute;
+      right: 0;
+      top: 100px;
+      // left: 15px;
+      width: 350px;
+      .info-content {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+  .columns {
+    .about-header {
+      font-size: 12px !important;
+      text-align: center;
+    }
+    .about-text {
+      font-size: 10px;
+    }
+  }
   .quarters-item {
-    // background-image: url("../svg/quarter.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     position: relative;
     overflow: hidden;
-    // background: #f7f4ff;
-    // border: 3px solid #ffffff;
     box-sizing: border-box;
     border-radius: 20px;
-    // max-width: 250px;
     margin: 0 auto !important;
     width: 80% !important;
   }
   .liner {
     width: 115px;
   }
-
   .dragon-icon {
     bottom: 0;
     top: 265px !important;
     right: 0px !important;
   }
-
   .parent-item-card {
     max-width: 350px;
     display: grid;
@@ -965,10 +1000,6 @@ img[alt="own_image"] {
       padding: 0px 10px;
       width: 100% !important;
       margin: 0 auto !important;
-    }
-
-    .content-container {
-      padding: 0;
     }
   }
 }
@@ -1118,10 +1149,6 @@ img[alt="own_image"] {
     margin: 0;
   }
 
-  .about-header {
-    margin-top: 25px;
-  }
-
   .col-calculator {
     margin-top: -75px !important;
   }
@@ -1163,11 +1190,6 @@ img[alt="own_image"] {
 
   .roadMap-text {
     margin-bottom: 15px !important;
-  }
-
-  .about-header {
-    line-height: 25px;
-    font-size: 20px !important;
   }
 
   .about-text {

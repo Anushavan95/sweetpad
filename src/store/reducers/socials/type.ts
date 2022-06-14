@@ -13,6 +13,7 @@ export enum SocialActionEnum {
   SET_BUSD_COIN = "SET_BUSD_COIN",
   SET_SWEET_COIN = "SET_SWEET_COIN",
   SET_PROVIDER = "SET_PROVIDER",
+  SET_OPEN_BURGER_MENU = "SET_OPEN_BURGER_MENU",
 }
 export interface SocialState {
   result: number;
@@ -29,6 +30,7 @@ export interface SocialState {
   busdCoin: number;
   sweetCoin: any;
   provider: any;
+  openBurgerMenu: boolean;
 }
 export interface Items {
   check: boolean;

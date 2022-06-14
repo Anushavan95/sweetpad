@@ -180,8 +180,6 @@
         rgba(255, 255, 255, 0) 100%
       );
       backdrop-filter: blur(5px);
-      /* Note: backdrop-filter has minimal browser support */
-
       border-radius: 30px;
       height: 55px;
       padding: 1px 40px;
@@ -278,26 +276,6 @@
   }
 }
 .css-6e3h0h {
-  // background: #e1e7f1 !important;
-  // border: 2px solid #ffffff;
-  // box-shadow: -10px 0px 20px rgba(0, 0, 0, 0.1) !important;
-  // .account-drawwer {
-  //   height: 35px;
-  //   margin-top: 5px;
-  //   border-bottom: 2px solid white;
-  //   width: 100%;
-  //   color: #000000 !important;
-  //   h3 {
-  //     font-family: "Montserrat";
-  //     font-style: normal;
-  //     font-weight: 600;
-  //     font-size: 18px;
-  //     line-height: 17px;
-
-  //     color: #205072;
-  //   }
-  // }
-
   .account-box {
     margin: 20px 0px;
     border-bottom: 2px solid white;
@@ -334,11 +312,7 @@
 .modal.svelte-lkspmm {
   display: none !important;
 }
-// .modalBgIMage {
-//   background-image: url("../assets/modalbg.png");
-//   background-repeat: no-repeat;
-//   background-size: cover;
-// }
+
 .error-message-telegram {
   color: $s-error-red;
   font-size: $font-error;
@@ -399,12 +373,6 @@
   height: 300px;
   border: 1px solid #03a66d;
 }
-
-// .background-content {
-//   background-image: url("../svg/pageBackground.svg");
-//   background-repeat: no-repeat;
-//   background-size: cover;
-// }
 
 .social-component-content {
   position: relative;
@@ -486,47 +454,6 @@
   justify-content: space-between;
 }
 
-// .circle-list {
-//   display: inline-block;
-//   background: #fff;
-//   width: 100px;
-//   height: 1px;
-//   margin-top: 25px;
-//   position: relative;
-//   border: 2px solid #ffffff;
-
-//   &::after {
-//     content: "";
-//     width: 14px;
-//     height: 14px;
-//     background: #f3f0fa;
-//     border: 2px solid #ffffff;
-//     border-radius: 20px;
-//     position: absolute;
-//     right: -7px;
-//     z-index: 15;
-//     top: -7px;
-//   }
-
-//   &::before {
-//     content: "";
-//     width: 14px;
-//     height: 14px;
-//     border-radius: 20px;
-//     position: static;
-//     background: #f3f0fa;
-//     border: 2px solid #ffffff;
-//     position: absolute;
-//     left: -7px;
-//     top: -7px;
-//   }
-// }
-
-// .quarter-section {
-//   margin-top: 40px;
-//   display: flex;
-//   justify-content: space-between;
-// }
 .quarters-item {
   background: linear-gradient(
     180deg,
@@ -534,18 +461,15 @@
     rgba(255, 255, 255, 0) 100%
   );
   backdrop-filter: blur(5px);
-
   border-radius: 30px;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   position: relative;
   overflow: hidden;
-
   box-sizing: border-box;
   border-radius: 20px;
   max-width: 250px;
   width: 100%;
-
   .title-quarter,
   ul {
     padding: 5px 15px;
@@ -553,23 +477,19 @@
 
   ul {
     list-style: none;
-
     li {
       position: relative;
       display: flex;
       align-items: center;
       justify-content: space-between;
       color: #ffffff;
-
       padding: 10px 0px;
-
       input[type="checkbox"] {
         width: 15px;
         height: 15px;
         cursor: pointer;
         filter: hue-rotate(240deg);
       }
-
       &::after {
         content: "";
         width: 100%;
@@ -584,7 +504,6 @@
 }
 
 .title-quarter {
-  // background: rgba(255, 255, 255, 0.6);
   h3 {
     color: #63b9f8;
 
@@ -593,7 +512,6 @@
     line-height: 32px;
   }
 }
-// }
 
 .chakra-modal__body div {
   border: unset;
@@ -620,7 +538,7 @@
 }
 
 .content-container {
-  z-index: 9 !important;
+  // z-index: 9 !important;
   position: relative;
   padding: 10px;
   display: flex;
@@ -1090,18 +1008,18 @@ td {
     display: flex;
     // flex-direction: column-reverse;
   }
-  .background-content {
-    background-image: url("../svg/mobile.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
 
   .calculator-sweetcoin {
     display: flex;
     grid-column-gap: 10px;
   }
 }
-
+.background-content {
+  // background-image: url("../svg/2\ NEW.png");
+  background-repeat: no-repeat;
+  position: fixed;
+  // background-size: cover;
+}
 @media screen and (max-width: 500px) {
   .buttons-config {
     .buttons-connected {
@@ -1645,10 +1563,6 @@ fieldset {
     width: 100%;
   }
 
-  .about-header {
-    font-size: 1.5rem;
-  }
-
   .social-text-footer {
     font-size: 22px;
   }
@@ -1679,10 +1593,6 @@ fieldset {
     margin: 0px 20px;
   }
 
-  .about-header {
-    font-size: 2rem;
-  }
-
   .social_columns .roadMap_container,
   .social-border {
     width: 100%;
@@ -1695,11 +1605,6 @@ fieldset {
 }
 
 @media (max-width: 700px) {
-  .about-header {
-    position: relative;
-    z-index: 100;
-  }
-
   .content-container {
     .info-content {
       justify-content: center;

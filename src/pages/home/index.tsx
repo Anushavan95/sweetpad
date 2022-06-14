@@ -28,6 +28,8 @@ import { SocialActionCreators } from "../../store/reducers/socials/action-creato
 import Carousel from "react-multi-carousel";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import BuyDragonVideo from "../../components/BuyDragonVideo";
+import FinishedDragon from "../../components/FinishedDragon";
+import { useMediaQuery } from "react-responsive";
 // import useScrollSnap from "react-use-scroll-snap";
 // const responsive = {
 //   desktop: { breakpoint: { max: 3000, min: 1024 }, items: 3 },
@@ -36,6 +38,19 @@ import BuyDragonVideo from "../../components/BuyDragonVideo";
 // };
 
 export default function Home() {
+  const isDesktopOrLaptop = useMediaQuery({
+    query: "(min-width: 1224px)",
+  });
+  const isBigScreen = useMediaQuery({ query: "(min-width: 1824px)" });
+  // const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
+
+  const isPortrait = useMediaQuery({ query: "(orientation: portrait)" });
+  console.log(isPortrait, "isPortrait");
+
+  const isRetina = useMediaQuery({ query: "(min-resolution: 2dppx)" });
+  console.log(isBigScreen, "isBigScreen");
+
   // const scrollRef = useRef(null);
   // useScrollSnap({ ref: scrollRef, duration: 100, delay: 50 });
   // container = React.createRef();
@@ -122,9 +137,7 @@ export default function Home() {
     // <div>
     <div>
       <div className="support-scrollsnap"></div>
-      {/* <Header> */}
       <Headera connectWallet={(bool: boolean) => connectWallet(bool)} />
-      {/* </Header> */}
       <VideoComponent />
       <section className="scroll-container-sweet">
         <section className="component-section scroll-area">
@@ -146,14 +159,41 @@ export default function Home() {
               <FeaturedPools />
             </div>
           </div>
+          <FinishedDragon />
         </section>
-        <section className="component-section  scroll-area">
-          <div className="tires-content">
-            <div className="main-content partners-main">
-              <Tires />
+        {isTabletOrMobile ? (
+          <>
+            <section className="component-section  scroll-area">
+              <div className="tires-content">
+                <div className="main-content partners-main">
+                  <Tires
+                    isTabletOrMobile={isTabletOrMobile}
+                    method={"calculator"}
+                  />
+                </div>
+              </div>
+            </section>
+            <section className="component-section  scroll-area">
+              <div className="tires-content">
+                <div className="main-content partners-main">
+                  <Tires
+                    isTabletOrMobile={isTabletOrMobile}
+                    method={"slider"}
+                  />
+                </div>
+              </div>
+            </section>
+          </>
+        ) : (
+          <section className="component-section  scroll-area">
+            <div className="tires-content">
+              <div className="main-content partners-main">
+                <Tires />
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        )}
+
         <section className="social-airdrops  scroll-area">
           <div className="social-component-content">
             <div className="main-content socials-main">

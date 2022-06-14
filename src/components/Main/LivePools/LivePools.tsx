@@ -28,9 +28,10 @@ export default function LivePools() {
         <Button>LivePools</Button>
       </div>
       <div className="live-pools">
-        {pools.map((poolItem: any) => {
+        {pools.map((poolItem: any, index: number) => {
           return (
             <div
+              key={index}
               className="pool-card"
               style={{ width: "400px", height: "250px" }}
             >

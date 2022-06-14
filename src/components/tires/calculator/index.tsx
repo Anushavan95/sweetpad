@@ -174,7 +174,7 @@ const Calculator = ({ days, setDays, setCard, changeCardHandler }: Props) => {
                       {addres ? (
                         <SwtStacking />
                       ) : (
-                        <BuySweetButton btnName={"Approve"} />
+                        <BuySweetButton btnName={"Connect Wallet"} />
                       )}
                     </div>
                   </Box>

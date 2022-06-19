@@ -12,20 +12,6 @@ import classes from "./Drawer.module.scss";
 import { changeAnchor } from "./Web3Modal/helpers/drawwer-chanje";
 
 const Drawer = (props: any) => {
-  const [copied, setCopied] = useState(false);
-
-  const { open, anchor, onClose } = props;
-  const dispatch = useDispatch();
-  const { accountLocal, busdCoin, sweetCoin } = useTypedSelector(
-    (state) => state.socials
-  );
-
-  let locale: any = localStorage.getItem("walletconnectedaddress");
-  useEffect(() => {
-    if (localStorage.getItem("walletconnectedaddress")) {
-      dispatch(SocialActionCreators.setAccountLocal(locale));
-    }
-  }, [open]);
   const {
     drawer,
     animate,
@@ -35,6 +21,31 @@ const Drawer = (props: any) => {
     overlayHidden,
     header,
   } = classes;
+  const { open, anchor, onClose } = props;
+  const [copied, setCopied] = useState(false);
+  const { userNfts, currentBlock, freezesBlock, provider } = useTypedSelector(
+    (state) => state.socials
+  );
+  console.log(userNfts, currentBlock, freezesBlock, " currentBlock usernfts");
+  const [first, setfirst] = useState([]);
+  const dispatch = useDispatch();
+  const { accountLocal, busdCoin, sweetCoin } = useTypedSelector(
+    (state) => state.socials
+  );
+  let c;
+  let locale: any = localStorage.getItem("walletconnectedaddress");
+  useEffect(() => {
+    if (localStorage.getItem("walletconnectedaddress")) {
+      dispatch(SocialActionCreators.setAccountLocal(locale));
+    }
+    const data = async () => {
+      const freezes = freezesBlock.map((item) => {
+        return item[2];
+      });
+      setfirst(freezes);
+    };
+    data();
+  }, [open]);
 
   return (
     <Box>
@@ -95,6 +106,21 @@ const Drawer = (props: any) => {
                 </div>
               </div>
             </Box>
+            {userNfts.map((item) => {
+              let image = item.image.replace(
+                "ipfs://",
+                "https://ipfs.io/ipfs/"
+              );
+              return (
+                <div style={{ width: "100px" }}>
+                  <h2>{item.name}</h2>
+                  <img src={image} />
+                </div>
+              );
+            })}
+            {first.map((item) => {
+              return <li>{provider.utils.fromWei(item)}</li>;
+            })}
           </Box>
 
           <Box>

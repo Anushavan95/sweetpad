@@ -69,4 +69,16 @@ export const SocialActionCreators = {
     type: SocialActionEnum.SET_OPEN_BURGER_MENU,
     payload,
   }),
+  setUserNfts: (payload: any) => ({
+    type: SocialActionEnum.SET_USER_NFTS,
+    payload,
+  }),
+  setCurrentBlock: (payload: number | null) => ({
+    type: SocialActionEnum.SET_CURRENT_BLOCK,
+    payload,
+  }),
+  setFreezesBlock: (payload: Array<[]>) => ({
+    type: SocialActionEnum.SET_FREEZES_BLOCK,
+    payload,
+  }),
 };

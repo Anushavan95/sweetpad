@@ -1,16 +1,16 @@
+import { Box } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
-import { Box, Button } from "@chakra-ui/react";
 
+import { Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/react";
 import { useDispatch } from "react-redux";
 import { SocialActionCreators } from "../../../store/reducers/socials/action-creators";
-import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
-import LPstacking from "./LP Stacking/lp-stacking";
-import Liquidity from "./Liquidity/Liquidity";
-import NFTstacking from "./NFT/nft-stacking";
-import SWTcalc from "./SWT/swt-calc";
-import DaysCalc from "./SWT/days-calc";
-import BuyNFT from "./NFT/Buy-NFT";
 import BuySweetButton from "../../walletConnect/BuySweetButton";
+import Liquidity from "./Liquidity/Liquidity";
+import LPstacking from "./LP Stacking/lp-stacking";
+import BuyNFT from "./NFT/Buy-NFT";
+import NFTstacking from "./NFT/nft-stacking";
+import DaysCalc from "./SWT/days-calc";
+import SWTcalc from "./SWT/swt-calc";
 import SwtStacking from "./SwtStacking";
 interface Props {
   days: number;
@@ -20,8 +20,12 @@ interface Props {
 }
 
 const Calculator = ({ days, setDays, setCard, changeCardHandler }: Props) => {
-  let addres = localStorage.getItem("walletconnectedaddress");
+  let address = localStorage.getItem("walletconnectedaddress");
+  const [tabIndex, setTabIndex] = React.useState(0);
 
+  const handleTabsChange = (index) => {
+    setTabIndex(index);
+  };
   const [sweetCoin, setSweetCoin] = useState<string>("1000000");
   const [disableTab, setDisableTab] = useState<boolean>(true);
   const [disableInput, setDisableInput] = useState<boolean>(false);
@@ -116,13 +120,16 @@ const Calculator = ({ days, setDays, setCard, changeCardHandler }: Props) => {
       ? dispatch(SocialActionCreators.setResultSlider(result))
       : dispatch(SocialActionCreators.setResultSlider(0));
   }, [result]);
-  const buyAddres = () => {
-    alert("account yes");
-  };
+
   return (
     <React.Fragment>
       <Box className={"calculator"}>
-        <Tabs variant="enclosed" className="swt-chakra-tabs">
+        <Tabs
+          variant="enclosed"
+          className="swt-chakra-tabs"
+          index={tabIndex}
+          onChange={handleTabsChange}
+        >
           <TabList className="list-calc-tabs">
             <Tab>
               <pre>SWT Calculator</pre>{" "}
@@ -171,8 +178,8 @@ const Calculator = ({ days, setDays, setCard, changeCardHandler }: Props) => {
                       <BuyNFT />
                     </div>
                     <div>
-                      {addres ? (
-                        <SwtStacking />
+                      {address ? (
+                        <SwtStacking sweetCoin={sweetCoin} days={days} />
                       ) : (
                         <BuySweetButton btnName={"Connect Wallet"} />
                       )}
@@ -207,7 +214,7 @@ const Calculator = ({ days, setDays, setCard, changeCardHandler }: Props) => {
                 />
               </TabPanel>
               <TabPanel>
-                <NFTstacking />
+                <NFTstacking tabIndex={tabIndex} />
               </TabPanel>
             </TabPanels>
           </div>

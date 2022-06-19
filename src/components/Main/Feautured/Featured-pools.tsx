@@ -27,9 +27,9 @@ export default function FeaturedPools() {
         <Button>Featured Pools</Button>
       </div>
       <ul className="feautured-pool-list-parent">
-        {pools.map((poolsItem: any) => {
+        {pools.map((poolsItem: any, index: number) => {
           return (
-            <li className="feautured-pool-list">
+            <li className="feautured-pool-list" key={index}>
               <div className="name-pool">
                 <p> {poolsItem.name} </p>
                 <span>{poolsItem.info}</span>

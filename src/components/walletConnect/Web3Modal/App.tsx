@@ -163,7 +163,6 @@ class MyApp extends React.PureComponent<any, any> {
 
   public render = () => {
     let { address, connected, chainId, fetching, accountLocal } = this.state;
-    console.log(this.state.web3, "www");
 
     return (
       <>

@@ -16,6 +16,9 @@ const initialState: SocialState = {
   sweetCoin: 0,
   provider: null,
   openBurgerMenu: false,
+  userNfts: [],
+  currentBlock: null,
+  freezesBlock: [],
 };
 export default function socialsReducer(
   state = initialState,
@@ -60,6 +63,12 @@ export default function socialsReducer(
       return { ...state, provider: action.payload };
     case SocialActionEnum.SET_OPEN_BURGER_MENU:
       return { ...state, openBurgerMenu: !state.openBurgerMenu };
+    case SocialActionEnum.SET_USER_NFTS:
+      return { ...state, userNfts: action.payload };
+    case SocialActionEnum.SET_CURRENT_BLOCK:
+      return { ...state, currentBlock: action.payload };
+    case SocialActionEnum.SET_FREEZES_BLOCK:
+      return { ...state, freezesBlock: action.payload };
     default:
       return state;
   }

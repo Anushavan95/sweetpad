@@ -14,6 +14,9 @@ export enum SocialActionEnum {
   SET_SWEET_COIN = "SET_SWEET_COIN",
   SET_PROVIDER = "SET_PROVIDER",
   SET_OPEN_BURGER_MENU = "SET_OPEN_BURGER_MENU",
+  SET_USER_NFTS = "SET_USER_NFTS",
+  SET_CURRENT_BLOCK = "SET_CURRENT_BLOCK",
+  SET_FREEZES_BLOCK = "SET_FREEZES_BLOCK",
 }
 export interface SocialState {
   result: number;
@@ -31,6 +34,9 @@ export interface SocialState {
   sweetCoin: any;
   provider: any;
   openBurgerMenu: boolean;
+  userNfts: any;
+  currentBlock: number | null;
+  freezesBlock: Array<[]>;
 }
 export interface Items {
   check: boolean;

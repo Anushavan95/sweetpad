@@ -6,3 +6,4 @@ export let busdAddress = "0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56";
 
 export let presaleAddress = "0x6041791b23859869b8345CA3f0A0B2C44b71f521";
 export let sweetNftAddres = "0x2b9e982084fA59fC55EdD43da55fFD7F59542A22";
+export let sweetNftSFreezing = "0xf25E4f492c139cD0e17A3fdEa138c639B2023c47";

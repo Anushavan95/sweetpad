@@ -1,15 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
-import {
-  Header,
-  Section,
-  SectionsContainer,
-  Slide,
-  ScrollToTopOnMount,
-} from "react-fullpage";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-multi-carousel/lib/styles.css";
 import { useDispatch } from "react-redux";
-import DragonTokeno from "../../svg/dragon-tokeno.png";
+import { useMediaQuery } from "react-responsive";
 import AboutFooter from "../../components/AboutFooter/AboutFooter";
-import Footer from "../../components/AboutFooter/footer";
+import BuyDragonVideo from "../../components/BuyDragonVideo";
+import FinishedDragon from "../../components/FinishedDragon";
 import About from "../../components/Header/about";
 import Headera from "../../components/Header/misc/header";
 import FeaturedPools from "../../components/Main/Feautured/Featured-pools";
@@ -20,16 +15,10 @@ import RoadmapSecond from "../../components/Main/roadmap/RoadmapSecond";
 import StackingLeadboard from "../../components/Main/Stacking/Stacking-Leadboard";
 import Tokeno from "../../components/Main/Tokeno";
 import SocialLinks from "../../components/social";
-import drag from "../../svg/dragon-social.png";
-import "react-multi-carousel/lib/styles.css";
 import Tires from "../../components/tires";
-import VideoComponent from "../../components/VideoComponent";
 import { SocialActionCreators } from "../../store/reducers/socials/action-creators";
-import Carousel from "react-multi-carousel";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import BuyDragonVideo from "../../components/BuyDragonVideo";
-import FinishedDragon from "../../components/FinishedDragon";
-import { useMediaQuery } from "react-responsive";
+import drag from "../../svg/dragon-social.png";
+import DragonTokeno from "../../svg/dragon-tokeno.png";
 // import useScrollSnap from "react-use-scroll-snap";
 // const responsive = {
 //   desktop: { breakpoint: { max: 3000, min: 1024 }, items: 3 },
@@ -138,7 +127,6 @@ export default function Home() {
     <div>
       <div className="support-scrollsnap"></div>
       <Headera connectWallet={(bool: boolean) => connectWallet(bool)} />
-      <VideoComponent />
       <section className="scroll-container-sweet">
         <section className="component-section scroll-area">
           <div className="main-content" style={{ paddingTop: "60px" }}>

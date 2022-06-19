@@ -20,7 +20,7 @@ import SimpleStorage_abi from "../../utils/ABI/sweet-token.json";
 import BusdToken from "../../utils/ABI/busd-token.json";
 import PresaleTokken from "../../utils/ABI/presale-token.json";
 import SweetTokkenTest_abi from "../../utils/ABI/sweet-tokken-test.json";
-import SweetFreezing_abi from "../../utils/ABI/sweet-freezing-test.json";
+import SweetFreezingTest_abi from "../../utils/ABI/sweet-freezing-test.json";
 
 import DayDown from "./DayDown";
 import {
@@ -64,14 +64,13 @@ function BuySweet({ onConnect, provider }: Iprops) {
   const loading = useRef(false);
   const [stateMax, setStateMax] = useState("");
   const [localAddressState, setLocalAddress] = useState("");
-  let [color, setColor] = useState("#ffffff");
+  const [color, _] = useState("#ffffff");
   let maxApprove: any = null;
   let sweetContract: any;
   let busdContract: any;
   let presaleContract: any;
 
   let SweetTokkenTest: any;
-  let sweetFreezingContract: any;
 
   const { isOpen, onOpen, onClose, isControlled } = useDisclosure();
   const [date, setDate] = useState<any>(null);
@@ -109,6 +108,17 @@ function BuySweet({ onConnect, provider }: Iprops) {
       setLocalAddress(accounts[0]);
     }
     const bustData = async () => {
+      let freezingSweet = await new provider.eth.Contract(
+        SweetFreezingTest_abi as AbiItem[],
+        sweetFreezing
+      );
+      let accounts = await provider.eth.getAccounts();
+      console.log(freezingSweet, 545454545);
+      let getFreezes = await freezingSweet.methods
+        .getFreezes(accounts[0])
+        .call();
+
+      dispatch(SocialActionCreators.setFreezesBlock(getFreezes));
       busdContract = await new provider.eth.Contract(
         BusdToken as AbiItem[],
         busdAddress
@@ -138,25 +148,13 @@ function BuySweet({ onConnect, provider }: Iprops) {
         SweetTokkenTest_abi as AbiItem[],
         sweetAddress
       );
-      sweetFreezingContract = new provider.eth.Contract(
-        SweetFreezing_abi as AbiItem[],
-        sweetFreezing
-      );
 
       presaleContract = new provider.eth.Contract(
         PresaleTokken as AbiItem[],
         presaleAddress
       );
 
-      // sweetNftContract = new provider.eth.Contract(
-      //   NftSweetTokken as AbiItem[],
-      //   nftSweetAddress
-      // );
-      // console.log(sweetNftContract, "sweetNftContract");
       let accounts = await provider.eth.getAccounts();
-
-      // addres
-      // 0x601d9D19a83D2a75e07045e7a67410a26120CE3E
 
       setContract((tempContract: any) => {
         return tempContract;

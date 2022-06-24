@@ -1,9 +1,10 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import "react-multi-carousel/lib/styles.css";
 import { useDispatch } from "react-redux";
 import { useMediaQuery } from "react-responsive";
 import AboutFooter from "../../components/AboutFooter/AboutFooter";
+import AirdropDragon from "../../components/AirdropVideo";
 import BuyDragonVideo from "../../components/BuyDragonVideo";
+import CalculatorDragon from "../../components/CalculatorDragon";
 import FinishedDragon from "../../components/FinishedDragon";
 import About from "../../components/Header/about";
 import Headera from "../../components/Header/misc/header";
@@ -14,17 +15,16 @@ import RoadMap from "../../components/Main/roadmap";
 import RoadmapSecond from "../../components/Main/roadmap/RoadmapSecond";
 import StackingLeadboard from "../../components/Main/Stacking/Stacking-Leadboard";
 import Tokeno from "../../components/Main/Tokeno";
+import MediaDragon from "../../components/MediaDragon";
+import RoadmapVideo from "../../components/RoadmapVidep";
+import SecondRoadmapVideo from "../../components/SecondRoadmapVideo";
 import SocialLinks from "../../components/social";
+import StackingDragon from "../../components/StackingDragonVideo";
 import Tires from "../../components/tires";
+import TokenoDragon from "../../components/TokenoVideo";
+import YoutubeVideo from "../../components/YoutubeVideo";
 import { SocialActionCreators } from "../../store/reducers/socials/action-creators";
-import drag from "../../svg/dragon-social.png";
 import DragonTokeno from "../../svg/dragon-tokeno.png";
-// import useScrollSnap from "react-use-scroll-snap";
-// const responsive = {
-//   desktop: { breakpoint: { max: 3000, min: 1024 }, items: 3 },
-//   mobile: { breakpoint: { max: 464, min: 0 }, items: 1 },
-//   tablet: { breakpoint: { max: 1024, min: 464 }, items: 3 },
-// };
 
 export default function Home() {
   const isDesktopOrLaptop = useMediaQuery({
@@ -35,30 +35,9 @@ export default function Home() {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
 
   const isPortrait = useMediaQuery({ query: "(orientation: portrait)" });
-  console.log(isPortrait, "isPortrait");
 
   const isRetina = useMediaQuery({ query: "(min-resolution: 2dppx)" });
-  console.log(isBigScreen, "isBigScreen");
 
-  // const scrollRef = useRef(null);
-  // useScrollSnap({ ref: scrollRef, duration: 100, delay: 50 });
-  // container = React.createRef();
-  // const container = React.useRef<HTMLDivElement | undefined>();
-
-  // const bindScrollSnap = () => {
-  //   const element = container.current!;
-  //   createScrollSnap(
-  //     element,
-  //     {
-  //       snapDestinationY: "90%",
-  //     },
-  //     () => console.log("snapped")
-  //   );
-  // };
-
-  // useEffect(() => {
-  //   bindScrollSnap();
-  // }, []);
   const dispatch = useDispatch();
 
   const connectWallet = (bool: boolean) => {
@@ -84,7 +63,6 @@ export default function Home() {
     scrollBar: false,
     navigation: false,
     verticalAlign: false,
-
     // sectionPaddingTop: "50px",
     // sectionPaddingBottom: "50px",
     responsive: true,
@@ -92,38 +70,6 @@ export default function Home() {
   };
 
   return (
-    // <div>
-    //   <Headera connectWallet={(bool: boolean) => connectWallet(bool)} />
-    //   <div className="support-scrollsnap"></div>
-    //   <VideoComponent />
-    //   <div className="scroll-container">
-    //     <div className="scroll-area">
-    //       <div className="main-content" style={{ paddingTop: "60px" }}>
-    //         <About connectWallet={connectWallet} />
-    //       </div>
-    //     </div>
-    //     <div className="scroll-area">
-    //       1
-    //       {/* <div className="live-pools-conetnt">
-    //         <div className="main-content live-pool">
-    //           <LivePools />
-    //         </div>
-    //       </div> */}
-    //     </div>
-    //     <div className="scroll-area">
-    //       <div className="live-feautured-conetnt">
-    //         <div className="main-content feautured-pool">
-    //           <FeaturedPools />
-    //         </div>
-    //       </div>
-    //     </div>
-    //     <div className="scroll-area">
-    //       {" "}
-    //       <Tires />
-    //     </div>
-    //   </div>
-    // </div>
-    // <div>
     <div>
       <div className="support-scrollsnap"></div>
       <Headera connectWallet={(bool: boolean) => connectWallet(bool)} />
@@ -141,14 +87,14 @@ export default function Home() {
           </div>
           <BuyDragonVideo />
         </section>
-        <section className="component-section scroll-area">
+        {/* <section className="component-section scroll-area">
           <div className="live-feautured-conetnt">
             <div className="main-content feautured-pool">
               <FeaturedPools />
             </div>
           </div>
           <FinishedDragon />
-        </section>
+        </section> */}
         {isTabletOrMobile ? (
           <>
             <section className="component-section  scroll-area">
@@ -182,18 +128,15 @@ export default function Home() {
           </section>
         )}
 
-        <section className="social-airdrops  scroll-area">
+        {/* <section className="social-airdrops  scroll-area">
           <div className="social-component-content">
             <div className="main-content socials-main">
               <SocialLinks />
             </div>
           </div>
-          <LazyLoadImage
-            src={drag}
-            alt="Dragon-social"
-            className="drag-social"
-          />
-        </section>
+
+          <AirdropDragon />
+        </section> */}
         <section className="component-section tokeno-drag-content  scroll-area">
           <div className="tokeno-content">
             <div className="main-content">
@@ -201,12 +144,7 @@ export default function Home() {
             </div>
           </div>
           <div className="tokeno-dragon">
-            <img
-              src={DragonTokeno}
-              alt="DragonTokeno"
-              // effect="blur"
-              className="drag-tokeno-img"
-            />
+            <TokenoDragon />
           </div>
         </section>
         <section className="component-section  scroll-area">
@@ -215,12 +153,18 @@ export default function Home() {
               <RoadMap />
             </div>
           </div>
+          <div className="roadmap-dragon">
+            <RoadmapVideo />
+          </div>
         </section>
         <section className="component-section  scroll-area">
           <div className="tires-content">
             <div className="main-content partners-main">
               <Partners />
             </div>
+          </div>
+          <div className="partners-dragon">
+            <MediaDragon />
           </div>
         </section>
         <section className="component-section  scroll-area">
@@ -229,12 +173,18 @@ export default function Home() {
               <RoadmapSecond />
             </div>
           </div>
+          <div className="second-roadmap-dragon">
+            <SecondRoadmapVideo />
+          </div>
         </section>
         <section className="component-section  scroll-area">
           <div className="tires-content">
             <div className="main-content stacking-leadboard-main">
               <StackingLeadboard />
             </div>
+          </div>
+          <div className="stacking-dragon">
+            <StackingDragon />
           </div>
         </section>
         <section className="component-section scroll-area">

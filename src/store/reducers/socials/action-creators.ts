@@ -81,4 +81,12 @@ export const SocialActionCreators = {
     type: SocialActionEnum.SET_FREEZES_BLOCK,
     payload,
   }),
+  setFreezesNftID: (payload: Array<[]>) => ({
+    type: SocialActionEnum.SET_FREEZES_NFT_ID,
+    payload,
+  }),
+  setFreezesNft: (payload: Array<[]>) => ({
+    type: SocialActionEnum.SET_FREEZES_NFT,
+    payload,
+  }),
 };

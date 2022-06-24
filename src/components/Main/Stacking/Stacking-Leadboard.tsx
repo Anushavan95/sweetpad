@@ -38,7 +38,7 @@ export default function StackingLeadboard() {
   return (
     <>
       <div className="pool-title">
-        <Button>About us</Button>
+        <Button>Staking Leaderboard</Button>
       </div>
       <div className="stacking-leaderboard-section">
         <ul className="leaderboard-lists">

@@ -6,9 +6,6 @@ import { useTypedSelector } from "../../hooks/useTypedSelector";
 import { SliderByInput } from "./3dSlider/SliderByInput";
 import { Button } from "@chakra-ui/react";
 
-// import OnboardComponent from "../walletConnect/Trust";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
 interface Iprops {
   isTabletOrMobile?: boolean;
   method?: string;
@@ -32,62 +29,54 @@ const Tires = ({ isTabletOrMobile, method }: Iprops) => {
 
   return (
     <div className="tires-calc">
-      <div className="pool-title">
-        <Button id="calculator-id">Tiers</Button>
-      </div>
-
       <section className="content-container">
-        {/* <Carousel
-          swipeable={true}
-          draggable={false}
-          showDots={true}
-          responsive={responsive}
-          ssr={true} // means to render carousel on server-side.
-          infinite={true}
-          autoPlay={devicetype !== "mobile" ? true : false}
-          // autoPlaySpeed={1000}
-          keyBoardControl={true}
-          customTransition="all .5"
-          transitionDuration={500}
-          containerClass="carousel-container"
-          removeArrowOnDeviceType={["tablet", "mobile"]}
-          deviceType={devicetype}
-          dotListClass="custom-dot-list-style"
-          itemClass="carousel-item-padding-40-px"
-        > */}
         {isTabletOrMobile ? (
           <>
             {method === "calculator" ? (
-              <div className="columns calc-columns">
-                <div className="tire-container">
-                  <Calculator
-                    days={days}
-                    setDays={(value) => {
-                      setDays(value);
-                    }}
-                    changeCardHandler={(card, num) => {
-                      changeCardHandler(card, num);
-                    }}
-                    setCard={(card) => {
-                      setCard(card);
-                    }}
-                  />
+              <>
+                {" "}
+                <div className="pool-title">
+                  <Button id="calculator-id">Calculator</Button>
                 </div>
-              </div>
+                <div className="columns calc-columns">
+                  <div className="tire-container">
+                    <Calculator
+                      days={days}
+                      setDays={(value) => {
+                        setDays(value);
+                      }}
+                      changeCardHandler={(card, num) => {
+                        changeCardHandler(card, num);
+                      }}
+                      setCard={(card) => {
+                        setCard(card);
+                      }}
+                    />
+                  </div>
+                </div>
+              </>
             ) : (
-              <div className="columns col-calculator">
-                <div
-                  className="tire-container tire-cards"
-                  style={{ display: "block" }}
-                >
-                  {renderComponent()}
+              <>
+                {/* <div className="pool-title">
+                  <Button id="calculator-id">Tiers</Button>
+                </div> */}
+                <div className="columns col-calculator">
+                  <div
+                    className="tire-container tire-cards"
+                    style={{ display: "block" }}
+                  >
+                    {renderComponent()}
+                  </div>
                 </div>
-              </div>
+              </>
             )}
           </>
         ) : (
           <>
             <div className="columns calc-columns">
+              {/* <div className="pool-title">
+                <Button id="calculator-id">Tiers</Button>
+              </div> */}
               <div className="tire-container">
                 <Calculator
                   days={days}
@@ -114,8 +103,6 @@ const Tires = ({ isTabletOrMobile, method }: Iprops) => {
             </div>
           </>
         )}
-
-        {/* </Carousel> */}
       </section>
     </div>
   );

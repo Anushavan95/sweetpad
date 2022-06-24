@@ -3,8 +3,6 @@ import { Button, useToast } from "@chakra-ui/react";
 import { EmptyLength, WalletStatus } from "../../types/types";
 // import { WalletContext } from "../../Context/WalletContext";
 import { WalletContent } from "./WalletContent";
-import pic from "../../svg/Sweet-Dragon-social.gif";
-import picMobile from "../../svg/Sweet-Dragon-mobile.gif";
 
 import SocialService from "../../api/SocialService";
 import Step from "./step";
@@ -175,22 +173,12 @@ const SocialLinks = () => {
         </Button>
       </div>
 
-      {/* <p className="roadMap-text">
-        Join our channels and get your Sweet coin when we launch.
-      </p> */}
       <Step activeStep={activeStep} />
       <div className="social_columns">
-        {/* <div className="parent-drag">
-          <img src={pic} alt="may" className="roadMap_images" />
-          <img src={picMobile} alt="may" className="roadMap_images-mobile" />
-        </div> */}
         <div className="social-connect-links">
           <WalletContent wallet={wallet} account={accountLocal} />
           {content}
         </div>
-        {/* <div>
-          <img src={drag} alt="Dragon-social" className="drag-social" />
-        </div> */}
       </div>
       {activeStep === 7 ? (
         <div className="social-text-footer">

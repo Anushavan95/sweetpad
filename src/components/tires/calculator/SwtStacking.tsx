@@ -23,7 +23,7 @@ declare global {
 
 export default function SwtStacking({ sweetCoin, days }) {
   const dispatch = useDispatch();
-  const { provider, currentBlock } = useTypedSelector((state) => state.socials);
+  const { provider } = useTypedSelector((state) => state.socials);
   const [freezes, setFreezes] = useState(null);
   const loading = useRef(false);
   const [color, _] = useState("#ffffff");
@@ -39,15 +39,12 @@ export default function SwtStacking({ sweetCoin, days }) {
       sweetAddress
     );
     let accounts = await provider.eth.getAccounts();
-    let approved = await sweetContract.methods
-      .approve(sweetFreezing, maxApprove)
-      .send({
-        from: accounts[0],
-      });
-    let maxApproveed = provider.utils.toWei(
+    await sweetContract.methods.approve(sweetFreezing, maxApprove).send({
+      from: accounts[0],
+    });
+    provider.utils.toWei(
       await sweetContract.methods.allowance(accounts[0], sweetFreezing).call()
     );
-    localStorage.setItem("maxapprove", JSON.stringify(maxApproveed));
   };
   const freezeSwt = async () => {
     setfirst(true);
@@ -74,8 +71,6 @@ export default function SwtStacking({ sweetCoin, days }) {
 
   useEffect(() => {
     async function contractData() {
-      // dispatch(SocialActionCreators.setFreezesBlock(getFreezes));
-
       let sweetContract = await new provider.eth.Contract(
         SweetTokkenTest_abi as AbiItem[],
         sweetAddress
@@ -86,7 +81,6 @@ export default function SwtStacking({ sweetCoin, days }) {
       );
       setMaxAppproved(maxApproveed);
     }
-
     contractData();
   }, []);
   useEffect(() => {

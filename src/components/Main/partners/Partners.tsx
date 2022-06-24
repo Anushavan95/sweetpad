@@ -44,6 +44,11 @@ import NftEvenning from "../../../svg/nft-evenning.png";
 import NftCalendar from "../../../svg/nft-calendar.png";
 import NftCalendar_1 from "../../../svg/nft-calendar_1.png";
 
+import NFT from "../../../svg/NFT.png";
+import NFT1 from "../../../svg/NFT-1.png";
+import UpComming from "../../../svg/up-comming.png";
+import UpComming1 from "../../../svg/upcomming1.png";
+
 import { Button } from "@chakra-ui/react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
@@ -178,16 +183,31 @@ export default function Partners() {
             <img src={Crypto} alt="Crypto" className="hover-show" />
           </section>
         </a>
-        <a href="" target="_blank">
+        <a href="https://nftevening.com/event/sweetpadnft/" target="_blank">
           <section className="partners-section cryptotalk">
             <LazyLoadImage effect="blur" src={NftEvenning} alt="Crypto" />
             <img src={NftEvenning_1} alt="Crypto" className="hover-show" />
           </section>
         </a>
-        <a href="" target="_blank">
+        <a href="https://nftcalendar.io/event/sweetpadnft/" target="_blank">
+          <section className="partners-section cryptotalk">
+            <LazyLoadImage effect="blur" src={NFT} alt="Crypto" />
+            <img src={NFT1} alt="Crypto" className="hover-show" />
+          </section>
+        </a>
+        <a
+          href="https://www.nftdropscalendar.com/nft-drops/sweetpadnft"
+          target="_blank"
+        >
           <section className="partners-section cryptotalk">
             <LazyLoadImage effect="blur" src={NftCalendar} alt="Crypto" />
             <img src={NftCalendar_1} alt="Crypto" className="hover-show" />
+          </section>
+        </a>
+        <a href="https://www.upcomingdrop.net/" target="_blank">
+          <section className="partners-section cryptotalk">
+            <LazyLoadImage effect="blur" src={UpComming} alt="Crypto" />
+            <img src={UpComming1} alt="Crypto" className="hover-show" />
           </section>
         </a>
       </div>

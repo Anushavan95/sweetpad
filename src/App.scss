@@ -233,15 +233,6 @@ img[alt="own_image"] {
   font-family: Comfortaa;
 }
 
-.roadMap_images-mobile {
-  position: absolute;
-  position: absolute;
-  top: -230px;
-  left: 25px;
-  width: 235px;
-  display: none;
-}
-
 .desc-title {
   color: #505050;
   font-size: 18px;
@@ -378,11 +369,6 @@ img[alt="own_image"] {
 
 .item-card:nth-child(9) .item-precent {
   width: 1%;
-}
-
-.parent-drag {
-  // width: 500px;
-  margin-top: 60px;
 }
 
 .item-card p {
@@ -875,6 +861,29 @@ img[alt="own_image"] {
 }
 
 @media screen and (max-width: 980px) {
+  .content-container {
+    .stack-card {
+      max-width: 300px !important;
+      .title-stack {
+        display: none !important;
+      }
+      .stack-values {
+        grid-template-columns: 120px 120px !important;
+        div {
+          span {
+            font-size: 9px !important;
+          }
+          strong {
+            font-size: 10px !important;
+          }
+        }
+      }
+    }
+  }
+  .live-pools-conetnt {
+    margin-top: 0px !important;
+  }
+
   .feautured-pool-list {
     &:nth-child(5) {
       display: none !important;
@@ -915,7 +924,7 @@ img[alt="own_image"] {
       text-align: center;
     }
     .about-text {
-      font-size: 10px;
+      font-size: 16px;
     }
   }
   .quarters-item {
@@ -957,16 +966,7 @@ img[alt="own_image"] {
       display: flex !important;
       justify-content: center !important;
       margin: 0 auto !important;
-
-      // .quarters-item {
-      //   display: flex;
-      //   flex-direction: column;
-      // }
     }
-  }
-
-  .roadMap_images-mobile {
-    display: block;
   }
 
   .logo-mobile-sweet {
@@ -986,13 +986,6 @@ img[alt="own_image"] {
     width: 100%;
     top: 6% !important;
     transform: translateY(-50%);
-  }
-
-  .parent-drag {
-    margin-left: 0;
-    margin-top: 160px;
-    width: 260px;
-    position: relative;
   }
 
   .background-content {
@@ -1330,10 +1323,6 @@ img[alt="own_image"] {
       width: 350px;
       height: 250px;
     }
-  }
-
-  .parent-drag {
-    margin-top: 210px;
   }
 
   .content-slider {

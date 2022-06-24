@@ -2,6 +2,7 @@ import { Button } from "@chakra-ui/react";
 import React, { useState } from "react";
 
 import Play from "../../svg/Play.svg";
+import YoutubeVideo from "../YoutubeVideo";
 import Footer from "./footer";
 
 export default function AboutFooter() {
@@ -49,6 +50,9 @@ export default function AboutFooter() {
                 </div>
               </div>
             </>
+            {/* <div className="youtibe-dragon">
+              <YoutubeVideo />
+            </div> */}
           </div>
         </div>
       </section>

@@ -21,6 +21,8 @@ import BusdToken from "../../utils/ABI/busd-token.json";
 import PresaleTokken from "../../utils/ABI/presale-token.json";
 import SweetTokkenTest_abi from "../../utils/ABI/sweet-tokken-test.json";
 import SweetFreezingTest_abi from "../../utils/ABI/sweet-freezing-test.json";
+import SweetNftFreezingAbi from "../../utils/ABI/nft-freezing-test.json";
+import SweetNftAbi from "../../utils/ABI/sweetNFT-test.json";
 
 import DayDown from "./DayDown";
 import {
@@ -28,6 +30,8 @@ import {
   busdAddress,
   presaleAddress,
   sweetFreezing,
+  sweetNftAddres,
+  sweetNftSFreezing,
 } from "../../utils/contractaddresses";
 import React, { useEffect, useRef, useState } from "react";
 import { useDisclosure } from "@chakra-ui/react";
@@ -56,6 +60,40 @@ declare global {
     [name: string]: any;
   }
 }
+let syncronusAjax = (arr, methods, time = 1000) => {
+  let len = arr.length;
+  let jsons: any = [];
+  let interval: any = null;
+  return new Promise((resolve, reject) => {
+    try {
+      arr.map(async (item, index) => {
+        let url = await methods.tokenURI(item).call();
+
+        fetch(url.replace("ipfs://", "https://ipfs.io/ipfs/"))
+          .then((res) => res.json())
+          .then((response) => {
+            jsons.push(response);
+          })
+          .catch((err) => {
+            len--;
+          });
+      });
+
+      interval = setInterval(() => {
+        if (len === jsons.length) {
+          clearInterval(interval);
+          resolve(jsons);
+        }
+      }, time);
+    } catch (error) {
+      if (interval !== null) {
+        clearInterval(interval);
+      }
+
+      reject(error);
+    }
+  });
+};
 
 function BuySweet({ onConnect, provider }: Iprops) {
   let localAddress: any = localStorage.getItem("walletconnectedaddress");
@@ -86,8 +124,13 @@ function BuySweet({ onConnect, provider }: Iprops) {
   const [contract, setContract] = useState<any>(null);
   const [bust, setBust] = useState<any>("");
   const [sweet, setSweet] = useState<any>("");
-  const { isConnectButtonClick, clickedBuySweet, busdCoin, sweetCoin } =
-    useTypedSelector((state) => state.socials);
+  const {
+    isConnectButtonClick,
+    clickedBuySweet,
+    busdCoin,
+    sweetCoin,
+    freezesNftID,
+  } = useTypedSelector((state) => state.socials);
 
   useEffect(() => {
     if (isConnectButtonClick) {
@@ -113,16 +156,35 @@ function BuySweet({ onConnect, provider }: Iprops) {
         sweetFreezing
       );
       let accounts = await provider.eth.getAccounts();
-      console.log(freezingSweet, 545454545);
       let getFreezes = await freezingSweet.methods
         .getFreezes(accounts[0])
         .call();
 
       dispatch(SocialActionCreators.setFreezesBlock(getFreezes));
+
       busdContract = await new provider.eth.Contract(
         BusdToken as AbiItem[],
         busdAddress
       );
+      let sweetNftFreeze = await new provider.eth.Contract(
+        SweetNftFreezingAbi as AbiItem[],
+        sweetNftSFreezing
+      );
+      let sweetNfts = await new provider.eth.Contract(
+        SweetNftAbi as AbiItem[],
+        sweetNftAddres
+      );
+
+      let freezesNftId = await sweetNftFreeze.methods
+        .getNftsFrozeByUser(accounts[0])
+        .call();
+
+      let jsons: any = await syncronusAjax(freezesNftId, sweetNfts.methods);
+      console.log(jsons, "connecxt");
+
+      await dispatch(SocialActionCreators.setFreezesNftID(freezesNftId));
+      await dispatch(SocialActionCreators.setFreezesNft(jsons));
+
       maxApprove = provider.utils.toWei(
         await busdContract.methods
           .allowance(JSON.parse(localAddressState), presaleAddress)

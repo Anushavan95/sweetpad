@@ -40,7 +40,8 @@
   z-index: 3000 !important;
 }
 .live-pools {
-  padding: 50px;
+  // padding: 50px;
+  margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -63,8 +64,9 @@
     border-radius: 30px;
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    max-width: 350px;
-    width: 100%;
+    width: 1000px !important;
+    height: 300px !important;
+
     display: flex;
     align-items: center;
     color: white;
@@ -131,7 +133,7 @@
 }
 .live-pools-conetnt {
   position: relative;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 .main-content {
   .pool-title {
@@ -219,8 +221,14 @@
     margin: 0;
   }
   .button-ido {
-    background-color: #6f2493 !important;
+    background-color: #4dd3fe !important;
     border-radius: 20px !important;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400 !important;
+    font-size: 15px !important;
+    line-height: 18px;
+
     &:hover {
       background-color: #983cc3 !important;
     }
@@ -275,7 +283,42 @@
     margin: 20px 0px;
   }
 }
+.frezes-count {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  span {
+    display: flex;
+    align-items: center;
+  }
+}
+.stake-logo {
+  width: 35px;
+}
+.frezes-list {
+  margin-top: 5px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-around;
+
+  .freezes-stake-claim-btn {
+    width: 55px;
+    height: 20px;
+
+    background: linear-gradient(180deg, #03a66d 0%, #03a66d 100%);
+    box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    font-size: 12px;
+  }
+}
+.coins-block,
+.sweet-freezes-block {
+  border-top: 2px solid white;
+  margin-top: 15px;
+}
 .css-6e3h0h {
+  position: relative;
   .account-box {
     margin: 20px 0px;
     border-bottom: 2px solid white;
@@ -302,12 +345,20 @@
   }
 }
 .balance-draw {
+  margin: 10px 0px;
   img {
     width: 20px;
     height: 20px;
   }
   display: flex !important;
   grid-gap: 5px;
+  justify-content: space-between;
+  .b-1,
+  .b-2,
+  .b-3 {
+    display: flex;
+    grid-gap: 15px;
+  }
 }
 .modal.svelte-lkspmm {
   display: none !important;
@@ -369,9 +420,36 @@
     justify-content: flex-end;
   }
 }
+.nft-calc {
+  .calculator-sweetcoin-footer-input {
+    display: none;
+  }
+}
+.blocks-coins-values {
+  display: flex;
+}
 .nft-cards-section {
-  height: 300px;
+  height: 250px;
+  overflow: scroll;
   border: 1px solid #03a66d;
+
+  .nft-cards {
+    display: flex;
+    flex-wrap: wrap;
+    // align-items: center;
+    // justify-content: center;
+    justify-content: space-between;
+    padding: 15px;
+    height: 100%;
+    .img-nft-card {
+      width: 60px;
+      height: 60px;
+    }
+    .nft-name {
+      color: #03a66d;
+      font-size: 12px;
+    }
+  }
 }
 
 .social-component-content {
@@ -538,19 +616,12 @@
 }
 
 .content-container {
-  // z-index: 9 !important;
   position: relative;
   padding: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   .stack-card {
-    // background: url("../svg/stake-values-bg.png"),
-    //   linear-gradient(
-    //     180deg,
-    //     rgba(255, 255, 255, 0.3) 0%,
-    //     rgba(255, 255, 255, 0) 100%
-    //   );
     border: 0.5px solid white;
 
     background: linear-gradient(
@@ -835,6 +906,7 @@ td {
   color: #ffffff;
   height: 40px !important;
   width: 160px !important;
+  border-radius: 25px !important;
 }
 .cziHkE,
 .hHdDkH,
@@ -921,16 +993,34 @@ td {
   z-index: 10;
 }
 
+.block-section-nft-and-swt {
+  display: flex;
+  justify-content: space-between;
+  .claim-nft {
+    width: 55px;
+    height: 20px;
+    background: linear-gradient(180deg, #03a66d 0%, #03a66d 100%);
+    box-shadow: 5px 0px 5px rgb(0 0 0 / 10%);
+    border-radius: 20px;
+    font-size: 12px;
+  }
+  .my-nft {
+    display: flex;
+    align-items: center;
+  }
+}
+
 .tire-container .calculator {
-  background-image: url("../svg/calculator.gif");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
   position: relative;
   max-width: 360px;
   width: 100%;
   position: relative;
   display: flex;
   justify-content: center;
+}
+.calculator-dragon-video {
+  position: absolute;
+  width: 450px;
 }
 .connected-wallet-p {
   height: 0px !important;
@@ -1015,11 +1105,10 @@ td {
   }
 }
 .background-content {
-  background-image: url("../svg/bg.png");
+  background-image: url("../svg/2\ NE.jpg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   position: fixed;
-  // background-size: cover;
 }
 @media screen and (max-width: 500px) {
   .buttons-config {
@@ -1418,13 +1507,6 @@ fieldset {
 
 .social-border {
   height: 100%;
-}
-.drag-social {
-  width: 200px;
-  position: absolute;
-
-  bottom: 30px;
-  right: 150px;
 }
 
 .social-item-container {

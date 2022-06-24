@@ -10,7 +10,6 @@ interface Iprops {
 const WalletConnect = ({ connectWallet }: Iprops) => {
   const { isOpen: connectOpen, onOpen, onClose } = useDisclosure();
   const { openBurgerMenu } = useTypedSelector((state) => state.socials);
-  console.log(openBurgerMenu, "openBurgerMenu");
   const dispatch = useDispatch();
 
   return (

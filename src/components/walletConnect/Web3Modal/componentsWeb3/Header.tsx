@@ -68,9 +68,9 @@ const Header = (props: IHeaderProps) => {
           />
         </div>
       ) : (
-        <button onClick={onConnect} className={"connect-btn-wallet"}>
+        <Button onClick={onConnect} className={"connect-btn-wallet"}>
           Connect wallet
-        </button>
+        </Button>
       )}
     </SHeader>
   );

@@ -15,7 +15,7 @@ export default function LivePools() {
             // img: PoolIcon,
             // name: "Name",
             // info: "info About Pool",
-            soon: "Comming soon",
+            soon: "PROJECTS WILL BE REVEALED SOON",
           },
         ];
       });
@@ -33,7 +33,7 @@ export default function LivePools() {
             <div
               key={index}
               className="pool-card"
-              style={{ width: "400px", height: "250px" }}
+              // style={{ width: "400px", height: "250px" }}
             >
               <p style={{ textAlign: "center" }}>{poolItem.soon}</p>
               {/* <div>

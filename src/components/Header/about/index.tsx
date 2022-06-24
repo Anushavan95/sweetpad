@@ -11,7 +11,7 @@ import Instagram from "../../../svg/instagram.png";
 // import Tiktok from "../../../svg/tiktok.png";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import DragonVideo from "../../DragonVideo";
-
+import Medium from "../../../svg/medium_logo.svg";
 interface Iprops {
   connectWallet: (boll: boolean) => void;
 }
@@ -39,6 +39,12 @@ const About = ({ connectWallet }: Iprops) => {
             <a href="https://twitter.com/SweetPad_" target={"_blank"}>
               <TwitterLogo />
             </a>
+            {/* <a
+              href="https://instagram.com/sweetpad.io?utm_medium=copy_link"
+              target={"_blank"}
+            >
+              <img src={Medium} alt="medium" />
+            </a> */}
             <a
               href="https://instagram.com/sweetpad.io?utm_medium=copy_link"
               target={"_blank"}
@@ -69,25 +75,22 @@ const About = ({ connectWallet }: Iprops) => {
         </div>
       </div> */}
         <div className="stack-card">
-          <h3 className="title-stack">
-            SWT distribution will be on 28/06/2022
-          </h3>
           <div className="stack-values">
             <div>
               <span>TOTAL VALUE STAKING</span>
-              <strong>$50 , 000 , 000</strong>
+              <strong>$0 , 000 , 000</strong>
             </div>
             <div>
               <span>UNIQUE STAKERS</span>
-              <strong>20 , 000</strong>
+              <strong>00 , 000</strong>
             </div>
             <div>
               <span>SWT STAKED</span>
-              <strong>50 , 000 , 000 SWT</strong>
+              <strong>00 , 000 , 000 SWT</strong>
             </div>
             <div>
-              <span>SWT -LP STAKED</span>
-              <strong>5 , 000 , 000</strong>
+              <span>SWT-LP STAKED</span>
+              <strong>0, 000 , 000</strong>
             </div>
           </div>
         </div>

@@ -12,6 +12,7 @@ import NFTstacking from "./NFT/nft-stacking";
 import DaysCalc from "./SWT/days-calc";
 import SWTcalc from "./SWT/swt-calc";
 import SwtStacking from "./SwtStacking";
+import CalculatorDragon from "../../CalculatorDragon";
 interface Props {
   days: number;
   setDays: (value: any) => void;
@@ -23,7 +24,7 @@ const Calculator = ({ days, setDays, setCard, changeCardHandler }: Props) => {
   let address = localStorage.getItem("walletconnectedaddress");
   const [tabIndex, setTabIndex] = React.useState(0);
 
-  const handleTabsChange = (index) => {
+  const handleTabsChange = (index: number) => {
     setTabIndex(index);
   };
   const [sweetCoin, setSweetCoin] = useState<string>("1000000");
@@ -123,6 +124,7 @@ const Calculator = ({ days, setDays, setCard, changeCardHandler }: Props) => {
 
   return (
     <React.Fragment>
+      <CalculatorDragon />
       <Box className={"calculator"}>
         <Tabs
           variant="enclosed"
@@ -214,7 +216,18 @@ const Calculator = ({ days, setDays, setCard, changeCardHandler }: Props) => {
                 />
               </TabPanel>
               <TabPanel>
-                <NFTstacking tabIndex={tabIndex} />
+                <NFTstacking
+                  tabIndex={tabIndex}
+                  isDisabledMinus={isDisabledMinus}
+                  handleDeCrease={handleDeCrease}
+                  isDisabledPlus={isDisabledPlus}
+                  handleInCrease={handleInCrease}
+                  days={days}
+                  handleChangeDays={handleChangeDays}
+                  handleBlurDays={handleBlurDays}
+                  warningText={warningText}
+                  result={result}
+                />
               </TabPanel>
             </TabPanels>
           </div>

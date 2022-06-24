@@ -54,7 +54,7 @@
       backdrop-filter: blur(5px);
       /* Note: backdrop-filter has minimal browser support */
 
-      border-radius: 30px;
+      border-radius: 20px;
       background-size: cover;
 
       // border: 2px solid white;
@@ -228,6 +228,10 @@
       margin-top: 20px;
     }
   }
+}
+.carousel-inner {
+  display: flex;
+  justify-content: space-between;
 }
 
 .swt-input {
@@ -614,14 +618,14 @@
 .tokeno-drag-content {
   position: relative;
   .drag-tokeno-img {
+    width: 350px;
+    bottom: 30px;
+    right: 220px;
     position: absolute;
-    bottom: 0;
-    right: 500px;
-    width: 250px;
+    z-index: 15;
   }
 }
 .social-item {
-  // background-image: url("../svg/socials.png");
   min-width: 600px;
   height: 58px;
   box-sizing: border-box;
@@ -635,7 +639,36 @@
   position: absolute;
   z-index: 15;
 }
+.stacking-dragon-img {
+  width: 300px;
+  bottom: 30px;
+  right: 200px;
+  position: absolute;
+  z-index: 1500;
+}
 
+.second-dragon-video {
+  width: 250px;
+  bottom: 30px;
+  right: 210px;
+  position: absolute;
+  z-index: 15;
+  z-index: 1000;
+}
+.feautured-dragon-video {
+  width: 300px;
+  bottom: -35px;
+  right: 220px;
+  position: absolute;
+  z-index: 15;
+}
+.airdrop-dragon-video {
+  width: 300px;
+  bottom: 0px;
+  right: 220px;
+  position: absolute;
+  z-index: 15;
+}
 @media screen and (max-width: 2000px) {
   .pool-title {
     margin-top: 30px;
@@ -661,7 +694,7 @@
     line-height: 35px;
   }
   .roadMap_container {
-    margin-top: 70px;
+    margin-top: 0px;
   }
   .partners-component {
     margin-top: 0 !important;
@@ -681,7 +714,7 @@
   }
   .drag-social,
   .drag-tokeno-img {
-    width: 170px !important;
+    width: 250px !important;
   }
   .feautured-pool {
     max-width: 900px;
@@ -702,10 +735,10 @@
     .partners-container {
       max-width: 860px;
       .partners-section {
-        width: 170px;
-        height: 100px;
+        width: 150px;
+        height: 80px;
         img {
-          width: 120px;
+          width: 80px;
         }
       }
     }
@@ -788,7 +821,7 @@
     margin-bottom: 0;
   }
   .buy-dragon-video {
-    width: 200px;
+    width: 300px;
   }
 }
 

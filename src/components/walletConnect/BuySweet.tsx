@@ -148,9 +148,12 @@ function BuySweet({ onConnect, provider }: Iprops) {
     }
   }, [isConnectButtonClick, clickedBuySweet]);
   useEffect(() => {
-    if (localAddress) {
+    if (localAddress || walletconnectAddress) {
       if (onConnect) {
-        onConnect();
+        // onConnect();
+        // console.log("hshhs");
+
+        dispatch(SocialActionCreators.setConnected(true));
       }
     }
   }, []);

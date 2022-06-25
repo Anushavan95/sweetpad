@@ -9,8 +9,16 @@ import TwitterLogo from "../../../svg/TwitterLogo";
 import Telegram from "../../../svg/Telegram";
 import Instagram from "../../../svg/instagram.png";
 // import Tiktok from "../../../svg/tiktok.png";
+import Hello from "../../../svg/Hello.png";
+import MediumHover from "../../../svg/medium-hover.png";
+import DiscordLogo from "../../../svg/discord-logo.png";
+import DiscordHover from "../../../svg/discord-hover.png";
+import Reddit from "../../../svg/reddit.png";
+import RedditHover from "../../../svg/reddit-hover.png";
+
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import DragonVideo from "../../DragonVideo";
+// import DragonVideo from "../../DragonVideo";
+
 import Medium from "../../../svg/medium_logo.svg";
 interface Iprops {
   connectWallet: (boll: boolean) => void;
@@ -39,24 +47,48 @@ const About = ({ connectWallet }: Iprops) => {
             <a href="https://twitter.com/SweetPad_" target={"_blank"}>
               <TwitterLogo />
             </a>
-            {/* <a
-              href="https://instagram.com/sweetpad.io?utm_medium=copy_link"
-              target={"_blank"}
-            >
-              <img src={Medium} alt="medium" />
-            </a> */}
+            <a href="https://discord.com/invite/T3R4MECCAG" target={"_blank"}>
+              <LazyLoadImage
+                src={DiscordLogo}
+                alt="medium"
+                className="hide-hover"
+              />
+              <LazyLoadImage
+                src={DiscordHover}
+                alt="medium"
+                className="show-hover"
+              />
+            </a>
             <a
-              href="https://instagram.com/sweetpad.io?utm_medium=copy_link"
+              href="https://medium.com/@sweetpad.io.official"
               target={"_blank"}
             >
-              <FacebookLogo />
+              <LazyLoadImage src={Medium} alt="medium" className="hide-hover" />
+              <LazyLoadImage
+                src={MediumHover}
+                alt="medium"
+                className="show-hover"
+              />
             </a>
             <a
               href="https://www.facebook.com/SweetPad-official-111890581352736"
               target={"_blank"}
             >
+              <FacebookLogo />
+            </a>
+            <a
+              href="https://instagram.com/sweetpad.io?utm_medium=copy_link "
+              target={"_blank"}
+            >
               <LazyLoadImage src={Instagram} className="hide-hover" />
               <LazyLoadImage src={InstagramLogo} className="show-hover" />
+            </a>
+            <a
+              href="https://www.reddit.com/r/SweetPad_Official/"
+              target={"_blank"}
+            >
+              <LazyLoadImage src={Reddit} className="hide-hover" />
+              <LazyLoadImage src={RedditHover} className="show-hover" />
             </a>
             <a
               href="https://youtube.com/channel/UCVlg4Abe1XIWbXYyD6aMixA"
@@ -95,9 +127,8 @@ const About = ({ connectWallet }: Iprops) => {
           </div>
         </div>
       </div>
-
       <div className="drag-header">
-        <DragonVideo />
+        <LazyLoadImage src={Hello} />
       </div>
     </>
   );

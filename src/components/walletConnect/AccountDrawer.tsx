@@ -36,7 +36,7 @@ const Drawer = (props: any) => {
   } = classes;
   const { open, anchor, onClose } = props;
   const [copied, setCopied] = useState(false);
-  const [bnb, setBnb] = useState(null);
+  const [bnb, setBnb] = useState<any>(null);
   const {
     userNfts,
     currentBlock,
@@ -48,14 +48,12 @@ const Drawer = (props: any) => {
     freezesNftID,
     freezesNft,
   } = useTypedSelector((state) => state.socials);
-  // console.log(freezesNftID, "freezesNftIDfreezesNftIDfreezesNftID");
   const [freezeSwtInput, setfreezeSwtInput] = useState<string>("");
 
   const [sweetCount, setSweetCount] = useState<any>([]);
   const [currentBlockState, setCurrentBlock] = useState<any>(null);
   const [nftIdFrezes, setnftIdFrezes] = useState([]);
   const dispatch = useDispatch();
-  console.log(freezesNft, "freezesNft___________________");
 
   let locale: any = localStorage.getItem("walletconnectedaddress");
   useEffect(() => {
@@ -195,22 +193,22 @@ const Drawer = (props: any) => {
                       <img src={BustSvg} alt="BustSvg" /> <span>BNB:</span>
                     </div>
 
-                    {bnb}
+                    {bnb && bnb.slice(0, 5)}
                   </div>
                   <div className="balance-draw">
                     <div className="b-2">
                       <img src={BustSvg} alt="BustSvg" /> <span>BUSD:</span>
                     </div>
-                    {busdCoin}
+                    {busdCoin && String(busdCoin).slice(0, 5)}
                   </div>
                 </div>
                 <div className="balance-draw-coin">
                   <div className="balance-draw">
                     <div className="b-3">
                       <img src={SweetLogo} alt="SweetLogo" />
-                      <span> SWT:</span>
+                      <span>SWT:</span>
                     </div>
-                    {sweetCoin}
+                    {sweetCoin && String(sweetCoin).slice(0, 5)}
                   </div>
                 </div>
               </div>
@@ -241,6 +239,8 @@ const Drawer = (props: any) => {
                       // disabled={item.until < currentBlockState ? false : true}
                       > */}
                       <ModalClaimAccount
+                        until={item.until}
+                        currentBlockState={currentBlockState}
                         freezeSwtInput={freezeSwtInput}
                         handleSwtClaimChange={handleSwtClaimChange}
                         unfreezeSwt={() => unfreezeSwt(index)}

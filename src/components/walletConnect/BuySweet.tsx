@@ -39,7 +39,8 @@ import ClipLoader from "react-spinners/ClipLoader";
 import { useTypedSelector } from "../../hooks/useTypedSelector";
 import { SocialActionCreators } from "../../store/reducers/socials/action-creators";
 import { useDispatch } from "react-redux";
-
+import { useToast } from "@chakra-ui/react";
+import { WalletStatus } from "../../types/types";
 interface Iprops {
   userAccount: any;
   connectOpen: boolean;
@@ -96,7 +97,11 @@ let syncronusAjax = (arr, methods, time = 1000) => {
 };
 
 function BuySweet({ onConnect, provider }: Iprops) {
+  const toast = useToast();
+  const [countPopUp, setCountPopUp] = useState(false);
   let localAddress: any = localStorage.getItem("walletconnectedaddress");
+  let walletconnectAddress: any = localStorage.getItem("walletconnect");
+
   const dispatch = useDispatch();
   const [first, setfirst] = useState(false);
   const loading = useRef(false);
@@ -137,12 +142,39 @@ function BuySweet({ onConnect, provider }: Iprops) {
       if (onConnect) {
         onConnect();
       }
-      if (clickedBuySweet) {
+      if (clickedBuySweet || isConnectButtonClick) {
         maxCoins();
       }
     }
   }, [isConnectButtonClick, clickedBuySweet]);
+  useEffect(() => {
+    if (localAddress) {
+      if (onConnect) {
+        onConnect();
+      }
+    }
+  }, []);
 
+  const openPopUp = (event: React.MouseEvent<HTMLElement>) => {
+    if (countPopUp) {
+      return false;
+    }
+
+    toast({
+      status: WalletStatus.success,
+      position: "top",
+      duration: 3000,
+      isClosable: true,
+      render: () =>
+        !countPopUp ? (
+          <div className={"coming-soon buy-sweet-coming"}>Coming Soon</div>
+        ) : null,
+    });
+
+    setCountPopUp(true);
+
+    setTimeout(() => setCountPopUp(false), 3000);
+  };
   useEffect(() => {
     dispatch(SocialActionCreators.setProvider(provider));
 
@@ -180,7 +212,6 @@ function BuySweet({ onConnect, provider }: Iprops) {
         .call();
 
       let jsons: any = await syncronusAjax(freezesNftId, sweetNfts.methods);
-      console.log(jsons, "connecxt");
 
       await dispatch(SocialActionCreators.setFreezesNftID(freezesNftId));
       await dispatch(SocialActionCreators.setFreezesNft(jsons));
@@ -381,7 +412,7 @@ function BuySweet({ onConnect, provider }: Iprops) {
       </a>
       <div className="buttons-connected">
         {localAddress || localAddressState ? (
-          <Button className="buy-sweet-btn" onClick={maxCoins}>
+          <Button className="buy-sweet-btn" onClick={openPopUp}>
             Buy Sweets
           </Button>
         ) : (

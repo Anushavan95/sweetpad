@@ -25,8 +25,9 @@ export default function LPstacking({
 }: Iprops) {
   return (
     <div>
-      <h5>Stake your LP and earn xSWT</h5>
-      <div className="lp-input-section">
+      {/* <h5>Stake your LP and earn xSWT</h5> */}
+      <h2>Cooming Soon</h2>
+      {/* <div className="lp-input-section">
         <span>LP</span>
         <Input />
       </div>
@@ -44,7 +45,7 @@ export default function LPstacking({
       />
       <div className="lp-stack">
         <Button>Stacke</Button>
-      </div>
+      </div> */}
     </div>
   );
 }

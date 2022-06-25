@@ -24,7 +24,7 @@ const Tires = ({ isTabletOrMobile, method }: Iprops) => {
   }, [disabledTab]);
   const renderComponent = () => {
     // @ts-ignore
-    return disabledTab ? <SliderByInput /> : <Slider />;
+    return disabledTab ? <SliderByInput /> : <></>;
   };
 
   return (

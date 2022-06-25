@@ -16,17 +16,25 @@ interface IProps {
   unfreezeSwt: () => void;
   handleSwtClaimChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   freezeSwtInput: string;
+  until: string;
+  currentBlockState: any;
 }
 export default function ModalClaimAccount({
   unfreezeSwt,
   freezeSwtInput,
   handleSwtClaimChange,
+  until,
+  currentBlockState,
 }: IProps) {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <>
-      <Button onClick={onOpen} className="freezes-stake-claim-btn">
+      <Button
+        onClick={onOpen}
+        className="freezes-stake-claim-btn"
+        disabled={until < currentBlockState ? false : true}
+      >
         Claim
       </Button>
 
@@ -38,7 +46,12 @@ export default function ModalClaimAccount({
           <ModalCloseButton />
 
           <ModalFooter>
-            <Button colorScheme="blue" mr={3} onClick={unfreezeSwt}>
+            <Button
+              colorScheme="blue"
+              mr={3}
+              onClick={unfreezeSwt}
+              disabled={until < currentBlockState ? false : true}
+            >
               Claim
             </Button>
             <Button variant="ghost">Secondary Action</Button>

@@ -4,12 +4,7 @@ import { config } from "react-spring";
 import one from "../../../svg/card_4.svg";
 import two from "../../../svg/card_5.svg";
 import tree from "../../../svg/card_6.svg";
-import Airo from "../../../svg/Ario.svg";
-import AiroBottom from "../../../svg/Airo_2.svg";
-import Miro from "../../../svg/Miro.svg";
-import MiroBottom from "../../../svg/MIro_2.svg";
-import Neo from "../../../svg/Neo.svg";
-import NeoBottom from "../../../svg/Neo_2.svg";
+
 import { useTypedSelector } from "../../../hooks/useTypedSelector";
 export const SliderByInput = () => {
   const { result } = useTypedSelector((state) => state.socials);
@@ -53,19 +48,16 @@ export const SliderByInput = () => {
       className="content-slider"
     >
       {state.goToSlide === 0 && (
-        // <img src={Airo} alt="img_1" className="dragon-name" />
         <h2 alt="img_1" className="dragon-name">
           Ario
         </h2>
       )}
       {state.goToSlide === 1 && (
-        // <img src={Miro} alt="img_1" className="dragon-name" />
         <h2 alt="img_1" className="dragon-name">
           Miro
         </h2>
       )}
       {state.goToSlide === 2 && (
-        // <img src={Neo} alt="img_1" className="dragon-name" />
         <h2 alt="img_1" className="dragon-name">
           Neo
         </h2>

@@ -2,30 +2,22 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useDispatch } from "react-redux";
 import { useMediaQuery } from "react-responsive";
 import AboutFooter from "../../components/AboutFooter/AboutFooter";
-import AirdropDragon from "../../components/AirdropVideo";
-import BuyDragonVideo from "../../components/BuyDragonVideo";
-import CalculatorDragon from "../../components/CalculatorDragon";
-import FinishedDragon from "../../components/FinishedDragon";
 import About from "../../components/Header/about";
 import Headera from "../../components/Header/misc/header";
-import FeaturedPools from "../../components/Main/Feautured/Featured-pools";
 import LivePools from "../../components/Main/LivePools/LivePools";
 import Partners from "../../components/Main/partners/Partners";
 import RoadMap from "../../components/Main/roadmap";
 import RoadmapSecond from "../../components/Main/roadmap/RoadmapSecond";
 import StackingLeadboard from "../../components/Main/Stacking/Stacking-Leadboard";
 import Tokeno from "../../components/Main/Tokeno";
-import MediaDragon from "../../components/MediaDragon";
-import RoadmapVideo from "../../components/RoadmapVidep";
-import SecondRoadmapVideo from "../../components/SecondRoadmapVideo";
-import SocialLinks from "../../components/social";
-import StackingDragon from "../../components/StackingDragonVideo";
+import MediaDragon from "../../svg/Media.png";
+import SecondRoadmap from "../../svg/second-roadmap.png";
+import RoadmapDragon from "../../svg/roadmap-dragon.png";
+import StackingDragon from "../../svg/stacking.png";
 import Tires from "../../components/tires";
-import TokenoDragon from "../../components/TokenoVideo";
-import YoutubeVideo from "../../components/YoutubeVideo";
+import TokenoImage from "../../svg/tokenomix.png";
 import { SocialActionCreators } from "../../store/reducers/socials/action-creators";
-import DragonTokeno from "../../svg/dragon-tokeno.png";
-
+import BuyDragon from "../../svg/Buy.png";
 export default function Home() {
   const isDesktopOrLaptop = useMediaQuery({
     query: "(min-width: 1224px)",
@@ -75,7 +67,7 @@ export default function Home() {
       <Headera connectWallet={(bool: boolean) => connectWallet(bool)} />
       <section className="scroll-container-sweet">
         <section className="component-section scroll-area">
-          <div className="main-content" style={{ paddingTop: "60px" }}>
+          <div className="main-content">
             <About connectWallet={connectWallet} />
           </div>
         </section>
@@ -85,7 +77,9 @@ export default function Home() {
               <LivePools />
             </div>
           </div>
-          <BuyDragonVideo />
+          <div className="buy-drag">
+            <LazyLoadImage src={BuyDragon} alt={BuyDragon} />
+          </div>
         </section>
         {/* <section className="component-section scroll-area">
           <div className="live-feautured-conetnt">
@@ -144,7 +138,7 @@ export default function Home() {
             </div>
           </div>
           <div className="tokeno-dragon">
-            <TokenoDragon />
+            <LazyLoadImage src={TokenoImage} />
           </div>
         </section>
         <section className="component-section  scroll-area">
@@ -154,7 +148,7 @@ export default function Home() {
             </div>
           </div>
           <div className="roadmap-dragon">
-            <RoadmapVideo />
+            <LazyLoadImage src={RoadmapDragon} />
           </div>
         </section>
         <section className="component-section  scroll-area">
@@ -164,7 +158,7 @@ export default function Home() {
             </div>
           </div>
           <div className="partners-dragon">
-            <MediaDragon />
+            <LazyLoadImage src={MediaDragon} alt={"MediaDragon"} />
           </div>
         </section>
         <section className="component-section  scroll-area">
@@ -174,7 +168,7 @@ export default function Home() {
             </div>
           </div>
           <div className="second-roadmap-dragon">
-            <SecondRoadmapVideo />
+            <LazyLoadImage src={SecondRoadmap} />
           </div>
         </section>
         <section className="component-section  scroll-area">
@@ -184,7 +178,7 @@ export default function Home() {
             </div>
           </div>
           <div className="stacking-dragon">
-            <StackingDragon />
+            <LazyLoadImage src={StackingDragon} />
           </div>
         </section>
         <section className="component-section scroll-area">

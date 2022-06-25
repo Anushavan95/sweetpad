@@ -12,7 +12,6 @@ import NFTstacking from "./NFT/nft-stacking";
 import DaysCalc from "./SWT/days-calc";
 import SWTcalc from "./SWT/swt-calc";
 import SwtStacking from "./SwtStacking";
-import CalculatorDragon from "../../CalculatorDragon";
 interface Props {
   days: number;
   setDays: (value: any) => void;
@@ -124,7 +123,6 @@ const Calculator = ({ days, setDays, setCard, changeCardHandler }: Props) => {
 
   return (
     <React.Fragment>
-      <CalculatorDragon />
       <Box className={"calculator"}>
         <Tabs
           variant="enclosed"
@@ -136,10 +134,10 @@ const Calculator = ({ days, setDays, setCard, changeCardHandler }: Props) => {
             <Tab>
               <pre>SWT Calculator</pre>{" "}
             </Tab>
-            <Tab>
+            <Tab isDisabled opacity={"0.5"}>
               <pre>LP Staking</pre>
             </Tab>
-            <Tab>
+            <Tab isDisabled opacity={"0.5"}>
               <pre>ADD Liquidity</pre>
             </Tab>
             <Tab>
@@ -151,10 +149,9 @@ const Calculator = ({ days, setDays, setCard, changeCardHandler }: Props) => {
               <TabPanel>
                 <React.Fragment>
                   <div className="swt-calculator">
-                    <h2>Calculate your SWT</h2>
                     <p className="calculator-text">
-                      depending on the amount of staked tokens and your lock
-                      time.
+                      Calculate your SWT depending on the amount of staked
+                      tokens and your lock time.
                     </p>
                   </div>
                   <SWTcalc

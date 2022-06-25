@@ -209,7 +209,7 @@ export default function NFTstacking({
                         onChange={handleCheck}
                       />
                       <span className="nft-name">{item.name}</span>
-                      <img className="img-nft-card" src={`${image}`} />
+                      <img className="img-nft-card" src={`${item.image}`} />
                     </div>
                   </label>
                 );

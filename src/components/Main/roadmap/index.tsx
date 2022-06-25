@@ -14,7 +14,9 @@ export default function Roadmap() {
         <div className="carousel-inner">
           <div className="quarters-item">
             <div className="quarters-item-child">
-              <div className="title-quarter">{/* <h3>Quarter 1</h3> */}</div>
+              <div className="title-quarter">
+                <h3>Quarter 1</h3>
+              </div>
               <ul>
                 <li>
                   Seed Phase
@@ -23,7 +25,7 @@ export default function Roadmap() {
                   </label>
                 </li>
                 <li>
-                  100,000 Community
+                  50,000 Community
                   <label className="done-label">
                     <Done />
                   </label>
@@ -49,7 +51,7 @@ export default function Roadmap() {
                   </label>
                 </li>
 
-                <li> Community</li>
+                {/* <li> Community</li> */}
               </ul>
             </div>
           </div>
@@ -57,24 +59,48 @@ export default function Roadmap() {
           {/* <div className="carousel-item active "> */}
           <div className="quarters-item">
             <div className="quarters-item-child">
-              <div className="title-quarter">{/* <h3>Quarter 2</h3> */}</div>
+              <div className="title-quarter">
+                <h3>Quarter 2</h3>
+              </div>
               <ul>
-                <li>SWT coin Airdrop</li>
+                <li>
+                  SWT coin Airdrop{" "}
+                  <label className="done-label">
+                    <Done />
+                  </label>
+                </li>
+                <li>
+                  Platform Launch{" "}
+                  <label className="done-label">
+                    <Done />
+                  </label>
+                </li>
+                <li>
+                  Staking Launch{" "}
+                  <label className="done-label">
+                    <Done />
+                  </label>
+                </li>
+                <li>
+                  Partnerships
+                  <label className="done-label">
+                    <Done />
+                  </label>
+                </li>
                 <li>Public Sale</li>
-                <li>Platform Launch </li>
-                <li>Staking Launch</li>
-                <li>Partnerships</li>
+
                 <li>NFT Release</li>
                 <li>NFT Marketplace </li>
+                <li> CoinGecko Listing</li>
+
                 <li>
                   Listing on Different <br></br>
                   Exchanges
                 </li>
-                <li>CoinGecko Listing</li>
                 <li className="querater-item-last-child">
                   Influencer Marketing Push
                 </li>
-                {/* <li>100,000 Community</li> */}
+                <li>100,000 Community</li>
               </ul>
             </div>
           </div>
@@ -82,14 +108,16 @@ export default function Roadmap() {
           {/* <div className="carousel-item active"> */}
           <div className="quarters-item">
             <div className="quarters-item-child">
-              <div className="title-quarter">{/* <h3>Quarter 3</h3> */}</div>
+              <div className="title-quarter">
+                <h3>Quarter 3</h3>
+              </div>
               <ul>
                 <li>Exchanger Launch</li>
                 <li> Pools Opening</li>
                 <li> 150,000 Community</li>
                 <li> 5,000 Holders</li>
                 <li> NFT Game</li>
-                <li>Pools Openning</li>
+                {/* <li>Pools Openning</li> */}
               </ul>
             </div>
           </div>
@@ -97,10 +125,12 @@ export default function Roadmap() {
           {/* <div className="carousel-item active"> */}
           <div className="quarters-item">
             <div className="quarters-item-child">
-              <div className="title-quarter">{/* <h3>Quarter 4</h3> */}</div>
+              <div className="title-quarter">
+                <h3>Quarter 4</h3>
+              </div>
               <ul>
-                <li>Start Sweet Game</li>
-                <li> Start Sweet Metaverse</li>
+                <li>SweetPad Game</li>
+                <li> SweetPad Metaverse</li>
                 <li>200,000 Community</li>
                 <li>10,000 Holders</li>
               </ul>

@@ -94,7 +94,8 @@
     border: 1px solid #03a66d;
     color: white !important;
     border-radius: 20px;
-    // font-weight: 400 !important;
+    font-weight: 100;
+    font-family: "Montserrat" !important;
   }
 }
 
@@ -161,18 +162,18 @@
 
 .social-icons-header {
   margin-top: 15px;
-  background-image: url("../../../svg/social-bg.png");
   background-size: 100% 100%;
   display: flex;
   justify-content: space-around;
-  background-color: linear-gradient(
+  background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0.3) 0%,
     rgba(255, 255, 255, 0) 100%
   );
   align-items: center;
   height: 60px;
-  max-width: 400px;
+  max-width: 420px;
+  border-radius: 35px;
   .show-hover {
     display: none;
   }
@@ -223,6 +224,16 @@
     }
     &:nth-child(3) {
       &:hover {
+        .show-hover {
+          display: block;
+        }
+        .hide-hover {
+          display: none;
+        }
+      }
+    }
+    &:nth-child(5) {
+      &:hover {
         background: #1b74e4 !important;
         svg {
           path {
@@ -231,7 +242,34 @@
         }
       }
     }
-    &:nth-child(5) {
+    &:nth-child(6) {
+      &:hover {
+        .show-hover {
+          display: block;
+        }
+        .hide-hover {
+          display: none;
+        }
+      }
+      svg {
+        width: inherit;
+      }
+    }
+    &:nth-child(7) {
+      &:hover {
+        .show-hover {
+          display: block;
+        }
+        .hide-hover {
+          display: none;
+        }
+      }
+      svg {
+        width: inherit;
+      }
+    }
+
+    &:nth-child(8) {
       &:hover {
         background: #ff0000 !important;
         svg {
@@ -240,8 +278,12 @@
           }
         }
       }
+      svg {
+        width: inherit;
+      }
     }
-    &:nth-child(6) {
+
+    &:nth-child(9) {
       &:hover {
         background: black !important;
         svg {
@@ -259,4 +301,37 @@
 
 .hellodrag {
   width: 200px;
+}
+
+@media screen and (max-width: 980px) {
+  .rowHeader {
+    .burger {
+      width: 40px;
+    }
+  }
+  .rowHeader {
+    padding: 0px;
+    grid-gap: 0px;
+    .buttons-connected {
+      height: 35px;
+      button {
+        height: 100%;
+      }
+    }
+    .connect-btn-wallet {
+      height: 35px !important;
+    }
+    .button-ido {
+      height: 35px;
+    }
+    .flex-component {
+      padding: 10px;
+    }
+  }
+
+  .columns {
+    .about-header {
+      margin: 0;
+    }
+  }
 }

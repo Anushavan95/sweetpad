@@ -26,7 +26,8 @@ export default function Liquidity({
 }: Iprops) {
   return (
     <div className="add-liquidity">
-      <p className="text-title-liquidity">
+      <h2>Cooming Soon</h2>
+      {/* <p className="text-title-liquidity">
         By adding your liquidity calculate how many tokens you will recieve
         depending on your lock time
       </p>
@@ -48,7 +49,7 @@ export default function Liquidity({
       />
       <div className="add-liqui-stack">
         <Button> Add Liquidity & Stake</Button>
-      </div>
+      </div> */}
     </div>
   );
 }

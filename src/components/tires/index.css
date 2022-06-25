@@ -25,7 +25,14 @@
 .css-v9b9hc .css-hxtskf {
   width: 100%;
   padding: 20px;
-  background: radial-gradient(90.16% 143.01% at 15.32% 21.04%, rgba(239, 239, 239, 0.05) 0%, rgba(166, 219, 255, 0.0111979) 77.08%, rgba(163, 207, 245, 0.00330848) 93.23%, rgba(107, 178, 244, 0) 100%), #e5eeff url(../../svg/mobile-bg.png);
+  background: radial-gradient(
+      90.16% 143.01% at 15.32% 21.04%,
+      rgba(239, 239, 239, 0.05) 0%,
+      rgba(166, 219, 255, 0.0111979) 77.08%,
+      rgba(163, 207, 245, 0.00330848) 93.23%,
+      rgba(107, 178, 244, 0) 100%
+    ),
+    #e5eeff url(../../svg/mobile-bg.png);
   -webkit-box-shadow: 2px 16px 19px rgba(0, 0, 0, 0.04);
   box-shadow: 2px 16px 19px rgba(0, 0, 0, 0.04);
   border-radius: 20px;
@@ -184,7 +191,13 @@
 
 .tabs-calc .css-5nopcy[aria-selected="true"],
 .tabs-calc .css-5nopcy[data-selected] {
-  background: -webkit-gradient(linear, left top, left bottom, from(#03a66d), to(#03a66d));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#03a66d),
+    to(#03a66d)
+  );
   background: linear-gradient(180deg, #03a66d 0%, #03a66d 100%);
   font-size: 16px;
   color: #ffffff;
@@ -335,8 +348,6 @@
   display: none;
 }
 
-
-
 .item-second-roadmap ul li:after {
   content: "";
   width: 210px;
@@ -387,7 +398,6 @@
   background-color: white;
   top: -18px;
 }
-
 
 .buy-btn-footer {
   position: relative;

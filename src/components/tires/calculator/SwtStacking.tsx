@@ -23,8 +23,8 @@ declare global {
 
 export default function SwtStacking({ sweetCoin, days }) {
   const dispatch = useDispatch();
-  const { provider } = useTypedSelector((state) => state.socials);
-  const [freezes, setFreezes] = useState(null);
+  const { provider, freezesBlock } = useTypedSelector((state) => state.socials);
+
   const loading = useRef(false);
   const [color, _] = useState("#ffffff");
   const [first, setfirst] = useState(false);
@@ -88,7 +88,7 @@ export default function SwtStacking({ sweetCoin, days }) {
     if (!loading.current) {
       setfirst(false);
     }
-  }, [freezes]);
+  }, [freezesBlock]);
   useEffect(() => {
     loading.current = false;
     if (!loading.current) {
@@ -97,9 +97,9 @@ export default function SwtStacking({ sweetCoin, days }) {
   }, [maxAppprove]);
   return (
     <>
-      {Number(maxAppprove) > 0 ? (
+      {Number(maxAppprove) > 0 || freezesBlock.length > 0 ? (
         <Button onClick={() => freezeSwt()}>
-          freezeSwt
+          Stake
           {loading.current || first ? (
             <ClipLoader color={color} size={20} />
           ) : null}

@@ -19,6 +19,7 @@ export enum SocialActionEnum {
   SET_FREEZES_BLOCK = "SET_FREEZES_BLOCK",
   SET_FREEZES_NFT_ID = "SET_FREEZES_NFT_ID",
   SET_FREEZES_NFT = "SET_FREEZES_NFT",
+  SET_ACCOUNT_CONNECTED = "SET_ACCOUNT_CONNECTED",
 }
 export interface SocialState {
   result: number;
@@ -41,6 +42,7 @@ export interface SocialState {
   freezesBlock: Array<[]>;
   freezesNftID: Array<[]>;
   freezesNft: Array<[]>;
+  connected: boolean;
 }
 export interface Items {
   check: boolean;

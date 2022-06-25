@@ -89,4 +89,8 @@ export const SocialActionCreators = {
     type: SocialActionEnum.SET_FREEZES_NFT,
     payload,
   }),
+  setConnected: (payload: boolean) => ({
+    type: SocialActionEnum.SET_ACCOUNT_CONNECTED,
+    payload,
+  }),
 };

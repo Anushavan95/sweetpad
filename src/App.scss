@@ -36,6 +36,12 @@ html {
 .roadmap-content {
   max-width: 1240px;
   width: 100%;
+  .section-1,
+  .section-2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 }
 @font-face {
   font-family: ProductSans;

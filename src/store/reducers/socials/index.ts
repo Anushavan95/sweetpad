@@ -21,6 +21,7 @@ const initialState: SocialState = {
   freezesBlock: [],
   freezesNftID: [],
   freezesNft: [],
+  connected: false,
 };
 export default function socialsReducer(
   state = initialState,
@@ -75,6 +76,8 @@ export default function socialsReducer(
       return { ...state, freezesNftID: action.payload };
     case SocialActionEnum.SET_FREEZES_NFT:
       return { ...state, freezesNft: action.payload };
+    case SocialActionEnum.SET_ACCOUNT_CONNECTED:
+      return { ...state, connected: action.payload };
     default:
       return state;
   }

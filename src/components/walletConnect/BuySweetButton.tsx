@@ -9,6 +9,8 @@ interface SWTprops {
   btnName?: string;
 }
 export default function BuySweetButton({ btnName }: SWTprops) {
+  const { provider, connected } = useTypedSelector((state) => state.socials);
+
   const toast = useToast();
   const [countPopUp, setCountPopUp] = useState(false);
   const openPopUp = (event: React.MouseEvent<HTMLElement>) => {
@@ -42,7 +44,7 @@ export default function BuySweetButton({ btnName }: SWTprops) {
   let locale = localStorage.getItem("walletconnectedaddress");
   return (
     <>
-      {locale ? (
+      {locale && connected ? (
         <Button onClick={openPopUp}>{btnName}</Button>
       ) : (
         <Button

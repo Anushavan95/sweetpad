@@ -26,7 +26,7 @@ export default function Home() {
   // const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
 
-  const isPortrait = useMediaQuery({ query: "(orientation: portrait)" });
+  const isPortrait = useMediaQuery({ query: "(max-width: 800px)" });
 
   const isRetina = useMediaQuery({ query: "(min-resolution: 2dppx)" });
 
@@ -141,16 +141,42 @@ export default function Home() {
             <LazyLoadImage src={TokenoImage} />
           </div>
         </section>
-        <section className="component-section  scroll-area">
-          <div className="roadmap-content">
-            <div className="main-content roadmap-main">
-              <RoadMap />
+        {isPortrait ? (
+          <>
+            <section className="component-section  scroll-area">
+              <div className="roadmap-content">
+                <div className="main-content roadmap-main">
+                  <RoadMap method={"section-1"} isPortrait={isPortrait} />
+                </div>
+              </div>
+              <div className="roadmap-dragon">
+                <LazyLoadImage src={RoadmapDragon} />
+              </div>
+            </section>
+            <section className="component-section  scroll-area">
+              <div className="roadmap-content">
+                <div className="main-content roadmap-main">
+                  <RoadMap method={"section-2"} isPortrait={isPortrait} />
+                </div>
+              </div>
+              <div className="roadmap-dragon">
+                <LazyLoadImage src={RoadmapDragon} />
+              </div>
+            </section>
+          </>
+        ) : (
+          <section className="component-section  scroll-area">
+            <div className="roadmap-content">
+              <div className="main-content roadmap-main">
+                <RoadMap />
+              </div>
             </div>
-          </div>
-          <div className="roadmap-dragon">
-            <LazyLoadImage src={RoadmapDragon} />
-          </div>
-        </section>
+            <div className="roadmap-dragon">
+              <LazyLoadImage src={RoadmapDragon} />
+            </div>
+          </section>
+        )}
+
         <section className="component-section  scroll-area">
           <div className="tires-content">
             <div className="main-content partners-main">

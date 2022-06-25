@@ -41,6 +41,8 @@ const Header = (props: IHeaderProps) => {
     dispatch(SocialActionCreators.setIsAddresConnected(false));
 
     dispatch(SocialActionCreators.setIsConnectButtonClicked(false));
+    dispatch(SocialActionCreators.setConnected(false));
+
     onClose();
   }
   let newAddres = address;

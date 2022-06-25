@@ -1658,7 +1658,7 @@ fieldset {
   }
 
   .main-content {
-    max-width: 600px !important;
+    max-width: 768px !important;
     width: 100%;
     margin: 0 auto;
   }
@@ -1728,9 +1728,9 @@ fieldset {
 .scroll-container-sweet {
   overflow: auto;
   scroll-snap-type: y mandatory;
-  .main-content {
-    padding: 60px;
-  }
+  // .main-content {
+  //   padding: 60px;
+  // }
 }
 
 .scroll-area {

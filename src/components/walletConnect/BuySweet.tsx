@@ -142,7 +142,7 @@ function BuySweet({ onConnect, provider }: Iprops) {
       if (onConnect) {
         onConnect();
       }
-      if (clickedBuySweet || isConnectButtonClick) {
+      if (clickedBuySweet) {
         maxCoins();
       }
     }
@@ -177,6 +177,7 @@ function BuySweet({ onConnect, provider }: Iprops) {
   };
   useEffect(() => {
     dispatch(SocialActionCreators.setProvider(provider));
+    dispatch(SocialActionCreators.setConnected(true));
 
     if (provider) {
       let accounts = provider.eth.getAccounts();

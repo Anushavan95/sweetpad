@@ -163,6 +163,7 @@ class MyApp extends React.PureComponent<any, any> {
 
   public render = () => {
     let { address, connected, chainId, fetching, accountLocal } = this.state;
+    console.log(connected, "connected");
 
     return (
       <>
@@ -174,6 +175,7 @@ class MyApp extends React.PureComponent<any, any> {
           handleOpenModal={this.props.handleOpenModal}
           address={address}
           provider={this.state.web3}
+          connected={connected}
           onConnect={this.onConnect.bind(this)}
         />
         <SLayout className="success-connect">

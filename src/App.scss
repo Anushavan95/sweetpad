@@ -932,12 +932,23 @@ img[alt="own_image"] {
       transform: translate(100%);
       position: absolute;
       right: 0;
-      top: 100px;
-
-      width: 350px;
+      top: 65px;
+      width: 100%;
       .info-content {
-        display: flex;
-        flex-direction: column;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start;
+        width: 100%;
+        min-height: 100vh;
+        background: url("./svg/Glace.png"),
+          linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.3) 0%,
+            rgba(255, 255, 255, 0) 100%
+          ) !important;
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+        border-radius: 30px 0px 0px 30px;
       }
     }
   }
@@ -980,25 +991,45 @@ img[alt="own_image"] {
 }
 
 @media screen and (max-width: 700px) {
+  .about-video-youtube {
+    .videos-iframe {
+      width: 350px !important;
+    }
+  }
+  .quarters-item {
+    max-width: 170px !important;
+    .title-quarter {
+      h3 {
+        font-size: 12px;
+      }
+    }
+  }
+  .parent-item-card {
+    .item-card {
+      &:first-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+      }
+    }
+  }
+  .liner {
+    width: 80px;
+  }
   .drag-header {
     right: -10px;
-    bottom: 180px;
+    // bottom: 180px;
   }
-  .content-container {
-    margin-bottom: 150px;
-  }
+  // .content-container {
+  //   margin-bottom: 150px;
+  // }
   .rowHeader {
     .wallet-connect {
       // margin-top: auto
-      margin: 0;
+      margin: 5px 0px;
     }
   }
-  .scroll-container-sweet,
-  .scroll-area {
-    // .scroll-area {
-    // height: 80vh !important;
-    // }
-  }
+
   .background-content {
     margin: 5% auto;
     left: 0;
@@ -1006,7 +1037,7 @@ img[alt="own_image"] {
   }
   .drawwer-box {
     width: 100% !important;
-    height: 85vh !important;
+    height: 89vh !important;
   }
   .tires-calc {
     .pool-title {
@@ -1052,10 +1083,10 @@ img[alt="own_image"] {
   }
   .item-card {
     p {
-      font-size: 14px;
+      font-size: 10px;
     }
     strong {
-      font-size: 13px;
+      font-size: 9px;
     }
   }
   .live-pools {
@@ -1166,9 +1197,9 @@ img[alt="own_image"] {
       width: 150px;
     }
 
-    .d-flex {
-      margin-top: 10px;
-    }
+    // .d-flex {
+    //   margin-top: 10px;
+    // }
 
     .wallet-connect,
     .d-flex {
@@ -1308,7 +1339,7 @@ img[alt="own_image"] {
   }
 
   .parent-item-card {
-    grid-template-columns: 110px 110px 110px;
+    grid-template-columns: 80px 80px 80px;
   }
 
   .tire-container {

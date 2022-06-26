@@ -177,16 +177,16 @@ class MyApp extends React.PureComponent<any, any> {
           connected={connected}
           onConnect={this.onConnect.bind(this)}
         />
-        <SLayout className="success-connect">
-          <Header
-            accountLocal={accountLocal}
-            connected={connected}
-            address={address}
-            chainId={chainId}
-            killSession={this.resetApp}
-            onConnect={this.onConnect}
-          />
-        </SLayout>
+        {/* <SLayout className="success-connect"> */}
+        <Header
+          accountLocal={accountLocal}
+          connected={connected}
+          address={address}
+          chainId={chainId}
+          killSession={this.resetApp}
+          onConnect={this.onConnect}
+        />
+        {/* </SLayout> */}
       </>
     );
   };

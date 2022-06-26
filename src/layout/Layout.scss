@@ -1036,7 +1036,7 @@ td {
     width: 110px !important;
     font-size: 14px !important;
     position: relative;
-    left: 15px;
+    left: 5px;
   }
   .disconnect-wallet-crypto {
     margin-top: 5px;
@@ -1045,6 +1045,7 @@ td {
   .connected-wallet-p {
     display: flex !important;
     justify-content: end !important;
+    padding: 0 8px !important;
     .drawwer-box {
       margin-left: 15px;
     }
@@ -1094,7 +1095,7 @@ td {
   .buy-sweet-open {
     position: relative;
     // z-index: 100;
-    margin-left: 5px;
+    // margin-left: 5px;
     display: flex;
     // flex-direction: column-reverse;
   }
@@ -1113,7 +1114,7 @@ td {
 @media screen and (max-width: 500px) {
   .buttons-config {
     .buttons-connected {
-      margin-right: -22px;
+      margin-right: -50px;
     }
   }
   .roadMap-header {
@@ -1686,12 +1687,13 @@ fieldset {
 @media (max-width: 700px) {
   .buy-drag {
     right: 30px !important;
+    width: 200px !important;
   }
-  .content-container {
-    .info-content {
-      justify-content: center;
-    }
-  }
+  // .content-container {
+  //   .info-content {
+  //     // justify-content: center;
+  //   }
+  // }
 
   .social_columns {
     flex-direction: column !important;
@@ -1726,7 +1728,7 @@ fieldset {
 }
 
 .scroll-container-sweet {
-  overflow: auto;
+  overflow-x: hidden;
   scroll-snap-type: y mandatory;
   // .main-content {
   //   padding: 60px;

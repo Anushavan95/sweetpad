@@ -1,28 +1,25 @@
 import { Box, Button } from "@chakra-ui/react";
-import StakeImage from "../../svg/stake.png";
 import StakeNFT from "../../svg/nft-logo.png";
+import StakeImage from "../../svg/stake.png";
 
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 import { useDispatch } from "react-redux";
+import { AbiItem } from "web3-utils";
 import { useTypedSelector } from "../../hooks/useTypedSelector";
 import { SocialActionCreators } from "../../store/reducers/socials/action-creators";
-import CopyIcon from "../../svg/copy.png";
 import BustSvg from "../../svg/bust.svg";
+import CopyIcon from "../../svg/copy.png";
 import SweetLogo from "../../svg/sweet-step.svg";
-import { CopyToClipboard } from "react-copy-to-clipboard";
-import classes from "./Drawer.module.scss";
-import { changeAnchor } from "./Web3Modal/helpers/drawwer-chanje";
+import SweetNftFreezingAbi from "../../utils/ABI/nft-freezing-test.json";
+import SweetFreezingTest_abi from "../../utils/ABI/sweet-freezing-test.json";
 import {
   sweetFreezing,
-  sweetNftAddres,
   sweetNftSFreezing,
 } from "../../utils/contractaddresses";
-import SweetFreezingTest_abi from "../../utils/ABI/sweet-freezing-test.json";
-import SweetNftFreezingAbi from "../../utils/ABI/nft-freezing-test.json";
-import SweetNftAbi from "../../utils/ABI/sweetNFT-test.json";
-import { AbiItem } from "web3-utils";
-import ClipLoader from "react-spinners/ClipLoader";
+import classes from "./Drawer.module.scss";
 import ModalClaimAccount from "./ModalClaimAccount";
+import { changeAnchor } from "./Web3Modal/helpers/drawwer-chanje";
 
 const Drawer = (props: any) => {
   const {
@@ -137,8 +134,6 @@ const Drawer = (props: any) => {
     let c = await sweetNftFreeze.methods.unfreeze(Nftid).send({
       from: accounts[0],
     });
-    // console.log(c, "c");
-    console.log(Nftid, "Nftid");
   };
 
   return (

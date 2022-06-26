@@ -980,6 +980,30 @@ img[alt="own_image"] {
 }
 
 @media screen and (max-width: 700px) {
+  .drag-header {
+    right: -10px;
+    bottom: 180px;
+  }
+  .content-container {
+    margin-bottom: 150px;
+  }
+  .rowHeader {
+    .wallet-connect {
+      // margin-top: auto
+      margin: 0;
+    }
+  }
+  .scroll-container-sweet,
+  .scroll-area {
+    // .scroll-area {
+    // height: 80vh !important;
+    // }
+  }
+  .background-content {
+    margin: 5% auto;
+    left: 0;
+    right: 0;
+  }
   .drawwer-box {
     width: 100% !important;
     height: 85vh !important;
@@ -1084,12 +1108,7 @@ img[alt="own_image"] {
     left: 0;
     top: 100px;
   }
-  // .buttons-config {
-  //   display: inherit !important;
-  // }
-  .flex-component {
-    padding-bottom: 15px;
-  }
+
   .header-section {
     padding: 0 !important;
   }
@@ -1106,9 +1125,6 @@ img[alt="own_image"] {
     }
   }
 
-  .wallet-connect {
-    margin: 0;
-  }
   .buttons-config {
     display: flex;
   }
@@ -1147,7 +1163,7 @@ img[alt="own_image"] {
     // margin-top: 15px;
     .logo-sweet-desktop {
       margin-top: 6px;
-      width: 250px;
+      width: 150px;
     }
 
     .d-flex {
@@ -1157,10 +1173,6 @@ img[alt="own_image"] {
     .wallet-connect,
     .d-flex {
       width: 100%;
-    }
-
-    .wallet-connect {
-      margin-top: 15px;
     }
   }
 

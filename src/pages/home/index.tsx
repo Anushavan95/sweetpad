@@ -18,6 +18,8 @@ import Tires from "../../components/tires";
 import TokenoImage from "../../svg/tokenomix.png";
 import { SocialActionCreators } from "../../store/reducers/socials/action-creators";
 import BuyDragon from "../../svg/Buy.png";
+import Footer from "../../components/AboutFooter/footer";
+import YoutubeDragon from "../../svg/youtube.png";
 export default function Home() {
   const isDesktopOrLaptop = useMediaQuery({
     query: "(min-width: 1224px)",
@@ -149,9 +151,9 @@ export default function Home() {
                   <RoadMap method={"section-1"} isPortrait={isPortrait} />
                 </div>
               </div>
-              <div className="roadmap-dragon">
+              {/* <div className="roadmap-dragon">
                 <LazyLoadImage src={RoadmapDragon} />
-              </div>
+              </div> */}
             </section>
             <section className="component-section  scroll-area">
               <div className="roadmap-content">
@@ -233,9 +235,27 @@ export default function Home() {
             <LazyLoadImage src={StackingDragon} />
           </div>
         </section>
-        <section className="component-section scroll-area">
-          <AboutFooter />
-        </section>
+        {isPortrait ? (
+          <>
+            {" "}
+            <section className="component-section scroll-area">
+              <AboutFooter isPortrait={isPortrait} method={"slice"} />
+              <div className="about-dragon">
+                <LazyLoadImage src={YoutubeDragon} />
+              </div>
+            </section>
+            <section className="component-section scroll-area">
+              <Footer />
+            </section>
+          </>
+        ) : (
+          <section className="component-section scroll-area">
+            <AboutFooter />
+            {/* <div className="about-dragon">
+              <LazyLoadImage src={YoutubeDragon} />
+            </div> */}
+          </section>
+        )}
       </section>
     </div>
   );

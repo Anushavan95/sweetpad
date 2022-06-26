@@ -15,6 +15,7 @@
 
 .roadmap-dragon,
 .partners-dragon,
+.about-dragon,
 .stacking-dragon {
   width: 300px;
   bottom: 30px;
@@ -941,7 +942,7 @@ td {
   font-size: 19px;
   line-height: 22px;
   /* or 110% */
-  text-align: center;
+  text-align: left;
   letter-spacing: 0.5px;
 
   color: #ffffff;
@@ -1125,6 +1126,7 @@ td {
     width: 100%;
     align-items: center;
     height: 100%;
+    margin-top: 25px;
   }
 
   .tire-container .calculator {

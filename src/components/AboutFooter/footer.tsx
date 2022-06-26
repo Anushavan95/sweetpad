@@ -159,16 +159,16 @@ const Footer = () => {
                     </a>
                   </li>
 
-                  {/* <li>
+                  <li>
                     <a href={"https://discord.gg/T3R4MECCAG"} target={"_blank"}>
                       <DiscordLogo />
                     </a>
-                  </li> */}
-                  {/* <li
+                  </li>
+                  <li
                     style={{
                       display: "flex",
                       alignItems: "center",
-                      justifyContent: "center"
+                      justifyContent: "center",
                     }}
                   >
                     <a
@@ -180,7 +180,7 @@ const Footer = () => {
                         <RedditLogo />
                       </span>
                     </a>
-                  </li> */}
+                  </li>
                 </nav>
                 <nav className="second-nav-social">
                   {/* <li>

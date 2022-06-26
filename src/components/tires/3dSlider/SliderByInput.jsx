@@ -70,7 +70,7 @@ export const SliderByInput = () => {
         animationConfig={state.config}
       />
       {state.goToSlide === 0 && (
-        <pre alt="img_2" className="dragon-name .price-dragon">
+        <pre alt="img_2" className="dragon-name price-dragon">
           10.000 xSWT <br /> Guaranteed Allocation
         </pre>
       )}

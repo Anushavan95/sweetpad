@@ -992,6 +992,7 @@ img[alt="own_image"] {
 
 @media screen and (max-width: 700px) {
   .about-video-youtube {
+    margin-top: 0 !important;
     .videos-iframe {
       width: 350px !important;
     }
@@ -1168,8 +1169,6 @@ img[alt="own_image"] {
   }
 
   .youtube-about-video {
-    margin-top: 120px;
-
     iframe {
       width: 400px;
     }

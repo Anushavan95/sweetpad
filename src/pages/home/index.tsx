@@ -176,17 +176,43 @@ export default function Home() {
             </div>
           </section>
         )}
+        {isPortrait ? (
+          <>
+            <section className="component-section  scroll-area">
+              <div className="tires-content">
+                <div className="main-content partners-main">
+                  <Partners method={"partner-1"} isPortrait={isPortrait} />
+                </div>
+              </div>
+              <div className="partners-dragon">
+                <LazyLoadImage src={MediaDragon} alt={"MediaDragon"} />
+              </div>
+            </section>
 
-        <section className="component-section  scroll-area">
-          <div className="tires-content">
-            <div className="main-content partners-main">
-              <Partners />
+            <section className="component-section  scroll-area">
+              <div className="tires-content">
+                <div className="main-content partners-main">
+                  <Partners method={"section-2"} isPortrait={isPortrait} />
+                </div>
+              </div>
+              <div className="partners-dragon">
+                <LazyLoadImage src={MediaDragon} alt={"MediaDragon"} />
+              </div>
+            </section>
+          </>
+        ) : (
+          <section className="component-section  scroll-area">
+            <div className="tires-content">
+              <div className="main-content partners-main">
+                <Partners />
+              </div>
             </div>
-          </div>
-          <div className="partners-dragon">
-            <LazyLoadImage src={MediaDragon} alt={"MediaDragon"} />
-          </div>
-        </section>
+            <div className="partners-dragon">
+              <LazyLoadImage src={MediaDragon} alt={"MediaDragon"} />
+            </div>
+          </section>
+        )}
+
         <section className="component-section  scroll-area">
           <div className="tires-content">
             <div className="main-content secondRoadmap-main">

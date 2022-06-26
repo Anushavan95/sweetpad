@@ -174,7 +174,7 @@ const Calculator = ({ days, setDays, setCard, changeCardHandler }: Props) => {
                   <Box className="buttons-group">
                     <div className="swt-nft-buttons">
                       <BuySweetButton btnName={"Buy-SWT"} />
-                      <BuyNFT />
+                      {/* <BuyNFT /> */}
                     </div>
                     <div>
                       {address ? (

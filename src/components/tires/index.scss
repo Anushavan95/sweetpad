@@ -614,7 +614,7 @@
   bottom: 30px;
   right: 180px;
   position: absolute;
-  z-index: 15;
+  z-index: 1600;
   // img {
   // }
 }
@@ -750,7 +750,8 @@
     height: 350px;
   }
   .quarters-item {
-    max-width: 225px;
+    max-width: 185px;
+    margin: 5px;
     ul {
       li {
         font-size: 13px;
@@ -761,10 +762,10 @@
   .title-section {
     margin-top: 180px;
   }
-  .card-precent {
-    margin-top: 20px;
-    padding: 50px;
-  }
+  // .card-precent {
+  //   margin-top: 20px;
+  //   padding: 50px;
+  // }
   .tire-container {
     .calculator {
       min-height: 500px !important;
@@ -847,6 +848,10 @@
 }
 
 @media screen and (max-width: 700px) {
+  .stacking-leaderboard-section {
+    height: 320px;
+    width: 380px;
+  }
   .col-calculator {
     .price-dragon {
       position: absolute !important;

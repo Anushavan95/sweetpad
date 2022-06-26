@@ -52,164 +52,401 @@ import UpComming1 from "../../../svg/upcomming1.png";
 import { Button } from "@chakra-ui/react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
-export default function Partners() {
+interface Iprops {
+  method?: string;
+  isPortrait?: boolean;
+}
+export default function Partners({ method, isPortrait }: Iprops) {
   return (
     <div className="partners-component">
       <div className="pool-title">
         <Button className="title-partners">PARTNERS & MEDIA</Button>
       </div>
+
       <div className="partners-container">
-        <a
-          href="https://www.bsc.news/post/sweetpad-fundraising-and-trading-platform-on-binance-smart-chain"
-          target="_blank"
-        >
-          <section className="partners-section">
-            <LazyLoadImage effect="blur" src={BscNEWS} alt="BscNEWS" />
-            <img src={BscNEWS_1} alt="BscNEWS" className="hover-show" />
-          </section>
-        </a>
-        <a
-          href="https://coinmarketcap.com/currencies/sweetpad/"
-          target="_blank"
-        >
-          <section className="partners-section">
-            <LazyLoadImage
-              effect="blur"
-              src={CoinMarketCap}
-              alt="CoinMarketCap"
-            />
-            <img
-              src={CoinMarketCap_1}
-              alt="CoinMarketCap"
-              className="hover-show"
-            />
-          </section>
-        </a>
-        <a
-          href="https://www.icoannouncement.io/listing/sweetpad-swt/"
-          target="_blank"
-        >
-          <section className="partners-section">
-            <LazyLoadImage effect="blur" src={ICO} alt="ICO" />
-            <img src={ICO_1} alt="ICO" className="hover-show" />
-          </section>
-        </a>
-        <a
-          href="https://cryptodaily.io/sweetpad-your-sweetest-launchpad-is-launching-private-sale/"
-          target="_blank"
-        >
-          <section className="partners-section">
-            <LazyLoadImage effect="blur" src={CryptoDaily} alt="CryptoDaily" />
-            <img src={CryptoDaily} alt="CryptoDaily" className="hover-show" />
-          </section>
-        </a>
-        <a href="https://bnbproject.org/#/project/2274" target="_blank">
-          <section className="partners-section">
-            <LazyLoadImage effect="blur" src={Bnbcoin} alt="Bnbcoin" />
-            <img src={Bnbcoin_1} alt="Bnbcoin" className="hover-show" />
-          </section>
-        </a>
-        <a
-          href="https://www.coinscope.co/coin/1-swt?msclkid=6c45864bb03a11ecbb724f3e2a7b55c5"
-          target="_blank"
-        >
-          <section className="partners-section">
-            <LazyLoadImage effect="blur" src={Coinscope} alt="Coinscope" />
-            <img src={Coinscope_1} alt="Coinscope" className="hover-show" />
-          </section>
-        </a>
-        <a
-          href="https://bitcoinforum.com/off-topic/sweetpad-launchpad-a-decentralized-bsc-based-launchpad-with-nft-staking-system/new/#new"
-          target="_blank"
-        >
-          <section className="partners-section">
-            <LazyLoadImage
-              effect="blur"
-              src={BitcoinForum}
-              alt="BitcoinForum"
-            />
-            <img
-              src={BitcoinForum_1}
-              alt="BitcoinForum"
-              className="hover-show"
-            />
-          </section>
-        </a>
-        <a href="https://coinsniper.net/coin/29021" target="_blank">
-          <section className="partners-section nippers">
-            <LazyLoadImage effect="blur" src={Nipper_1} alt="Nipper" />
-            <img src={Nipper} alt="Nipper" className="hover-show" />
-          </section>
-        </a>
-        <a
-          href="https://coinhub.news/index.php/cs/article/bitcointalkann-sweetpad-first-double-audited-launchpad-with-nft-reflections-system?msclkid=90830027b03a11ec834c4bd535830241"
-          target="_blank"
-        >
-          <section className="partners-section coinHub-news">
-            <LazyLoadImage effect="blur" src={CoinHub} alt="CoinHub" />
-            <img src={CoinHub_1} alt="CoinHub" className="hover-show" />
-          </section>
-        </a>
-        <a href="https://icomarks.com/ico/sweetpad" target="_blank">
-          <section className="partners-section icomarks">
-            <LazyLoadImage effect="blur" src={Icomarks_1} alt="Icomarks" />
-            <img src={Icomarks} alt="Icomarks" className="hover-show" />
-          </section>
-        </a>
-        <a href="https://cryptoinvest.am/post.php?post=62" target="_blank">
-          <section className="partners-section">
-            <LazyLoadImage effect="blur" src={Export_1} alt="Export" />
-            <img src={Export} alt="Export" className="hover-show" />
-          </section>
-        </a>
-        <a href="https://icolink.com/ico-sweetpad.html" target="_blank">
-          <section className="partners-section">
-            <LazyLoadImage effect="blur" src={ICOcoin} alt="ICOcoin" />
-            <img src={ICOcoin_1} alt="ICOcoin" className="hover-show" />
-          </section>
-        </a>
-        <a href="https://icoholder.com/en/sweetpad-1016830" target="_blank">
-          <section className="partners-section">
-            <LazyLoadImage effect="blur" src={Icoholder} alt="Icoholder" />
-            <img src={Icoholder_1} alt="Icoholder" className="hover-show" />
-          </section>
-        </a>
-        <a
-          href="https://cryptotalk.org/topic/361333-ann-sweetpad-first-double-audited-launchpad-with-nft-reflections-system/"
-          target="_blank"
-        >
-          <section className="partners-section cryptotalk">
-            <LazyLoadImage effect="blur" src={Crypto} alt="Crypto" />
-            <img src={Crypto} alt="Crypto" className="hover-show" />
-          </section>
-        </a>
-        <a href="https://nftevening.com/event/sweetpadnft/" target="_blank">
-          <section className="partners-section cryptotalk">
-            <LazyLoadImage effect="blur" src={NftEvenning} alt="Crypto" />
-            <img src={NftEvenning_1} alt="Crypto" className="hover-show" />
-          </section>
-        </a>
-        <a href="https://nftcalendar.io/event/sweetpadnft/" target="_blank">
-          <section className="partners-section cryptotalk">
-            <LazyLoadImage effect="blur" src={NFT} alt="Crypto" />
-            <img src={NFT1} alt="Crypto" className="hover-show" />
-          </section>
-        </a>
-        <a
-          href="https://www.nftdropscalendar.com/nft-drops/sweetpadnft"
-          target="_blank"
-        >
-          <section className="partners-section cryptotalk">
-            <LazyLoadImage effect="blur" src={NftCalendar} alt="Crypto" />
-            <img src={NftCalendar_1} alt="Crypto" className="hover-show" />
-          </section>
-        </a>
-        <a href="https://www.upcomingdrop.net/" target="_blank">
-          <section className="partners-section cryptotalk">
-            <LazyLoadImage effect="blur" src={UpComming} alt="Crypto" />
-            <img src={UpComming1} alt="Crypto" className="hover-show" />
-          </section>
-        </a>
+        {isPortrait ? (
+          //
+          <>
+            {method === "partner-1" ? (
+              <>
+                {" "}
+                <a
+                  href="https://www.bsc.news/post/sweetpad-fundraising-and-trading-platform-on-binance-smart-chain"
+                  target="_blank"
+                >
+                  <section className="partners-section">
+                    <LazyLoadImage effect="blur" src={BscNEWS} alt="BscNEWS" />
+                    <img src={BscNEWS_1} alt="BscNEWS" className="hover-show" />
+                  </section>
+                </a>
+                <a
+                  href="https://coinmarketcap.com/currencies/sweetpad/"
+                  target="_blank"
+                >
+                  <section className="partners-section">
+                    <LazyLoadImage
+                      effect="blur"
+                      src={CoinMarketCap}
+                      alt="CoinMarketCap"
+                    />
+                    <img
+                      src={CoinMarketCap_1}
+                      alt="CoinMarketCap"
+                      className="hover-show"
+                    />
+                  </section>
+                </a>
+                <a
+                  href="https://www.icoannouncement.io/listing/sweetpad-swt/"
+                  target="_blank"
+                >
+                  <section className="partners-section">
+                    <LazyLoadImage effect="blur" src={ICO} alt="ICO" />
+                    <img src={ICO_1} alt="ICO" className="hover-show" />
+                  </section>
+                </a>
+                <a
+                  href="https://cryptodaily.io/sweetpad-your-sweetest-launchpad-is-launching-private-sale/"
+                  target="_blank"
+                >
+                  <section className="partners-section">
+                    <LazyLoadImage
+                      effect="blur"
+                      src={CryptoDaily}
+                      alt="CryptoDaily"
+                    />
+                    <img
+                      src={CryptoDaily}
+                      alt="CryptoDaily"
+                      className="hover-show"
+                    />
+                  </section>
+                </a>
+                <a href="https://bnbproject.org/#/project/2274" target="_blank">
+                  <section className="partners-section">
+                    <LazyLoadImage effect="blur" src={Bnbcoin} alt="Bnbcoin" />
+                    <img src={Bnbcoin_1} alt="Bnbcoin" className="hover-show" />
+                  </section>
+                </a>
+                <a
+                  href="https://www.coinscope.co/coin/1-swt?msclkid=6c45864bb03a11ecbb724f3e2a7b55c5"
+                  target="_blank"
+                >
+                  <section className="partners-section">
+                    <LazyLoadImage
+                      effect="blur"
+                      src={Coinscope}
+                      alt="Coinscope"
+                    />
+                    <img
+                      src={Coinscope_1}
+                      alt="Coinscope"
+                      className="hover-show"
+                    />
+                  </section>
+                </a>
+                <a
+                  href="https://bitcoinforum.com/off-topic/sweetpad-launchpad-a-decentralized-bsc-based-launchpad-with-nft-staking-system/new/#new"
+                  target="_blank"
+                >
+                  <section className="partners-section">
+                    <LazyLoadImage
+                      effect="blur"
+                      src={BitcoinForum}
+                      alt="BitcoinForum"
+                    />
+                    <img
+                      src={BitcoinForum_1}
+                      alt="BitcoinForum"
+                      className="hover-show"
+                    />
+                  </section>
+                </a>
+                <a href="https://coinsniper.net/coin/29021" target="_blank">
+                  <section className="partners-section nippers">
+                    <LazyLoadImage effect="blur" src={Nipper_1} alt="Nipper" />
+                    <img src={Nipper} alt="Nipper" className="hover-show" />
+                  </section>
+                </a>
+                <a
+                  href="https://coinhub.news/index.php/cs/article/bitcointalkann-sweetpad-first-double-audited-launchpad-with-nft-reflections-system?msclkid=90830027b03a11ec834c4bd535830241"
+                  target="_blank"
+                >
+                  <section className="partners-section coinHub-news">
+                    <LazyLoadImage effect="blur" src={CoinHub} alt="CoinHub" />
+                    <img src={CoinHub_1} alt="CoinHub" className="hover-show" />
+                  </section>
+                </a>
+                <a href="https://icomarks.com/ico/sweetpad" target="_blank">
+                  <section className="partners-section icomarks">
+                    <LazyLoadImage
+                      effect="blur"
+                      src={Icomarks_1}
+                      alt="Icomarks"
+                    />
+                    <img src={Icomarks} alt="Icomarks" className="hover-show" />
+                  </section>
+                </a>
+              </>
+            ) : (
+              <>
+                {" "}
+                <a
+                  href="https://cryptoinvest.am/post.php?post=62"
+                  target="_blank"
+                >
+                  <section className="partners-section">
+                    <LazyLoadImage effect="blur" src={Export_1} alt="Export" />
+                    <img src={Export} alt="Export" className="hover-show" />
+                  </section>
+                </a>
+                <a href="https://icolink.com/ico-sweetpad.html" target="_blank">
+                  <section className="partners-section">
+                    <LazyLoadImage effect="blur" src={ICOcoin} alt="ICOcoin" />
+                    <img src={ICOcoin_1} alt="ICOcoin" className="hover-show" />
+                  </section>
+                </a>
+                <a
+                  href="https://icoholder.com/en/sweetpad-1016830"
+                  target="_blank"
+                >
+                  <section className="partners-section">
+                    <LazyLoadImage
+                      effect="blur"
+                      src={Icoholder}
+                      alt="Icoholder"
+                    />
+                    <img
+                      src={Icoholder_1}
+                      alt="Icoholder"
+                      className="hover-show"
+                    />
+                  </section>
+                </a>
+                <a
+                  href="https://cryptotalk.org/topic/361333-ann-sweetpad-first-double-audited-launchpad-with-nft-reflections-system/"
+                  target="_blank"
+                >
+                  <section className="partners-section cryptotalk">
+                    <LazyLoadImage effect="blur" src={Crypto} alt="Crypto" />
+                    <img src={Crypto} alt="Crypto" className="hover-show" />
+                  </section>
+                </a>
+                <a
+                  href="https://nftevening.com/event/sweetpadnft/"
+                  target="_blank"
+                >
+                  <section className="partners-section cryptotalk">
+                    <LazyLoadImage
+                      effect="blur"
+                      src={NftEvenning}
+                      alt="Crypto"
+                    />
+                    <img
+                      src={NftEvenning_1}
+                      alt="Crypto"
+                      className="hover-show"
+                    />
+                  </section>
+                </a>
+                <a
+                  href="https://nftcalendar.io/event/sweetpadnft/"
+                  target="_blank"
+                >
+                  <section className="partners-section cryptotalk">
+                    <LazyLoadImage effect="blur" src={NFT} alt="Crypto" />
+                    <img src={NFT1} alt="Crypto" className="hover-show" />
+                  </section>
+                </a>
+                <a
+                  href="https://www.nftdropscalendar.com/nft-drops/sweetpadnft"
+                  target="_blank"
+                >
+                  <section className="partners-section cryptotalk">
+                    <LazyLoadImage
+                      effect="blur"
+                      src={NftCalendar}
+                      alt="Crypto"
+                    />
+                    <img
+                      src={NftCalendar_1}
+                      alt="Crypto"
+                      className="hover-show"
+                    />
+                  </section>
+                </a>
+                <a href="https://www.upcomingdrop.net/" target="_blank">
+                  <section className="partners-section cryptotalk">
+                    <LazyLoadImage effect="blur" src={UpComming} alt="Crypto" />
+                    <img src={UpComming1} alt="Crypto" className="hover-show" />
+                  </section>
+                </a>
+              </>
+            )}
+          </>
+        ) : (
+          <>
+            <a
+              href="https://www.bsc.news/post/sweetpad-fundraising-and-trading-platform-on-binance-smart-chain"
+              target="_blank"
+            >
+              <section className="partners-section">
+                <LazyLoadImage effect="blur" src={BscNEWS} alt="BscNEWS" />
+                <img src={BscNEWS_1} alt="BscNEWS" className="hover-show" />
+              </section>
+            </a>
+            <a
+              href="https://coinmarketcap.com/currencies/sweetpad/"
+              target="_blank"
+            >
+              <section className="partners-section">
+                <LazyLoadImage
+                  effect="blur"
+                  src={CoinMarketCap}
+                  alt="CoinMarketCap"
+                />
+                <img
+                  src={CoinMarketCap_1}
+                  alt="CoinMarketCap"
+                  className="hover-show"
+                />
+              </section>
+            </a>
+            <a
+              href="https://www.icoannouncement.io/listing/sweetpad-swt/"
+              target="_blank"
+            >
+              <section className="partners-section">
+                <LazyLoadImage effect="blur" src={ICO} alt="ICO" />
+                <img src={ICO_1} alt="ICO" className="hover-show" />
+              </section>
+            </a>
+            <a
+              href="https://cryptodaily.io/sweetpad-your-sweetest-launchpad-is-launching-private-sale/"
+              target="_blank"
+            >
+              <section className="partners-section">
+                <LazyLoadImage
+                  effect="blur"
+                  src={CryptoDaily}
+                  alt="CryptoDaily"
+                />
+                <img
+                  src={CryptoDaily}
+                  alt="CryptoDaily"
+                  className="hover-show"
+                />
+              </section>
+            </a>
+            <a href="https://bnbproject.org/#/project/2274" target="_blank">
+              <section className="partners-section">
+                <LazyLoadImage effect="blur" src={Bnbcoin} alt="Bnbcoin" />
+                <img src={Bnbcoin_1} alt="Bnbcoin" className="hover-show" />
+              </section>
+            </a>
+            <a
+              href="https://www.coinscope.co/coin/1-swt?msclkid=6c45864bb03a11ecbb724f3e2a7b55c5"
+              target="_blank"
+            >
+              <section className="partners-section">
+                <LazyLoadImage effect="blur" src={Coinscope} alt="Coinscope" />
+                <img src={Coinscope_1} alt="Coinscope" className="hover-show" />
+              </section>
+            </a>
+            <a
+              href="https://bitcoinforum.com/off-topic/sweetpad-launchpad-a-decentralized-bsc-based-launchpad-with-nft-staking-system/new/#new"
+              target="_blank"
+            >
+              <section className="partners-section">
+                <LazyLoadImage
+                  effect="blur"
+                  src={BitcoinForum}
+                  alt="BitcoinForum"
+                />
+                <img
+                  src={BitcoinForum_1}
+                  alt="BitcoinForum"
+                  className="hover-show"
+                />
+              </section>
+            </a>
+            <a href="https://coinsniper.net/coin/29021" target="_blank">
+              <section className="partners-section nippers">
+                <LazyLoadImage effect="blur" src={Nipper_1} alt="Nipper" />
+                <img src={Nipper} alt="Nipper" className="hover-show" />
+              </section>
+            </a>
+            <a
+              href="https://coinhub.news/index.php/cs/article/bitcointalkann-sweetpad-first-double-audited-launchpad-with-nft-reflections-system?msclkid=90830027b03a11ec834c4bd535830241"
+              target="_blank"
+            >
+              <section className="partners-section coinHub-news">
+                <LazyLoadImage effect="blur" src={CoinHub} alt="CoinHub" />
+                <img src={CoinHub_1} alt="CoinHub" className="hover-show" />
+              </section>
+            </a>
+            <a href="https://icomarks.com/ico/sweetpad" target="_blank">
+              <section className="partners-section icomarks">
+                <LazyLoadImage effect="blur" src={Icomarks_1} alt="Icomarks" />
+                <img src={Icomarks} alt="Icomarks" className="hover-show" />
+              </section>
+            </a>
+            <a href="https://cryptoinvest.am/post.php?post=62" target="_blank">
+              <section className="partners-section">
+                <LazyLoadImage effect="blur" src={Export_1} alt="Export" />
+                <img src={Export} alt="Export" className="hover-show" />
+              </section>
+            </a>
+            <a href="https://icolink.com/ico-sweetpad.html" target="_blank">
+              <section className="partners-section">
+                <LazyLoadImage effect="blur" src={ICOcoin} alt="ICOcoin" />
+                <img src={ICOcoin_1} alt="ICOcoin" className="hover-show" />
+              </section>
+            </a>
+            <a href="https://icoholder.com/en/sweetpad-1016830" target="_blank">
+              <section className="partners-section">
+                <LazyLoadImage effect="blur" src={Icoholder} alt="Icoholder" />
+                <img src={Icoholder_1} alt="Icoholder" className="hover-show" />
+              </section>
+            </a>
+            <a
+              href="https://cryptotalk.org/topic/361333-ann-sweetpad-first-double-audited-launchpad-with-nft-reflections-system/"
+              target="_blank"
+            >
+              <section className="partners-section cryptotalk">
+                <LazyLoadImage effect="blur" src={Crypto} alt="Crypto" />
+                <img src={Crypto} alt="Crypto" className="hover-show" />
+              </section>
+            </a>
+            <a href="https://nftevening.com/event/sweetpadnft/" target="_blank">
+              <section className="partners-section cryptotalk">
+                <LazyLoadImage effect="blur" src={NftEvenning} alt="Crypto" />
+                <img src={NftEvenning_1} alt="Crypto" className="hover-show" />
+              </section>
+            </a>
+            <a href="https://nftcalendar.io/event/sweetpadnft/" target="_blank">
+              <section className="partners-section cryptotalk">
+                <LazyLoadImage effect="blur" src={NFT} alt="Crypto" />
+                <img src={NFT1} alt="Crypto" className="hover-show" />
+              </section>
+            </a>
+            <a
+              href="https://www.nftdropscalendar.com/nft-drops/sweetpadnft"
+              target="_blank"
+            >
+              <section className="partners-section cryptotalk">
+                <LazyLoadImage effect="blur" src={NftCalendar} alt="Crypto" />
+                <img src={NftCalendar_1} alt="Crypto" className="hover-show" />
+              </section>
+            </a>
+            <a href="https://www.upcomingdrop.net/" target="_blank">
+              <section className="partners-section cryptotalk">
+                <LazyLoadImage effect="blur" src={UpComming} alt="Crypto" />
+                <img src={UpComming1} alt="Crypto" className="hover-show" />
+              </section>
+            </a>
+          </>
+        )}
       </div>
     </div>
   );

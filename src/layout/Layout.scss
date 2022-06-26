@@ -1093,7 +1093,7 @@ td {
 
   .buy-sweet-open {
     position: relative;
-    z-index: 100;
+    // z-index: 100;
     margin-left: 5px;
     display: flex;
     // flex-direction: column-reverse;
@@ -1109,6 +1109,9 @@ td {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   position: fixed;
+  margin: 5% auto;
+  left: 0;
+  right: 0;
 }
 @media screen and (max-width: 500px) {
   .buttons-config {
@@ -1180,7 +1183,7 @@ td {
     flex-direction: column;
     grid-gap: 15px;
     button {
-      height: 20px;
+      // height: 20px;
       padding: 2px 15px;
       font-size: 12px;
       &:hover {

@@ -41,6 +41,7 @@ html {
     width: 100%;
     display: flex;
     justify-content: center;
+    grid-gap: 15px;
   }
 }
 @font-face {
@@ -979,6 +980,60 @@ img[alt="own_image"] {
 }
 
 @media screen and (max-width: 700px) {
+  .drawwer-box {
+    width: 100% !important;
+    height: 85vh !important;
+  }
+  .tires-calc {
+    .pool-title {
+      top: 30px;
+    }
+  }
+  .tire-container {
+    .calculator {
+      min-height: 535px !important;
+      max-width: 350px !important;
+    }
+  }
+
+  .leaderboard-lists {
+    .leaderboard-list-items {
+      margin: 5px 0px !important;
+      display: flex !important;
+      justify-content: space-evenly !important;
+    }
+  }
+  .second-roadmap {
+    margin-bottom: 50px;
+  }
+  .title-roadmap-second {
+    .second-line {
+      font-size: 12px;
+    }
+  }
+  .second-roadmap-title {
+    margin: 100px 0px 20px;
+  }
+  .quarters-item {
+    margin: 0 !important;
+  }
+  .title-roadmap-second {
+    pre {
+      font-size: 10px;
+    }
+  }
+  .tokeno-content {
+    display: inherit;
+    align-self: inherit !important;
+  }
+  .item-card {
+    p {
+      font-size: 14px;
+    }
+    strong {
+      font-size: 13px;
+    }
+  }
   .live-pools {
     .pool-card {
       width: 100% !important;
@@ -990,6 +1045,8 @@ img[alt="own_image"] {
       display: flex !important;
       justify-content: center !important;
       margin: 0 auto !important;
+      grid-gap: 15px !important;
+      flex-wrap: wrap !important;
     }
   }
 
@@ -1239,7 +1296,7 @@ img[alt="own_image"] {
   }
 
   .parent-item-card {
-    grid-template-columns: 150px 150px;
+    grid-template-columns: 110px 110px 110px;
   }
 
   .tire-container {
